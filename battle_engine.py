@@ -896,12 +896,7 @@ class Battle_Engine:
             else:
                 self.charging_move = self.pokemon1_move_data["name"].lower()
 
-    
-            
         
-
-        
-
 
     # SPECIAL ABILITY, ABILITY THAT HAS BIZZARE EFFECTS
     def ability_synchonize(self):
