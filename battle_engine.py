@@ -753,20 +753,20 @@ class Battle_Engine:
     def check_contact_ability(self):
 
         chance = random.randint(0,100) # chance of getting the status effect
-        if self.pokemon2_ability == "static" and self.pokemon1_move_data["contact"] and chance <= 30 and self.status_pokemon1 is None and "Electric" not in self.pokemon1_type : # if my pokemon touch a pokemonn with static
+        if self.pokemon2_ability == "static" and self.pokemon1_move_data["contact"] and chance <= 30 and self.status_pokemon1 is None and "Electric" not in self.pokemon1_type and self.charging_move == "": # if my pokemon touch a pokemonn with static
             self.status_pokemon1 = "paralysis"
             return "paralysis"
         
-        elif self.pokemon2_ability == "poison point" and self.pokemon1_move_data["contact"] and chance <= 20 and self.status_pokemon1 is None and "Poison" not in self.pokemon1_type: # if my pokemon touch a pokemonn with poison
+        elif self.pokemon2_ability == "poison point" and self.pokemon1_move_data["contact"] and chance <= 20 and self.status_pokemon1 is None and "Poison" not in self.pokemon1_type and self.charging_move == "": # if my pokemon touch a pokemonn with poison
             self.status_pokemon1 = "poison"
             return "poison"
 
         
-        elif self.pokemon2_ability == "flame body" and self.pokemon1_move_data["contact"] and chance <= 30 and self.status_pokemon1 is None and "Fire" not in self.pokemon1_type: # if my pokemon touch a pokemon with flame body
+        elif self.pokemon2_ability == "flame body" and self.pokemon1_move_data["contact"] and chance <= 30 and self.status_pokemon1 is None and "Fire" not in self.pokemon1_type and self.charging_move == "": # if my pokemon touch a pokemon with flame body
             self.status_pokemon1 = "burn"
             return "burn"
         
-        elif self.pokemon2_ability == "effect spore" and self.pokemon1_move_data["contact"] and chance <= 30 and self.status_pokemon1 is None: # if my pokemon touch a pokemonn with effect spore
+        elif self.pokemon2_ability == "effect spore" and self.pokemon1_move_data["contact"] and chance <= 30 and self.status_pokemon1 is None and self.charging_move == "": # if my pokemon touch a pokemonn with effect spore
             effect = ["paralysis","poison","sleep"] # sleep later
             random_effect = random.choice(effect)
             self.status_pokemon1 = random_effect

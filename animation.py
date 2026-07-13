@@ -75,6 +75,7 @@ class BattleAnimation:
             "leech seed": (self._load_leech_seed, self.anim_leech_seed),
             "dig": (self._load_dig, self.anim_dig),
             "fly": (self._load_fly, self.anim_fly),
+            "sky attack": (self._load_sky_attack, self.anim_sky_attack),
 
         }
 
@@ -461,6 +462,12 @@ class BattleAnimation:
         self.state["sound"] = pygame.mixer.Sound('move_sprites/fly/fly.mp3')
         self.state["start"] = None
 
+    def _load_sky_attack(self, name):
+        self.state["sound"] = pygame.mixer.Sound('move_sprites/sky_attack/sky_attack.mp3')
+        self.state["start"] = None
+        self.state["particles"] = []
+        self.state["spawn_timer"] = 0
+        self.state["sky_overlay"] = pygame.Surface((800, 500))
 
     
 
@@ -2378,4 +2385,134 @@ class BattleAnimation:
             done = self._flash_phase(screen, opponent_sprite, opponent_rect)
             if done:
                 s["start"] = None
+            return done
+        
+
+    def _draw_sky_particles(self, screen):
+        s = self.state
+        alive_particles = []
+        for particle in s["particles"]:
+            particle["x"] += particle["speed_x"]
+            particle["y"] += particle["speed_y"]
+            if particle["y"] < 500:
+                end_x = int(particle["x"] - particle["speed_x"] * 2)
+                end_y = int(particle["y"] - particle["length"])
+                pygame.draw.line(screen, particle["color"], (int(particle["x"]), int(particle["y"])), (end_x, end_y), 2)
+                alive_particles.append(particle)
+        s["particles"] = alive_particles
+
+    def _lerp_color(self, color_a, color_b, t):
+        t = max(0.0, min(1.0, t))
+        return (
+            int(color_a[0] + (color_b[0] - color_a[0]) * t),
+            int(color_a[1] + (color_b[1] - color_a[1]) * t),
+            int(color_a[2] + (color_b[2] - color_a[2]) * t),
+        )
+
+
+    def anim_sky_attack(self, move_name, screen, opponent_sprite, opponent_rect, my_sprite, my_rect):
+        s = self.state
+        now = pygame.time.get_ticks()
+        elapsed = self._start_animation(True)
+
+        GLOW_END = 500
+        STREAK_END = 800
+        IMPACT_END = 1150
+
+        if now - s["spawn_timer"] >= 30:
+            s["spawn_timer"] = now
+            for _ in range(random.randint(2, 4)):
+                s["particles"].append({
+                    "x": float(random.randint(0, 800)),
+                    "y": float(random.randint(-30, 0)),
+                    "speed_x": random.uniform(-2, 2),
+                    "speed_y": random.uniform(6, 12),
+                    "length": random.randint(15, 35),
+                    "color": random.choice([(255, 250, 210), (255, 255, 255), (255, 223, 128)])
+                })
+
+        # phase 1: sky begins to glow gold as the user charges
+        if elapsed < GLOW_END:
+            progress = elapsed / GLOW_END
+            overlay_color = self._lerp_color((0, 0, 0), (255, 235, 150), progress)
+            overlay_alpha = int(90 * progress)
+
+            s["sky_overlay"].fill(overlay_color)
+            s["sky_overlay"].set_alpha(overlay_alpha)
+            screen.blit(s["sky_overlay"], (0, 0))
+
+            screen.blit(opponent_sprite, opponent_rect)
+            screen.blit(my_sprite, my_rect)
+
+            pulse = abs(math.sin(elapsed / 90))
+            glow_radius = int(40 + pulse * 25)
+            glow_surface = pygame.Surface((glow_radius * 2, glow_radius * 2), pygame.SRCALPHA)
+            pygame.draw.circle(glow_surface, (255, 255, 210, int(120 * pulse)), (glow_radius, glow_radius), glow_radius)
+            screen.blit(glow_surface, glow_surface.get_rect(center=my_rect.center))
+
+            self._draw_sky_particles(screen)
+            return False
+
+        # phase 2: sky deepens to a burning orange-red as the bolt streaks across
+        elif elapsed < STREAK_END:
+            progress = (elapsed - GLOW_END) / (STREAK_END - GLOW_END)
+            overlay_color = self._lerp_color((255, 235, 150), (255, 110, 40), progress)
+            overlay_alpha = int(90 + 70 * progress)
+
+            s["sky_overlay"].fill(overlay_color)
+            s["sky_overlay"].set_alpha(overlay_alpha)
+            screen.blit(s["sky_overlay"], (0, 0))
+
+            screen.blit(opponent_sprite, opponent_rect)
+
+            start_x, start_y = my_rect.centerx, my_rect.centery
+            end_x, end_y = opponent_rect.centerx, opponent_rect.centery
+            bolt_x = int(start_x + (end_x - start_x) * progress)
+            bolt_y = int(start_y + (end_y - start_y) * progress)
+
+            for i in range(6):
+                trail_progress = max(0.0, progress - i * 0.05)
+                trail_x = int(start_x + (end_x - start_x) * trail_progress)
+                trail_y = int(start_y + (end_y - start_y) * trail_progress)
+                fade = int(255 * (1 - i / 6))
+                trail_surface = pygame.Surface((30, 30), pygame.SRCALPHA)
+                pygame.draw.circle(trail_surface, (255, 255, 255, fade), (15, 15), 12 - i)
+                screen.blit(trail_surface, (trail_x - 15, trail_y - 15))
+
+            pygame.draw.circle(screen, (255, 255, 255), (bolt_x, bolt_y), 14)
+            pygame.draw.circle(screen, (255, 240, 150), (bolt_x, bolt_y), 20, 3)
+
+            self._draw_sky_particles(screen)
+            return False
+
+        # phase 3: the sky flashes near-white on impact, then fades back to normal
+        elif elapsed < IMPACT_END:
+            progress = (elapsed - STREAK_END) / (IMPACT_END - STREAK_END)
+
+            if progress < 0.3:
+                flash_progress = progress / 0.3
+                overlay_color = self._lerp_color((255, 110, 40), (255, 255, 255), flash_progress)
+                overlay_alpha = int(160 + 60 * flash_progress)
+            else:
+                fade_progress = (progress - 0.3) / 0.7
+                overlay_color = (255, 255, 255)
+                overlay_alpha = int(220 * (1 - fade_progress))
+
+            s["sky_overlay"].fill(overlay_color)
+            s["sky_overlay"].set_alpha(overlay_alpha)
+            screen.blit(s["sky_overlay"], (0, 0))
+
+            screen.blit(opponent_sprite, opponent_rect)
+            shaken_rect = opponent_rect.move(random.randint(-6, 6), random.randint(-6, 6))
+            screen.blit(opponent_sprite, shaken_rect)
+
+            self._draw_sky_particles(screen)
+            return False
+
+        # phase 4: standard hit flash, ends the move
+        else:
+            done = self._flash_phase(screen, opponent_sprite, opponent_rect)
+            if done:
+                s["start"] = None
+                s["particles"] = []
             return done

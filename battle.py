@@ -156,7 +156,7 @@ class Battle(pygame.sprite.Sprite):
         # ==========================================
         # 9. OPPONENT (POKEMON 2) SPECIFIC BATTLE STATES
         # ==========================================
-        self.pokemon_list = ["machamp"] #"pidgeot","charizard","venusaur","blastoise","butterfree","raichu",
+        self.pokemon_list = ["rapidash"] #"pidgeot","charizard","venusaur","blastoise","butterfree","raichu",
         self.opponent_name = random.choice(self.pokemon_list)
 
         # test opponent pokemon, with animation when entering
@@ -291,7 +291,7 @@ class Battle(pygame.sprite.Sprite):
 
 
         #
-        black_list = ["bulbasaur", 'squirtle','rattata','raticate','ivysaur','sandshrew', 'nidoqueen','diglett','golduck','golem']
+        black_list = ["bulbasaur", 'squirtle','rattata','raticate','ivysaur','sandshrew', 'nidoqueen','diglett','golduck','golem','magnemite']
         if self.pokemon_name not in black_list:  #this if statement fix the dimensions of some pokemon
             TARGET_HEIGHT = 120
             self.bottom = 333
@@ -578,6 +578,8 @@ class Battle(pygame.sprite.Sprite):
 
                     elif self.engine.charging_move == "dig":
                         full_text = f"{self.pokemon_name.capitalize()} dug down!"
+                    elif self.engine.charging_move == "sky attack":
+                        full_text = f"{self.pokemon_name.capitalize()} is cloaked in harshed light!"
                 else:
                     if self.pokemon1_current_status != "sleep":
                         full_text = f"{self.pokemon_name.capitalize()} used {self.chosen_move}!"
