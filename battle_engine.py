@@ -15,6 +15,7 @@ class Battle_Engine:
         self.status_pokemon1 = None  # "burn", "poison", "toxic", "paralysis", "sleep", "freeze"  # initally let the status effect == nONE
         self.status_pokemon2 = None
 
+
         #move of pokemon 1
         self.pokemon1_move_data = {}
         self.pokemon1_move_name = ""
@@ -497,8 +498,8 @@ class Battle_Engine:
             check_sure_hit = self.pokemon1_move_data["accuracy"]
         else:
             print("cant miss")
-            self.accuracy =  True
-            return True
+            self.accuracy = True
+            return 
         
         chance = random.randint(0,100)
         print(f"co hoi trc la:{chance}")
@@ -507,15 +508,21 @@ class Battle_Engine:
             chance = int(chance * ((3+self.stages_pokemon2["evasion"])/3))
 
         
-        chance = 0 if (self.pokemon1_ability == "no guard" or self.pokemon2_ability == "no guard") else chance
 
         chance = int(0.7*chance) if self.pokemon1_ability =="compound eyes" else chance # check for Compound Eyes
         chance = int(1.2* chance) if self.pokemon1_ability == "hustle" else chance # check for hustle ability
         chance = int(1.2 * chance) if (self.pokemon2_ability == "sand veil" and self.current_weather == "sandstorm" and self.pokemon1_ability != "cloud nine") else chance # check sand veil
-        chance = 0 if (self.pokemon1_move_data["name"].lower() == "thunder" and self.current_weather == "rain dance" and self.pokemon1_ability != "cloud nine") else chance
         chance = int(1.2* chance) if (self.pokemon1_move_data["name"].lower() == "thunder" and self.current_weather == "sunny day" and self.pokemon1_ability != "cloud nine") else chance
 
 
+        chance = -1 if (self.pokemon1_ability == "no guard" or self.pokemon2_ability == "no guard") else chance
+        chance = -1 if (self.pokemon1_move_data["name"].lower() == "thunder" and self.current_weather == "rain dance" and self.pokemon1_ability != "cloud nine") else chance
+
+
+        if chance == -1:
+            self.accuracy = True
+            return
+        
         print(f"co hoi sau la {chance}")
 
         if chance <= int(check_sure_hit): # the lower the chance the higher the hit ratio

@@ -149,13 +149,14 @@ class Battle(pygame.sprite.Sprite):
         self.trapped_name_p1 = ""
         self.trapped_counter_p1 = 0
         self.seeded_p1 = False
+        self.p1_invulnerable = False
 
 
 
         # ==========================================
         # 9. OPPONENT (POKEMON 2) SPECIFIC BATTLE STATES
         # ==========================================
-        self.pokemon_list = ["blastoise"] #"pidgeot","charizard","venusaur","blastoise","butterfree","raichu",
+        self.pokemon_list = ["machamp"] #"pidgeot","charizard","venusaur","blastoise","butterfree","raichu",
         self.opponent_name = random.choice(self.pokemon_list)
 
         # test opponent pokemon, with animation when entering
@@ -193,6 +194,7 @@ class Battle(pygame.sprite.Sprite):
         self.trapped_counter_p2 = 0 
         self.seeded_p2 = False
         self.seed_animation_transition = False
+        self.p2_invulnerable = False
 
         # ==========================================
         # 10. WEATHER TURN COUNTS
@@ -324,7 +326,7 @@ class Battle(pygame.sprite.Sprite):
     def draw_pokemon(self, screen):
         #draw my pokemon
         pokemon_rect = self.pokemon1_sprite.get_rect(centerx=self.ground_player_rect.centerx + 160, bottom= self.bottom)
-        if (not self.opponent_turn or self.animator.frame == 0 and self.animator.current_loaded_move not in ("body slam","submission","double-edge","take down")) and not self.pokemon1_fainted: # this prevents the tackle not flashing bug when p2 attack p1
+        if (not self.opponent_turn or self.animator.frame == 0 and self.animator.current_loaded_move not in ("body slam","submission","double-edge","take down")) and not self.pokemon1_fainted and self.engine.charging_move not in ("fly","dig"): # this prevents the tackle not flashing bug when p2 attack p1
             screen.blit(self.pokemon1_sprite, pokemon_rect)
 
         elif self.pokemon1_fainted:
@@ -570,6 +572,12 @@ class Battle(pygame.sprite.Sprite):
 
                     elif self.engine.charging_move == "solar beam":
                         full_text = f"{self.pokemon_name.capitalize()} took in the sunlight!"
+
+                    elif self.engine.charging_move == "fly":
+                        full_text =  f"{self.pokemon_name.capitalize()} soared up high!"
+
+                    elif self.engine.charging_move == "dig":
+                        full_text = f"{self.pokemon_name.capitalize()} dug down!"
                 else:
                     if self.pokemon1_current_status != "sleep":
                         full_text = f"{self.pokemon_name.capitalize()} used {self.chosen_move}!"
@@ -633,6 +641,8 @@ class Battle(pygame.sprite.Sprite):
                         #CHECK ACCURACY
                         if self.move_hit is None and not self.move_done and self.pokemon1_current_status !="sleep":
                             self.move_hit = self.engine.check_accuracy()
+                            if self.move_hit is None: # FOR CANT MISS MOVE
+                                self.move_hit = True
 
                             if self.multi_turn_move_charged == 0 and self.engine.charging_move != "": # no need to check accuracy in the intermediate turn of the multi move charge
                                 self.move_hit = True
@@ -714,10 +724,12 @@ class Battle(pygame.sprite.Sprite):
                                     if self.engine.charging_move != "" and self.multi_turn_move_charged == 0:
                                             self.damage = 0
                                             self.multi_turn_move_charged = 1
+                                            self.p1_invulnerable = True
 
                                     elif self.engine.charging_move != "" and self.multi_turn_move_charged == 1:
                                             self.multi_turn_move_charged = 0
                                             self.engine.charging_move = ""
+                                            self.p1_invulnerable = False
 
 
                                     # DAMAGE, RECOIL, SECONDARY EFFECT AND HEAL
@@ -1041,7 +1053,7 @@ class Battle(pygame.sprite.Sprite):
                     self.hover = 0
                     print(self.engine.stages_pokemon1)
                     print(self.engine.stages_pokemon2)
-                    print("hello world")
+
 
             # DO THE WEATHER, STATUS
             if self.turn_done:
@@ -1066,7 +1078,7 @@ class Battle(pygame.sprite.Sprite):
 
 
     def run_opponent_turn(self, screen, pokemon_rect):
-        move_list = ["body slam","hydro pump"]  # hahah
+        move_list = ["tackle"]  # hahah
         if self.pokemon2_chosen_move == "":
             self.pokemon2_chosen_move = random.choice(move_list)
    
@@ -1163,7 +1175,14 @@ class Battle(pygame.sprite.Sprite):
                 # CHECK ACCURACY (SKIP IF POKEMON IS SLEEPING)
                 if not self.opponent_move_hit and self.pokemon2_current_status != "sleep": 
                     self.message_queue.append(f"{self.opponent_name.capitalize()} used {self.pokemon2_chosen_move.capitalize()}!")
+
+                    # CHECK ACCURACY
                     self.opponent_move_hit = self.engine.check_accuracy()
+                    if self.opponent_move_hit is None:
+                        self.opponent_move_hit = True
+                    elif self.opponent_move_hit is not None and self.p1_invulnerable:
+                        self.opponent_move_hit = False
+
 
 
             # PLAY ANIMATION

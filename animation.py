@@ -73,6 +73,8 @@ class BattleAnimation:
             "fire spin": (self._load_fire_spin, self.anim_fire_spin),
             "wrap": (self._load_wrap, self.anim_wrap),
             "leech seed": (self._load_leech_seed, self.anim_leech_seed),
+            "dig": (self._load_dig, self.anim_dig),
+            "fly": (self._load_fly, self.anim_fly),
 
         }
 
@@ -449,6 +451,14 @@ class BattleAnimation:
         self.state["sound"] = pygame.mixer.Sound('move_sprites/leech_seed/leech_seed.mp3')
         self.state["seed"] = seed
         self.state["sprouts"] = [sprout1, sprout2]
+        self.state["start"] = None
+
+    def _load_dig(self, name):
+        self.state["sound"] = pygame.mixer.Sound('move_sprites/earthquake/earthquake.mp3')
+        self.state["start"] = None
+
+    def _load_fly(self, name):
+        self.state["sound"] = pygame.mixer.Sound('move_sprites/fly/fly.mp3')
         self.state["start"] = None
 
 
@@ -2250,3 +2260,122 @@ class BattleAnimation:
             self.current_loaded_move = None
             s["start"] = None
             return True
+        
+
+    def anim_dig(self, move_name, screen, opponent_sprite, opponent_rect, my_sprite, my_rect):
+        s = self.state
+        elapsed = self._start_animation(True)
+
+        TRAVEL_DURATION = 1000
+        ERUPTION_DURATION = 800
+
+        
+        if elapsed < TRAVEL_DURATION + ERUPTION_DURATION:
+            screen.blit(opponent_sprite, opponent_rect)
+
+        #TRAVEL PHASE
+        if elapsed < TRAVEL_DURATION:
+            progress = elapsed / TRAVEL_DURATION
+            start_x, start_y = my_rect.centerx, my_rect.bottom - 10
+            end_x, end_y = opponent_rect.centerx, opponent_rect.bottom - 10
+            
+            # Interpolate coordinates along the screen ground coordinate line
+            current_x = int(start_x + (end_x - start_x) * progress)
+            current_y = int(start_y + (end_y - start_y) * progress)
+
+            # Main traveling dirt mound layers
+            pygame.draw.ellipse(screen, (101, 67, 33), (current_x - 35, current_y - 15, 70, 30))
+            pygame.draw.ellipse(screen, (139, 69, 19), (current_x - 22, current_y - 18, 44, 24))
+
+            # Flicker minor dirt debris elements near the moving mound
+            random.seed(elapsed // 40)
+            for _ in range(6):
+                offset_x = random.randint(-18, 18)
+                offset_y = random.randint(-12, 6)
+                size = random.randint(3, 6)
+                pygame.draw.circle(screen, (80, 50, 20), (current_x + offset_x, current_y + offset_y), size)
+
+            return False
+
+        # ERRUPTION PHASE
+        elif elapsed < TRAVEL_DURATION + ERUPTION_DURATION:
+            eruption_elapsed = elapsed - TRAVEL_DURATION
+            progress = eruption_elapsed / ERUPTION_DURATION
+            
+            base_x = opponent_rect.centerx
+            base_y = opponent_rect.bottom - 10
+
+            # Growing shockwave ring on the floor base
+            ring_radius = int(progress * 60)
+            if ring_radius > 5:
+                pygame.draw.ellipse(screen, (139, 69, 19), (base_x - ring_radius, base_y - int(ring_radius / 2), ring_radius * 2, ring_radius), 2)
+
+            # Erupting dirt debris elements shooting upward (deterministic seed)
+            random.seed(42)
+            for i in range(14):
+                angle = random.uniform(math.pi, 2 * math.pi)  # Upward semicircle arc arc
+                speed = random.uniform(120, 280)
+                dist = speed * progress
+                
+                # Apply gravity effect pulling particles back down over time
+                gravity = 250 * (progress ** 2)
+                
+                px = int(base_x + math.cos(angle) * dist)
+                py = int(base_y + math.sin(angle) * dist + gravity)
+                
+                size = random.randint(4, 11)
+                color = random.choice([(101, 67, 33), (139, 69, 19), (80, 50, 20)])
+                pygame.draw.circle(screen, color, (px, py), size)
+
+            return False
+
+       # FLASH
+        else:
+            done = self._flash_phase(screen, opponent_sprite, opponent_rect)
+            if done:
+                s["start"] = None
+            return done
+        
+
+    def anim_fly(self, move_name, screen, opponent_sprite, opponent_rect, my_sprite, my_rect):
+        s = self.state
+        elapsed = self._start_animation(True)
+
+        DESCENT_DURATION = 500
+
+        if elapsed < DESCENT_DURATION:
+            screen.blit(opponent_sprite, opponent_rect)
+
+        # ------------------------------------------------------------------ #
+        #  1. DESCENT PHASE: Dive bomb from the top onto the opponent        #
+        # ------------------------------------------------------------------ #
+        if elapsed < DESCENT_DURATION:
+            progress = elapsed / DESCENT_DURATION
+
+            # Ground shadow grows rapidly beneath the opponent target
+            shadow_w = int(opponent_rect.width * (progress * 1.3))
+            shadow_h = int(14 * (progress * 1.3))
+            pygame.draw.ellipse(screen, (20, 20, 20), (opponent_rect.centerx - shadow_w//2, opponent_rect.bottom - 6, shadow_w, shadow_h))
+
+            # Dive straight down onto opponent coordinates
+            start_y = -50
+            end_y = opponent_rect.centery
+            current_y = int(start_y + (end_y - start_y) * progress)
+
+            # Wind streaks
+            random.seed(elapsed // 30)
+            for _ in range(4):
+                line_x = opponent_rect.centerx + random.randint(-30, 30)
+                line_y = current_y + random.randint(-40, 10)
+                length = random.randint(20, 50)
+                pygame.draw.line(screen, (240, 240, 255), (line_x, line_y), (line_x, line_y + length), 2)
+
+            # Draw attacking dark blue circle silhouette
+            pygame.draw.circle(screen, (16, 44, 87), (opponent_rect.centerx, current_y), 24)
+            return False
+
+        else:
+            done = self._flash_phase(screen, opponent_sprite, opponent_rect)
+            if done:
+                s["start"] = None
+            return done
