@@ -1041,6 +1041,7 @@ class Battle(pygame.sprite.Sprite):
                     self.hover = 0
                     print(self.engine.stages_pokemon1)
                     print(self.engine.stages_pokemon2)
+                    print("hello world")
 
             # DO THE WEATHER, STATUS
             if self.turn_done:
