@@ -1,0 +1,7536 @@
+[
+  {
+    "name": "Bulbasaur",
+    "health": 45,
+    "attack": 49,
+    "defense": 49,
+    "sp_attack": 65,
+    "sp_defense": 65,
+    "speed": 45,
+    "weight_kg": 6.9,
+    "description": "A strange seed was planted on its back at birth. The plant sprouts and grows with this POKEMON.",
+    "type": [
+      "Grass",
+      "Poison"
+    ],
+    "abilities": [
+      "Overgrow",
+      "Chlorophyll"
+    ],
+    "ability_descriptions": {
+      "Overgrow": "Powers up Grass moves when HP is low.",
+      "Chlorophyll": "Boosts Speed in harsh sunlight."
+    },
+    "Learnable": [
+      "Agility",
+      "Swords Dance",
+      "Cut",
+      "Vine Whip",
+      "Tackle",
+      "Take Down",
+      "Double-Edge",
+      "Growl",
+      "Mega Drain",
+      "Leech Seed",
+      "Growth",
+      "Razor Leaf",
+      "Solar Beam",
+      "Poison Powder",
+      "Sleep Powder",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Ivysaur",
+    "health": 60,
+    "attack": 62,
+    "defense": 63,
+    "sp_attack": 80,
+    "sp_defense": 80,
+    "speed": 60,
+    "weight_kg": 13.0,
+    "description": "When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.",
+    "type": [
+      "Grass",
+      "Poison"
+    ],
+    "abilities": [
+      "Overgrow",
+      "Chlorophyll"
+    ],
+    "ability_descriptions": {
+      "Overgrow": "Powers up Grass moves when HP is low.",
+      "Chlorophyll": "Boosts Speed in harsh sunlight."
+    },
+    "Learnable": [
+      "Swords Dance",
+      "Cut",
+      "Vine Whip",
+      "Tackle",
+      "Take Down",
+      "Double-Edge",
+      "Growl",
+      "Mega Drain",
+      "Leech Seed",
+      "Growth",
+      "Razor Leaf",
+      "Solar Beam",
+      "Poison Powder",
+      "Sleep Powder",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Venusaur",
+    "health": 80,
+    "attack": 82,
+    "defense": 83,
+    "sp_attack": 100,
+    "sp_defense": 100,
+    "speed": 80,
+    "weight_kg": 100.0,
+    "description": "The plant blooms by absorbing solar energy. It moves more nimbly on sunny days.",
+    "type": [
+      "Grass",
+      "Poison"
+    ],
+    "abilities": [
+      "Overgrow",
+      "Chlorophyll"
+    ],
+    "ability_descriptions": {
+      "Overgrow": "Powers up Grass moves when HP is low.",
+      "Chlorophyll": "Boosts Speed in harsh sunlight."
+    },
+    "Learnable": [
+      "Sunny Day",
+      "Swords Dance",
+      "Cut",
+      "Vine Whip",
+      "Tackle",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Hyper Beam",
+      "Growl",
+      "Absorb",
+      "Mega Drain",
+      "Leech Seed",
+      "Growth",
+      "Razor Leaf",
+      "Solar Beam",
+      "Poison Powder",
+      "Stun Spore",
+      "Sleep Powder",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Charmander",
+    "health": 39,
+    "attack": 52,
+    "defense": 43,
+    "sp_attack": 60,
+    "sp_defense": 50,
+    "speed": 65,
+    "weight_kg": 8.5,
+    "description": "Obviously prefers hot places. When it rains, steam is said to spout from the tip of its tail.",
+    "type": [
+      "Fire"
+    ],
+    "abilities": [
+      "Blaze",
+      "Solar Power"
+    ],
+    "ability_descriptions": {
+      "Blaze": "Powers up Fire moves when HP is low.",
+      "Solar Power": "In harsh sunlight, boosts Sp. Atk but loses HP every turn."
+    },
+    "Learnable": [
+      "Mega Punch",
+      "Fire Punch",
+      "Scratch",
+      "Swords Dance",
+      "Cut",
+      "Mega Kick",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Bite",
+      "Growl",
+      "Ember",
+      "Flamethrower",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Strength",
+      "Dragon Rage",
+      "Fire Spin",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Reflect",
+      "Bide",
+      "Swift",
+      "Skull Bash",
+      "Slash",
+      "Substitute",
+      "Fire Blast"
+    ]
+  },
+  {
+    "name": "Charmeleon",
+    "health": 58,
+    "attack": 64,
+    "defense": 58,
+    "sp_attack": 80,
+    "sp_defense": 65,
+    "speed": 80,
+    "weight_kg": 19.0,
+    "description": "When it swings its burning tail, it elevates the temperature to unbearably high levels.",
+    "type": [
+      "Fire"
+    ],
+    "abilities": [
+      "Blaze",
+      "Solar Power"
+    ],
+    "ability_descriptions": {
+      "Blaze": "Powers up Fire moves when HP is low.",
+      "Solar Power": "In harsh sunlight, boosts Sp. Atk but loses HP every turn."
+    },
+    "Learnable": [
+      "Mega Punch",
+      "Fire Punch",
+      "Scratch",
+      "Swords Dance",
+      "Cut",
+      "Mega Kick",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Bite",
+      "Growl",
+      "Ember",
+      "Flamethrower",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Strength",
+      "Dragon Rage",
+      "Fire Spin",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Reflect",
+      "Bide",
+      "Swift",
+      "Skull Bash",
+      "Slash",
+      "Substitute",
+      "Fire Blast"
+    ]
+  },
+  {
+    "name": "Charizard",
+    "health": 78,
+    "attack": 84,
+    "defense": 78,
+    "sp_attack": 109,
+    "sp_defense": 85,
+    "speed": 100,
+    "weight_kg": 90.5,
+    "description": "Spits fire that is hot enough to melt boulders. Known to cause forest fires unintentionally.",
+    "type": [
+      "Fire",
+      "Flying"
+    ],
+    "abilities": [
+      "Blaze",
+      "Solar Power"
+    ],
+    "ability_descriptions": {
+      "Blaze": "Powers up Fire moves when HP is low.",
+      "Solar Power": "In harsh sunlight, boosts Sp. Atk but loses HP every turn."
+    },
+    "Learnable": [
+      "Sunny Day",
+      "Mega Punch",
+      "Fire Punch",
+      "Scratch",
+      "Swords Dance",
+      "Cut",
+      "Fly",
+      "Mega Kick",
+      "Hyper Beam",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Bite",
+      "Growl",
+      "Ember",
+      "Flamethrower",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Strength",
+      "Dragon Rage",
+      "Fire Spin",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Reflect",
+      "Bide",
+      "Swift",
+      "Skull Bash",
+      "Slash",
+      "Substitute",
+      "Fire Blast"
+    ]
+  },
+  {
+    "name": "Squirtle",
+    "health": 44,
+    "attack": 48,
+    "defense": 65,
+    "sp_attack": 50,
+    "sp_defense": 64,
+    "speed": 43,
+    "weight_kg": 9.0,
+    "description": "After birth, its back swells and hardens into a shell. Powerfully sprays foam from its mouth.",
+    "type": [
+      "Water"
+    ],
+    "abilities": [
+      "Torrent",
+      "Rain Dish"
+    ],
+    "ability_descriptions": {
+      "Torrent": "Powers up Water moves when HP is low.",
+      "Rain Dish": "Gradually regains HP when it is raining."
+    },
+    "Learnable": [
+      "Mega Punch",
+      "Ice Punch",
+      "Tackle",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Tail Whip",
+      "Bite",
+      "Withdraw",
+      "Water Gun",
+      "Hydro Pump",
+      "Surf",
+      "Ice Beam",
+      "Blizzard",
+      "Bubble Beam",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Strength",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Reflect",
+      "Bide",
+      "Skull Bash",
+      "Substitute",
+      "Mega Kick"
+    ]
+  },
+  {
+    "name": "Wartortle",
+    "health": 59,
+    "attack": 63,
+    "defense": 80,
+    "sp_attack": 65,
+    "sp_defense": 80,
+    "speed": 58,
+    "weight_kg": 22.5,
+    "description": "Often hides in water to stalk unwary prey. For swimming fast, it moves its ears to maintain balance.",
+    "type": [
+      "Water"
+    ],
+    "abilities": [
+      "Torrent",
+      "Rain Dish"
+    ],
+    "ability_descriptions": {
+      "Torrent": "Powers up Water moves when HP is low.",
+      "Rain Dish": "Gradually regains HP when it is raining."
+    },
+    "Learnable": [
+      "Mega Punch",
+      "Ice Punch",
+      "Tackle",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Tail Whip",
+      "Bite",
+      "Withdraw",
+      "Water Gun",
+      "Hydro Pump",
+      "Surf",
+      "Ice Beam",
+      "Blizzard",
+      "Bubble Beam",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Strength",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Reflect",
+      "Bide",
+      "Skull Bash",
+      "Substitute",
+      "Mega Kick"
+    ]
+  },
+  {
+    "name": "Blastoise",
+    "health": 79,
+    "attack": 83,
+    "defense": 100,
+    "sp_attack": 85,
+    "sp_defense": 105,
+    "speed": 78,
+    "weight_kg": 85.5,
+    "description": "A brutal POKEMON with pressurized water jets on its shell. They are used for high speed tackles.",
+    "type": [
+      "Water"
+    ],
+    "abilities": [
+      "Torrent",
+      "Rain Dish"
+    ],
+    "ability_descriptions": {
+      "Torrent": "Powers up Water moves when HP is low.",
+      "Rain Dish": "Gradually regains HP when it is raining."
+    },
+    "Learnable": [
+      "Rain Dance",
+      "Mega Punch",
+      "Ice Punch",
+      "Fire Punch",
+      "Hyper Beam",
+      "Tackle",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Tail Whip",
+      "Bite",
+      "Withdraw",
+      "Water Gun",
+      "Hydro Pump",
+      "Surf",
+      "Ice Beam",
+      "Blizzard",
+      "Bubble Beam",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Strength",
+      "Fissure",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Reflect",
+      "Bide",
+      "Skull Bash",
+      "Substitute",
+      "Mega Kick"
+    ]
+  },
+  {
+    "name": "Caterpie",
+    "health": 45,
+    "attack": 30,
+    "defense": 35,
+    "sp_attack": 20,
+    "sp_defense": 20,
+    "speed": 45,
+    "weight_kg": 2.9,
+    "description": "Its short feet are tipped with suction pads that enable it to tirelessly climb slopes and walls.",
+    "type": [
+      "Bug"
+    ],
+    "abilities": [
+      "Shield Dust",
+      "Run Away"
+    ],
+    "ability_descriptions": {
+      "Shield Dust": "Blocks the additional effects of incoming attacks.",
+      "Run Away": "Enables a sure escape from wild battles."
+    },
+    "Learnable": [
+      "Tackle",
+      "String Shot"
+    ]
+  },
+  {
+    "name": "Metapod",
+    "health": 50,
+    "attack": 20,
+    "defense": 55,
+    "sp_attack": 25,
+    "sp_defense": 25,
+    "speed": 30,
+    "weight_kg": 9.9,
+    "description": "This POKEMON is vulnerable to attack while its shell is soft, exposing its weak and tender body.",
+    "type": [
+      "Bug"
+    ],
+    "abilities": [
+      "Shed Skin"
+    ],
+    "ability_descriptions": {
+      "Shed Skin": "May cure its own status conditions by shedding skin."
+    },
+    "Learnable": [
+      "Harden"
+    ]
+  },
+  {
+    "name": "Butterfree",
+    "health": 60,
+    "attack": 45,
+    "defense": 50,
+    "sp_attack": 90,
+    "sp_defense": 80,
+    "speed": 70,
+    "weight_kg": 32.0,
+    "description": "In battle, it flaps its wings at high speed to release highly toxic dust into the air.",
+    "type": [
+      "Bug",
+      "Flying"
+    ],
+    "abilities": [
+      "Compound Eyes",
+      "Tinted Lens"
+    ],
+    "ability_descriptions": {
+      "Compound Eyes": "Boosts accuracy.",
+      "Tinted Lens": "Powers up \"not very effective\" moves."
+    },
+    "Learnable": [
+      "Razor Wind",
+      "Whirlwind",
+      "Gust",
+      "Take Down",
+      "Double-Edge",
+      "Mega Drain",
+      "Solar Beam",
+      "Poison Powder",
+      "Stun Spore",
+      "Sleep Powder",
+      "Psybeam",
+      "Hyper Beam",
+      "Psychic",
+      "Teleport",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Reflect",
+      "Bide",
+      "Swift",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Weedle",
+    "health": 40,
+    "attack": 35,
+    "defense": 30,
+    "sp_attack": 20,
+    "sp_defense": 20,
+    "speed": 50,
+    "weight_kg": 3.2,
+    "description": "Often found in forests, eating leaves. It has a sharp venomous stinger on its head.",
+    "type": [
+      "Bug",
+      "Poison"
+    ],
+    "abilities": [
+      "Shield Dust",
+      "Run Away"
+    ],
+    "ability_descriptions": {
+      "Shield Dust": "Blocks the additional effects of incoming attacks.",
+      "Run Away": "Enables a sure escape from wild battles."
+    },
+    "Learnable": [
+      "Poison Stinger",
+      "String Shot"
+    ]
+  },
+  {
+    "name": "Kakuna",
+    "health": 45,
+    "attack": 25,
+    "defense": 50,
+    "sp_attack": 25,
+    "sp_defense": 25,
+    "speed": 35,
+    "weight_kg": 10.0,
+    "description": "Almost incapable of moving, this POKEMON can only harden its shell to protect itself from predators.",
+    "type": [
+      "Bug",
+      "Poison"
+    ],
+    "abilities": [
+      "Shed Skin"
+    ],
+    "ability_descriptions": {
+      "Shed Skin": "May cure its own status conditions by shedding skin."
+    },
+    "Learnable": [
+      "Harden"
+    ]
+  },
+  {
+    "name": "Beedrill",
+    "health": 65,
+    "attack": 90,
+    "defense": 40,
+    "sp_attack": 45,
+    "sp_defense": 80,
+    "speed": 75,
+    "weight_kg": 29.5,
+    "description": "Flies at high speed and attacks using its large venomous stingers on its forelegs and tail.",
+    "type": [
+      "Bug",
+      "Poison"
+    ],
+    "abilities": [
+      "Swarm",
+      "Sniper"
+    ],
+    "ability_descriptions": {
+      "Swarm": "Powers up Bug moves when HP is low.",
+      "Sniper": "Powers up critical hits."
+    },
+    "Learnable": [
+      "Swords Dance",
+      "Cut",
+      "Fury Attack",
+      "Take Down",
+      "Double-Edge",
+      "Poison Sting",
+      "Twineedle",
+      "Pin Missile",
+      "Hyper Beam",
+      "Mega Drain",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Swift",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Pidgey",
+    "health": 40,
+    "attack": 45,
+    "defense": 40,
+    "sp_attack": 35,
+    "sp_defense": 35,
+    "speed": 56,
+    "weight_kg": 1.8,
+    "description": "A common sight in forests and woods. It flaps its wings at ground level to kick up blinding sand.",
+    "type": [
+      "Normal",
+      "Flying"
+    ],
+    "abilities": [
+      "Keen Eye",
+      "Tangled Feet",
+      "Big Pecks"
+    ],
+    "ability_descriptions": {
+      "Keen Eye": "Prevents accuracy from being lowered.",
+      "Tangled Feet": "Raises evasion when confused.",
+      "Big Pecks": "Prevents Defense from being lowered."
+    },
+    "Learnable": [
+      "Razor Wind",
+      "Whirlwind",
+      "Gust",
+      "Wing Attack",
+      "Sand Attack",
+      "Take Down",
+      "Double-Edge",
+      "Quick Attack",
+      "Agility",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Swift",
+      "Sky Attack",
+      "Mirror Move",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Pidgeotto",
+    "health": 63,
+    "attack": 60,
+    "defense": 55,
+    "sp_attack": 50,
+    "sp_defense": 50,
+    "speed": 71,
+    "weight_kg": 30.0,
+    "description": "Very protective of its large territory, this POKEMON will fiercely peck at any intruder.",
+    "type": [
+      "Normal",
+      "Flying"
+    ],
+    "abilities": [
+      "Keen Eye",
+      "Tangled Feet",
+      "Big Pecks"
+    ],
+    "ability_descriptions": {
+      "Keen Eye": "Prevents accuracy from being lowered.",
+      "Tangled Feet": "Raises evasion when confused.",
+      "Big Pecks": "Prevents Defense from being lowered."
+    },
+    "Learnable": [
+      "Razor Wind",
+      "Whirlwind",
+      "Gust",
+      "Wing Attack",
+      "Sand Attack",
+      "Take Down",
+      "Double-Edge",
+      "Quick Attack",
+      "Agility",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Swift",
+      "Sky Attack",
+      "Mirror Move",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Pidgeot",
+    "health": 83,
+    "attack": 80,
+    "defense": 75,
+    "sp_attack": 70,
+    "sp_defense": 70,
+    "speed": 101,
+    "weight_kg": 39.5,
+    "description": "When hunting, it skims the surface of water at high speed to pick off unwary prey such as Magikarp.",
+    "type": [
+      "Normal",
+      "Flying"
+    ],
+    "abilities": [
+      "Keen Eye",
+      "Tangled Feet",
+      "Big Pecks"
+    ],
+    "ability_descriptions": {
+      "Keen Eye": "Prevents accuracy from being lowered.",
+      "Tangled Feet": "Raises evasion when confused.",
+      "Big Pecks": "Prevents Defense from being lowered."
+    },
+    "Learnable": [
+      "Razor Wind",
+      "Whirlwind",
+      "Gust",
+      "Wing Attack",
+      "Fly",
+      "Hyper Beam",
+      "Sand Attack",
+      "Take Down",
+      "Double-Edge",
+      "Quick Attack",
+      "Agility",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Swift",
+      "Sky Attack",
+      "Mirror Move",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Rattata",
+    "health": 30,
+    "attack": 56,
+    "defense": 35,
+    "sp_attack": 25,
+    "sp_defense": 35,
+    "speed": 72,
+    "weight_kg": 3.5,
+    "description": "Bites anything when it attacks. Small and very quick, it is a common sight in many places.",
+    "type": [
+      "Normal"
+    ],
+    "abilities": [
+      "Hustle",
+      "Run Away",
+      "Guts"
+    ],
+    "ability_descriptions": {
+      "Run Away": "Enables a sure escape from wild battles.",
+      "Guts": "Boosts Attack if afflicted with a status condition.",
+      "Hustle": "Boosts Attack but lowers accuracy."
+    },
+    "Learnable": [
+      "Tackle",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Tail Whip",
+      "Bite",
+      "Water Gun",
+      "Blizzard",
+      "Bubble Beam",
+      "Ice Beam",
+      "Quick Attack",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Swift",
+      "Skull Bash",
+      "Super Fang",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Raticate",
+    "health": 55,
+    "attack": 81,
+    "defense": 60,
+    "sp_attack": 50,
+    "sp_defense": 70,
+    "speed": 97,
+    "weight_kg": 18.5,
+    "description": "It uses its whiskers to maintain its balance. It apparently slows down if they are cut off.",
+    "type": [
+      "Normal"
+    ],
+    "abilities": [
+      "Hustle",
+      "Run Away",
+      "Guts"
+    ],
+    "ability_descriptions": {
+      "Run Away": "Enables a sure escape from wild battles.",
+      "Guts": "Boosts Attack if afflicted with a status condition.",
+      "Hustle": "Boosts Attack but lowers accuracy."
+    },
+    "Learnable": [
+      "Cut",
+      "Hyper Beam",
+      "Tackle",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Tail Whip",
+      "Bite",
+      "Water Gun",
+      "Blizzard",
+      "Bubble Beam",
+      "Ice Beam",
+      "Quick Attack",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Swift",
+      "Skull Bash",
+      "Super Fang",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Spearow",
+    "health": 40,
+    "attack": 60,
+    "defense": 30,
+    "sp_attack": 31,
+    "sp_defense": 31,
+    "speed": 70,
+    "weight_kg": 2.0,
+    "description": "Eats bugs in grassy areas. It has to flap its short wings at high speed to stay airborne.",
+    "type": [
+      "Normal",
+      "Flying"
+    ],
+    "abilities": [
+      "Sniper",
+      "Keen Eye"
+    ],
+    "ability_descriptions": {
+      "Keen Eye": "Prevents accuracy from being lowered.",
+      "Sniper": "Powers up critical hits."
+    },
+    "Learnable": [
+      "Razor Wind",
+      "Whirlwind",
+      "Take Down",
+      "Double-Edge",
+      "Growl",
+      "Peck",
+      "Mirror Move",
+      "Agility",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Swift",
+      "Sky Attack",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Fearow",
+    "health": 65,
+    "attack": 90,
+    "defense": 65,
+    "sp_attack": 61,
+    "sp_defense": 61,
+    "speed": 100,
+    "weight_kg": 38.0,
+    "description": "With its huge and magnificent wings, it can keep aloft without ever having to land for rest.",
+    "type": [
+      "Normal",
+      "Flying"
+    ],
+    "abilities": [
+      "Sniper",
+      "Keen Eye"
+    ],
+    "ability_descriptions": {
+      "Keen Eye": "Prevents accuracy from being lowered.",
+      "Sniper": "Powers up critical hits."
+    },
+    "Learnable": [
+      "Razor Wind",
+      "Whirlwind",
+      "Fly",
+      "Hyper Beam",
+      "Fury Attack",
+      "Take Down",
+      "Double-Edge",
+      "Growl",
+      "Peck",
+      "Drill Peck",
+      "Mirror Move",
+      "Agility",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Swift",
+      "Sky Attack",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Ekans",
+    "health": 35,
+    "attack": 60,
+    "defense": 44,
+    "sp_attack": 40,
+    "sp_defense": 54,
+    "speed": 55,
+    "weight_kg": 6.9,
+    "description": "Moves silently and stealthily. Eats the eggs of birds, such as PIDGEY and SPEARROW, whole.",
+    "type": [
+      "Poison"
+    ],
+    "abilities": [
+      "Intimidate",
+      "Shed Skin",
+      "Unnerve"
+    ],
+    "ability_descriptions": {
+      "Intimidate": "Lowers opponents' Attack stat upon entering battle.",
+      "Shed Skin": "May cure its own status conditions by shedding skin.",
+      "Unnerve": "Prevents opponents from eating Berries."
+    },
+    "Learnable": [
+      "Wrap",
+      "Poison Sting",
+      "Bite",
+      "Glare",
+      "Screech",
+      "Acid",
+      "Dig",
+      "Mega Drain",
+      "Toxic",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Arbok",
+    "health": 60,
+    "attack": 95,
+    "defense": 69,
+    "sp_attack": 65,
+    "sp_defense": 79,
+    "speed": 80,
+    "weight_kg": 65.0,
+    "description": "It is rumored that the ferocious warning markings on its belly differ from area to area.",
+    "type": [
+      "Poison"
+    ],
+    "abilities": [
+      "Intimidate",
+      "Shed Skin",
+      "Unnerve"
+    ],
+    "ability_descriptions": {
+      "Intimidate": "Lowers opponents' Attack stat upon entering battle.",
+      "Shed Skin": "May cure its own status conditions by shedding skin.",
+      "Unnerve": "Prevents opponents from eating Berries."
+    },
+    "Learnable": [
+      "Wrap",
+      "Poison Sting",
+      "Bite",
+      "Glare",
+      "Screech",
+      "Acid",
+      "Dig",
+      "Mega Drain",
+      "Fissure",
+      "Hyper Beam",
+      "Toxic",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Pikachu",
+    "health": 35,
+    "attack": 55,
+    "defense": 40,
+    "sp_attack": 50,
+    "sp_defense": 50,
+    "speed": 90,
+    "weight_kg": 6.0,
+    "description": "When several of these POKEMON gather, their electricity can build and cause lightning storms.",
+    "type": [
+      "Electric"
+    ],
+    "abilities": [
+      "Static",
+      "Lightning Rod"
+    ],
+    "ability_descriptions": {
+      "Static": "Contact with the Pokemon may cause paralysis.",
+      "Lightning Rod": "Draws in Electric moves to boost its own Sp. Atk."
+    },
+    "Learnable": [
+      "Mega Punch",
+      "Pay Day",
+      "Slam",
+      "Mega Kick",
+      "Double-Edge",
+      "Tail Whip",
+      "Growl",
+      "Thunder Shock",
+      "Thunderbolt",
+      "Thunder Wave",
+      "Thunder",
+      "Surf",
+      "Agility",
+      "Quick Attack",
+      "Toxic",
+      "Body Slam",
+      "Take Down",
+      "Submission",
+      "Seismic Toss",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Swift",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Raichu",
+    "health": 66,
+    "attack": 90,
+    "defense": 55,
+    "sp_attack": 90,
+    "sp_defense": 80,
+    "speed": 110,
+    "weight_kg": 30.0,
+    "description": "Its long tail serves as a ground to protect itself from its own high-voltage power.",
+    "type": [
+      "Electric"
+    ],
+    "abilities": [
+      "Lightning Rod",
+      "Static"
+    ],
+    "ability_descriptions": {
+      "Static": "Contact with the Pokemon may cause paralysis.",
+      "Lightning Rod": "Draws in Electric moves to boost its own Sp. Atk."
+    },
+    "Learnable": [
+      "Sandstorm",
+      "Mega Punch",
+      "Pay Day",
+      "Hyper Beam",
+      "Slam",
+      "Mega Kick",
+      "Double-Edge",
+      "Tail Whip",
+      "Growl",
+      "Thunder Shock",
+      "Thunderbolt",
+      "Thunder Wave",
+      "Thunder",
+      "Surf",
+      "Agility",
+      "Quick Attack",
+      "Toxic",
+      "Body Slam",
+      "Take Down",
+      "Submission",
+      "Seismic Toss",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Swift",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Sandshrew",
+    "health": 50,
+    "attack": 75,
+    "defense": 85,
+    "sp_attack": 20,
+    "sp_defense": 30,
+    "speed": 40,
+    "weight_kg": 12.0,
+    "description": "Burrows deep underground in arid locations far from water. It only emerges to hunt for food.",
+    "type": [
+      "Ground"
+    ],
+    "abilities": [
+      "Sand Veil",
+      "Sand Rush"
+    ],
+    "ability_descriptions": {
+      "Sand Veil": "Boosts evasion in a sandstorm.",
+      "Sand Rush": "Boosts Speed in a sandstorm."
+    },
+    "Learnable": [
+      "Sandstorm",
+      "Scratch",
+      "Swords Dance",
+      "Cut",
+      "Poison Sting",
+      "Sand Attack",
+      "Slash",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Submission",
+      "Seismic Toss",
+      "Strength",
+      "Mega Drain",
+      "Dig",
+      "Earthquake",
+      "Fissure",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Swift",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Sandslash",
+    "health": 75,
+    "attack": 100,
+    "defense": 110,
+    "sp_attack": 45,
+    "sp_defense": 55,
+    "speed": 65,
+    "weight_kg": 29.5,
+    "description": "Curls up into a thorny ball when threatened. It can roll while curled up to attack or escape.",
+    "type": [
+      "Ground"
+    ],
+    "abilities": [
+      "Sand Rush",
+      "Sand Veil"
+    ],
+    "ability_descriptions": {
+      "Sand Veil": "Boosts evasion in a sandstorm.",
+      "Sand Rush": "Boosts Speed in a sandstorm."
+    },
+    "Learnable": [
+      "Sandstorm",
+      "Scratch",
+      "Swords Dance",
+      "Cut",
+      "Poison Sting",
+      "Sand Attack",
+      "Hyper Beam",
+      "Slash",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Submission",
+      "Seismic Toss",
+      "Strength",
+      "Mega Drain",
+      "Dig",
+      "Earthquake",
+      "Fissure",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Swift",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Nidoran",
+    "health": 55,
+    "attack": 47,
+    "defense": 52,
+    "sp_attack": 40,
+    "sp_defense": 40,
+    "speed": 41,
+    "weight_kg": 7.0,
+    "description": "Although small, its venomous barbs make this POKEMON dangerous. The female has smaller horns.",
+    "type": [
+      "Poison"
+    ],
+    "abilities": [
+      "Poison Point",
+      "Rivalry",
+      "Hustle"
+    ],
+    "ability_descriptions": {
+      "Poison Point": "Contact with the Pokemon may poison the attacker.",
+      "Rivalry": "Deals more damage to same-gender opponents, less to opposite.",
+      "Hustle": "Boosts Attack but lowers accuracy."
+    },
+    "Learnable": [
+      "Scratch",
+      "Poison Sting",
+      "Tail Whip",
+      "Growl",
+      "Bite",
+      "Double Kick",
+      "Fury Swipes",
+      "Blizzard",
+      "Thunder",
+      "Water Gun",
+      "Ice Beam",
+      "Bubble Beam",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Nidorina",
+    "health": 70,
+    "attack": 62,
+    "defense": 67,
+    "sp_attack": 55,
+    "sp_defense": 55,
+    "speed": 56,
+    "weight_kg": 20.0,
+    "description":"The female's horn develops slowly. Prefers physical attacks such as clawing and biting.",
+    "type": [
+      "Poison"
+    ],
+    "abilities": [
+      "Poison Point",
+      "Rivalry",
+      "Hustle"
+    ],
+    "ability_descriptions": {
+      "Poison Point": "Contact with the Pokemon may poison the attacker.",
+      "Rivalry": "Deals more damage to same-gender opponents, less to opposite.",
+      "Hustle": "Boosts Attack but lowers accuracy."
+    },
+    "Learnable": [
+      "Scratch",
+      "Poison Sting",
+      "Tail Whip",
+      "Growl",
+      "Bite",
+      "Double Kick",
+      "Fury Swipes",
+      "Blizzard",
+      "Thunder",
+      "Water Gun",
+      "Ice Beam",
+      "Bubble Beam",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Nidoqueen",
+    "health": 90,
+    "attack": 92,
+    "defense": 87,
+    "sp_attack": 75,
+    "sp_defense": 85,
+    "speed": 76,
+    "weight_kg": 60.0,
+    "description": "Its hard scales provide strong protection. It uses its hefty bulk to execute powerful moves.",
+    "type": [
+      "Poison",
+      "Ground"
+    ],
+    "abilities": [
+      "Poison Point",
+      "Sheer Force",
+      "Rivalry"
+    ],
+    "ability_descriptions": {
+      "Poison Point": "Contact with the Pokemon may poison the attacker.",
+      "Rivalry": "Deals more damage to same-gender opponents, less to opposite.",
+      "Sheer Force": "Removes additional move effects to increase power."
+    },
+    "Learnable": [
+      "Fire Punch",
+      "Mega Punch",
+      "Pay Day",
+      "Scratch",
+      "Poison Sting",
+      "Tail Whip",
+      "Growl",
+      "Bite",
+      "Double Kick",
+      "Fury Swipes",
+      "Blizzard",
+      "Thunder",
+      "Water Gun",
+      "Ice Beam",
+      "Bubble Beam",
+      "Hyper Beam",
+      "Mega Kick",
+      "Horn Drill",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Earthquake",
+      "Fissure",
+      "Surf",
+      "Strength",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Skull Bash",
+      "Substitute",
+      "Fire Blast"
+    ]
+  },
+  {
+    "name": "Nidoranmale",
+    "health": 46,
+    "attack": 57,
+    "defense": 40,
+    "sp_attack": 40,
+    "sp_defense": 40,
+    "speed": 50,
+    "weight_kg": 9.0,
+    "description": "Stiffens its ears to sense danger. The larger its horns, the more powerful its secreted venom.",
+    "type": [
+      "Poison"
+    ],
+    "abilities": [
+      "Poison Point",
+      "Rivalry",
+      "Hustle"
+    ],
+    "ability_descriptions": {
+      "Poison Point": "Contact with the Pokemon may poison the attacker.",
+      "Rivalry": "Deals more damage to same-gender opponents, less to opposite.",
+      "Hustle": "Boosts Attack but lowers accuracy."
+    },
+    "Learnable": [
+      "Horn Attack",
+      "Poison Sting",
+      "Fury Attack",
+      "Horn Drill",
+      "Double Kick",
+      "Blizzard",
+      "Thunder",
+      "Ice Beam",
+      "Water Gun",
+      "Bubble Beam",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Skull Bash",
+      "Substitute",
+      "Leer",
+      "Focus Energy"
+    ]
+  },
+  {
+    "name": "Nidorino",
+    "health": 61,
+    "attack": 72,
+    "defense": 57,
+    "sp_attack": 55,
+    "sp_defense": 55,
+    "speed": 65,
+    "weight_kg": 19.5,
+    "description": "An aggressive POKEMON that is quick to attack. The horn on its head secretes a powerful venom.",
+    "type": [
+      "Poison"
+    ],
+    "abilities": [
+      "Poison Point",
+      "Rivalry",
+      "Hustle"
+    ],
+    "ability_descriptions": {
+      "Poison Point": "Contact with the Pokemon may poison the attacker.",
+      "Rivalry": "Deals more damage to same-gender opponents, less to opposite.",
+      "Hustle": "Boosts Attack but lowers accuracy."
+    },
+    "Learnable": [
+      "Horn Attack",
+      "Poison Sting",
+      "Fury Attack",
+      "Horn Drill",
+      "Double Kick",
+      "Blizzard",
+      "Thunder",
+      "Ice Beam",
+      "Water Gun",
+      "Bubble Beam",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Skull Bash",
+      "Substitute",
+      "Leer",
+      "Focus Energy"
+    ]
+  },
+  {
+    "name": "Nidoking",
+    "health": 81,
+    "attack": 102,
+    "defense": 77,
+    "sp_attack": 85,
+    "sp_defense": 75,
+    "speed": 85,
+    "weight_kg": 62.0,
+    "description": "It uses its powerful tail in battle to smash, constrict, then break the prey's bones.",
+    "type": [
+      "Poison",
+      "Ground"
+    ],
+    "abilities": [
+      "Poison Point",
+      "Rivalry",
+      "Sheer Force"
+    ],
+    "ability_descriptions": {
+      "Poison Point": "Contact with the Pokemon may poison the attacker.",
+      "Rivalry": "Deals more damage to same-gender opponents, less to opposite.",
+      "Sheer Force": "Removes additional move effects to increase power."
+    },
+    "Learnable": [
+      "Mega Punch",
+      "Pay Day",
+      "Horn Attack",
+      "Poison Sting",
+      "Fury Attack",
+      "Horn Drill",
+      "Double Kick",
+      "Blizzard",
+      "Thunder",
+      "Ice Beam",
+      "Water Gun",
+      "Bubble Beam",
+      "Hyper Beam",
+      "Mega Kick",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Earthquake",
+      "Fissure",
+      "Surf",
+      "Strength",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Skull Bash",
+      "Substitute",
+      "Fire Blast",
+      "Leer",
+      "Focus Energy"
+    ]
+  },
+  {
+    "name": "Clefairy",
+    "health": 70,
+    "attack": 45,
+    "defense": 48,
+    "sp_attack": 60,
+    "sp_defense": 65,
+    "speed": 35,
+    "weight_kg": 7.5,
+    "description": "Its magical and cute appeal has many admirers. It is rare and found only in certain areas.",
+    "type": [
+      "Fairy"
+    ],
+    "abilities": [
+      "Magic Guard",
+      "Cute Charm",
+      "Friend Guard"
+    ],
+    "ability_descriptions": {
+      "Cute Charm": "Contact with the Pokemon may infatuate the attacker.",
+      "Magic Guard": "Only takes damage from direct attacks.",
+      "Friend Guard": "Reduces damage dealt to allies."
+    },
+    "Learnable": [
+      "Pound",
+      "Double Slap",
+      "Mega Punch",
+      "Fire Punch",
+      "Ice Punch",
+      "Thunder Punch",
+      "Mega Kick",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Growl",
+      "Sing",
+      "Water Gun",
+      "Blizzard",
+      "Bubble Beam",
+      "Ice Beam",
+      "Solar Beam",
+      "Thunderbolt",
+      "Thunder",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Toxic",
+      "Psychic",
+      "Teleport",
+      "Rage",
+      "Dig",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Metronome",
+      "Fire Blast",
+      "Skull Bash",
+      "Soft-Boiled",
+      "Tri Attack",
+      "Substitute",
+      "Minimize",
+      "Defense Curl",
+      "Light Screen"
+    ]
+  },
+  {
+    "name": "Clefable",
+    "health": 95,
+    "attack": 70,
+    "defense": 73,
+    "sp_attack": 95,
+    "sp_defense": 90,
+    "speed": 60,
+    "weight_kg": 40.0,
+    "description": "A timid fairy POKEMON that is rarely seen. It will run and hide the moment it senses people.",
+    "type": [
+      "Fairy"
+    ],
+    "abilities": [
+      "Unaware",
+      "Cute Charm",
+      "Unaware"
+    ],
+    "ability_descriptions": {
+      "Cute Charm": "Contact with the Pokemon may infatuate the attacker.",
+      "Magic Guard": "Only takes damage from direct attacks.",
+      "Unaware": "Ignores the opponent's stat changes."
+    },
+    "Learnable": [
+      "Comet Punch",
+      "Low Kick",
+      "Swords Dance",
+      "Karate Chop",
+      "Pound",
+      "Double Slap",
+      "Mega Punch",
+      "Fire Punch",
+      "Ice Punch",
+      "Thunder Punch",
+      "Mega Kick",
+      "Hyper Beam",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Growl",
+      "Sing",
+      "Water Gun",
+      "Blizzard",
+      "Bubble Beam",
+      "Ice Beam",
+      "Solar Beam",
+      "Thunderbolt",
+      "Thunder",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Toxic",
+      "Psychic",
+      "Teleport",
+      "Rage",
+      "Dig",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Metronome",
+      "Fire Blast",
+      "Skull Bash",
+      "Soft-Boiled",
+      "Tri Attack",
+      "Substitute",
+      "Minimize",
+      "Defense Curl",
+      "Light Screen"
+    ]
+  },
+  {
+    "name": "Vulpix",
+    "health": 38,
+    "attack": 41,
+    "defense": 40,
+    "sp_attack": 50,
+    "sp_defense": 65,
+    "speed": 65,
+    "weight_kg": 9.9,
+    "description": "At the time of its birth, it has only one white tail. The tail splits from the tip as it grows older.",
+    "type": [
+      "Fire"
+    ],
+    "abilities": [
+      "Flash Fire",
+      "Drought"
+    ],
+    "ability_descriptions": {
+      "Flash Fire": "Powers up SPAtk if hit by Fire-type moves.",
+      "Drought": "Summons harsh sunlight upon entering battle."
+    },
+    "Learnable": [
+      "Tail Whip",
+      "Roar",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Ember",
+      "Flamethrower",
+      "Fire Spin",
+      "Quick Attack",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Fire Blast",
+      "Swift",
+      "Skull Bash",
+      "Substitute",
+      "Confuse Ray"
+    ]
+  },
+  {
+    "name": "Ninetales",
+    "health": 73,
+    "attack": 76,
+    "defense": 75,
+    "sp_attack": 81,
+    "sp_defense": 100,
+    "speed": 100,
+    "weight_kg": 19.9,
+    "description": "Very smart and very vindictive. Grabbing one of its many tails could result in a 1000-year curse.",
+    "type": [
+      "Fire"
+    ],
+    "abilities": [
+      "Flash Fire",
+      "Drought"
+    ],
+    "ability_descriptions": {
+      "Flash Fire": "Powers up SPAtk if hit by Fire-type moves.",
+      "Drought": "Summons harsh sunlight upon entering battle."
+    },
+    "Learnable": [
+      "Sunny Day",
+      "Tail Whip",
+      "Hyper Beam",
+      "Roar",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Ember",
+      "Flamethrower",
+      "Fire Spin",
+      "Quick Attack",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Fire Blast",
+      "Swift",
+      "Skull Bash",
+      "Substitute",
+      "Confuse Ray"
+    ]
+  },
+  {
+    "name": "Jigglypuff",
+    "health": 115,
+    "attack": 45,
+    "defense": 20,
+    "sp_attack": 45,
+    "sp_defense": 25,
+    "speed": 20,
+    "weight_kg": 5.5,
+    "description": "When its huge eyes light up, it sings a mysteriously soothing melody that lulls its enemies to sleep.",
+    "type": [
+      "Normal",
+      "Fairy"
+    ],
+    "abilities": [
+      "Cute Charm",
+      "Competitive",
+      "Friend Guard"
+    ],
+    "ability_descriptions": {
+      "Cute Charm": "Contact with the Pokemon may infatuate the attacker.",
+      "Competitive": "Sharply boosts Sp. Atk when a stat is lowered by an opponent.",
+      "Friend Guard": "Reduces damage dealt to allies."
+    },
+    "Learnable": [
+      "Pound",
+      "Double Slap",
+      "Mega Punch",
+      "Mega Kick",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Growl",
+      "Sing",
+      "Disable",
+      "Water Gun",
+      "Blizzard",
+      "Bubble Beam",
+      "Ice Beam",
+      "Solar Beam",
+      "Thunderbolt",
+      "Thunder",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Toxic",
+      "Psychic",
+      "Teleport",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Fire Blast",
+      "Skull Bash",
+      "Tri Attack",
+      "Substitute",
+      "Defense Curl"
+    ]
+  },
+  {
+    "name": "Wigglytuff",
+    "health": 140,
+    "attack": 70,
+    "defense": 45,
+    "sp_attack": 85,
+    "sp_defense": 50,
+    "speed": 45,
+    "weight_kg": 12.0,
+    "description": "The body is soft and rubbery. When angered, it will inhale deeply and inflate itself to an enormous size.",
+    "type": [
+      "Normal",
+      "Fairy"
+    ],
+    "abilities": [
+      "Cute Charm",
+      "Competitive",
+      "Frisk"
+    ],
+    "ability_descriptions": {
+      "Cute Charm": "Contact with the Pokemon may infatuate the attacker.",
+      "Competitive": "Sharply boosts Sp. Atk when a stat is lowered by an opponent.",
+      "Frisk": "Checks the opponent's held item."
+    },
+    "Learnable": [
+      "Pound",
+      "Double Slap",
+      "Mega Punch",
+      "Mega Kick",
+      "Hyper Beam",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Growl",
+      "Sing",
+      "Disable",
+      "Water Gun",
+      "Blizzard",
+      "Bubble Beam",
+      "Ice Beam",
+      "Solar Beam",
+      "Thunderbolt",
+      "Thunder",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Toxic",
+      "Psychic",
+      "Teleport",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Fire Blast",
+      "Skull Bash",
+      "Tri Attack",
+      "Substitute",
+      "Defense Curl"
+    ]
+  },
+  {
+    "name": "Zubat",
+    "health": 40,
+    "attack": 45,
+    "defense": 35,
+    "sp_attack": 30,
+    "sp_defense": 40,
+    "speed": 55,
+    "weight_kg": 7.5,
+    "description": "Forms large colonies in dark places. Uses ultrasonic waves to identify and approach targets.",
+    "type": [
+      "Poison",
+      "Flying"
+    ],
+    "abilities": [
+      "Inner Focus",
+      "Infiltrator"
+    ],
+    "ability_descriptions": {
+      "Inner Focus": "Prevents flinching.",
+      "Infiltrator": "Bypasses the opponent's barrier moves to strike."
+    },
+    "Learnable": [
+      "Wing Attack",
+      "Take Down",
+      "Double-Edge",
+      "Poison Sting",
+      "Bite",
+      "Supersonic",
+      "Mega Drain",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Swift",
+      "Substitute",
+      "Leech Life",
+      "Confuse Ray"
+    ]
+  },
+  {
+    "name": "Golbat",
+    "health": 75,
+    "attack": 80,
+    "defense": 70,
+    "sp_attack": 65,
+    "sp_defense": 75,
+    "speed": 90,
+    "weight_kg": 55.0,
+    "description": "Once it strikes, it will not stop draining energy from the victim even if it gets too heavy to fly.",
+    "type": [
+      "Poison",
+      "Flying"
+    ],
+    "abilities": [
+      "Inner Focus",
+      "Infiltrator"
+    ],
+    "ability_descriptions": {
+      "Inner Focus": "Prevents flinching.",
+      "Infiltrator": "Bypasses the opponent's barrier moves to strike."
+    },
+    "Learnable": [
+      "Wing Attack",
+      "Hyper Beam",
+      "Take Down",
+      "Double-Edge",
+      "Poison Sting",
+      "Bite",
+      "Supersonic",
+      "Mega Drain",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Swift",
+      "Substitute",
+      "Leech Life",
+      "Confuse Ray"
+    ]
+  },
+  {
+    "name": "Oddish",
+    "health": 45,
+    "attack": 50,
+    "defense": 55,
+    "sp_attack": 75,
+    "sp_defense": 65,
+    "speed": 30,
+    "weight_kg": 5.4,
+    "description": "During the day, it keeps its face buried in the ground. It is said to walk around at night.",
+    "type": [
+      "Grass",
+      "Poison"
+    ],
+    "abilities": [
+      "Chlorophyll",
+      "Run Away"
+    ],
+    "ability_descriptions": {
+      "Chlorophyll": "Boosts Speed in harsh sunlight.",
+      "Run Away": "Enables a sure escape from wild battles."
+    },
+    "Learnable": [
+      "Swords Dance",
+      "Cut",
+      "Take Down",
+      "Double-Edge",
+      "Acid",
+      "Absorb",
+      "Mega Drain",
+      "Solar Beam",
+      "Poison Powder",
+      "Stun Spore",
+      "Sleep Powder",
+      "Petal Dance",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Gloom",
+    "health": 60,
+    "attack": 65,
+    "defense": 70,
+    "sp_attack": 85,
+    "sp_defense": 75,
+    "speed": 40,
+    "weight_kg": 8.6,
+    "description": "The fluid that oozes from its mouth isn't drool. It is a nectar that is used to attract prey.",
+    "type": [
+      "Grass",
+      "Poison"
+    ],
+    "abilities": [
+      "Chlorophyll",
+      "Stench"
+    ],
+    "ability_descriptions": {
+      "Chlorophyll": "Boosts Speed in harsh sunlight.",
+      "Stench": "Attacks may cause the target to flinch."
+    },
+    "Learnable": [
+      "Swords Dance",
+      "Cut",
+      "Take Down",
+      "Double-Edge",
+      "Acid",
+      "Absorb",
+      "Mega Drain",
+      "Solar Beam",
+      "Poison Powder",
+      "Stun Spore",
+      "Sleep Powder",
+      "Petal Dance",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Vileplume",
+    "health": 75,
+    "attack": 80,
+    "defense": 85,
+    "sp_attack": 110,
+    "sp_defense": 90,
+    "speed": 50,
+    "weight_kg": 18.6,
+    "description": "The larger its petals, the more toxic pollen it contains. Its big head is heavy and hard to hold up.",
+    "type": [
+      "Grass",
+      "Poison"
+    ],
+    "abilities": [
+      "Effect Spore",
+      "Chlorophyll"
+    ],
+    "ability_descriptions": {
+      "Chlorophyll": "Boosts Speed in harsh sunlight.",
+      "Effect Spore": "Contact may inflict poison, sleep, or paralysis."
+    },
+    "Learnable": [
+      "Sunny Day",
+      "Swords Dance",
+      "Cut",
+      "Hyper Beam",
+      "Take Down",
+      "Double-Edge",
+      "Acid",
+      "Absorb",
+      "Mega Drain",
+      "Solar Beam",
+      "Poison Powder",
+      "Stun Spore",
+      "Sleep Powder",
+      "Petal Dance",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Paras",
+    "health": 35,
+    "attack": 70,
+    "defense": 55,
+    "sp_attack": 45,
+    "sp_defense": 55,
+    "speed": 25,
+    "weight_kg": 5.4,
+    "description": "Burrows to suck tree roots. The mushrooms on its back grow by drawing nutrients from the host insect.",
+    "type": [
+      "Bug",
+      "Grass"
+    ],
+    "abilities": [
+      "Effect Spore",
+      "Dry Skin",
+      "Damp"
+    ],
+    "ability_descriptions": {
+      "Effect Spore": "Contact may inflict poison, sleep, or paralysis.",
+      "Dry Skin": "Heals in rain or via Water moves; takes more damage from Fire.",
+      "Damp": "Prevents the use of self-destructing moves."
+    },
+    "Learnable": [
+      "Scratch",
+      "Swords Dance",
+      "Cut",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Mega Drain",
+      "Solar Beam",
+      "Poison Powder",
+      "Stun Spore",
+      "Sleep Powder",
+      "Growth",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Skull Bash",
+      "Substitute",
+      "Leech Life",
+      "Slash"
+    ]
+  },
+  {
+    "name": "Parasect",
+    "health": 60,
+    "attack": 95,
+    "defense": 80,
+    "sp_attack": 60,
+    "sp_defense": 80,
+    "speed": 30,
+    "weight_kg": 29.5,
+    "description": "A host-parasite pair in which the mushroom insect has been completely taken over by the mushroom.",
+    "type": [
+      "Bug",
+      "Grass"
+    ],
+    "abilities": [
+      "Effect Spore",
+      "Dry Skin",
+      "Damp"
+    ],
+    "ability_descriptions": {
+      "Effect Spore": "Contact may inflict poison, sleep, or paralysis.",
+      "Dry Skin": "Heals in rain or via Water moves; takes more damage from Fire.",
+      "Damp": "Prevents the use of self-destructing moves."
+    },
+    "Learnable": [
+      "Scratch",
+      "Swords Dance",
+      "Cut",
+      "Hyper Beam",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Mega Drain",
+      "Solar Beam",
+      "Poison Powder",
+      "Stun Spore",
+      "Sleep Powder",
+      "Growth",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Skull Bash",
+      "Substitute",
+      "Leech Life",
+      "Slash"
+    ]
+  },
+  {
+    "name": "Venonat",
+    "health": 60,
+    "attack": 55,
+    "defense": 50,
+    "sp_attack": 40,
+    "sp_defense": 55,
+    "speed": 45,
+    "weight_kg": 30.0,
+    "description": "Lives in the shadows of tall trees where it eats bugs. It is attracted by light at night.",
+    "type": [
+      "Bug",
+      "Poison"
+    ],
+    "abilities": [
+      "Tinted Lens",
+      "Compound Eyes",
+      "Run Away"
+    ],
+    "ability_descriptions": {
+      "Compound Eyes": "Boosts accuracy.",
+      "Tinted Lens": "Powers up \"not very effective\" moves.",
+      "Run Away": "Enables a sure escape from wild battles."
+    },
+    "Learnable": [
+      "Wing Attack",
+      "Tackle",
+      "Disable",
+      "Poison Powder",
+      "Stun Spore",
+      "Sleep Powder",
+      "Psybeam",
+      "Mega Drain",
+      "Solar Beam",
+      "Psychic",
+      "Teleport",
+      "Toxic",
+      "Take Down",
+      "Double-Edge",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Swift",
+      "Substitute",
+      "Leech Life"
+    ]
+  },
+  {
+    "name": "Venomoth",
+    "health": 70,
+    "attack": 65,
+    "defense": 60,
+    "sp_attack": 90,
+    "sp_defense": 75,
+    "speed": 90,
+    "weight_kg": 12.5,
+    "description": "The dust-like scales covering its wings are color-coded to indicate the kinds of poison they contain.",
+    "type": [
+      "Bug",
+      "Poison"
+    ],
+    "abilities": [
+      "Tinted Lens",
+      "Shield Dust",
+      "Wonder Skin"
+    ],
+    "ability_descriptions": {
+      "Shield Dust": "Blocks the additional effects of incoming attacks.",
+      "Tinted Lens": "Powers up \"not very effective\" moves.",
+      "Wonder Skin": "Makes status moves more likely to miss."
+    },
+    "Learnable": [
+      "Tackle",
+      "Disable",
+      "Poison Powder",
+      "Stun Spore",
+      "Sleep Powder",
+      "Psybeam",
+      "Mega Drain",
+      "Solar Beam",
+      "Hyper Beam",
+      "Psychic",
+      "Teleport",
+      "Toxic",
+      "Take Down",
+      "Double-Edge",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Swift",
+      "Substitute",
+      "Leech Life",
+      "Razor Wind",
+      "Whirlwind",
+      "Gust"
+    ]
+  },
+  {
+    "name": "Diglett",
+    "health": 10,
+    "attack": 55,
+    "defense": 25,
+    "sp_attack": 35,
+    "sp_defense": 45,
+    "speed": 95,
+    "weight_kg": 0.8,
+    "description": "Lives about one yard underground where it feeds on plant roots. It sometimes appears above ground.",
+    "type": [
+      "Ground"
+    ],
+    "abilities": [
+      "Arena Trap",
+      "Sand Veil",
+      "Sand Force"
+    ],
+    "ability_descriptions": {
+      "Sand Veil": "Boosts evasion in a sandstorm.",
+      "Arena Trap": "Prevents grounded opponents from fleeing.",
+      "Sand Force": "Boosts Rock, Ground, and Steel moves in a sandstorm."
+    },
+    "Learnable": [
+      "Scratch",
+      "Cut",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Sand Attack",
+      "Growl",
+      "Dig",
+      "Earthquake",
+      "Fissure",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Substitute",
+      "Slash"
+    ]
+  },
+  {
+    "name": "Dugtrio",
+    "health": 35,
+    "attack": 100,
+    "defense": 50,
+    "sp_attack": 50,
+    "sp_defense": 70,
+    "speed": 120,
+    "weight_kg": 33.3,
+    "description": "A team of DIGLETT triplets. It triggers huge earthquakes by burrowing 60 miles underground.",
+    "type": [
+      "Ground"
+    ],
+    "abilities": [
+      "Arena Trap",
+      "Sand Veil",
+      "Sand Force"
+    ],
+    "ability_descriptions": {
+      "Sand Veil": "Boosts evasion in a sandstorm.",
+      "Arena Trap": "Prevents grounded opponents from fleeing.",
+      "Sand Force": "Boosts Rock, Ground, and Steel moves in a sandstorm."
+    },
+    "Learnable": [
+      "Scratch",
+      "Cut",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Hyper Beam",
+      "Sand Attack",
+      "Growl",
+      "Dig",
+      "Earthquake",
+      "Fissure",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Substitute",
+      "Slash"
+    ]
+  },
+  {
+    "name": "Meowth",
+    "health": 40,
+    "attack": 45,
+    "defense": 35,
+    "sp_attack": 40,
+    "sp_defense": 40,
+    "speed": 90,
+    "weight_kg": 4.2,
+    "description": "Adores circular objects. Wanders the streets on a nightly basis to look for dropped loose change.",
+    "type": [
+      "Normal"
+    ],
+    "abilities": [
+      "Technician",
+      "Pickup",
+      "Unnerve"
+    ],
+    "ability_descriptions": {
+      "Pickup": "May pick up items.",
+      "Technician": "Powers up the POKEMON's weaker moves.",
+      "Unnerve": "Prevents opponents from eating Berries."
+    },
+    "Learnable": [
+      "Scratch",
+      "Growl",
+      "Bite",
+      "Pay Day",
+      "Screech",
+      "Fury Swipes",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Water Gun",
+      "Bubble Beam",
+      "Thunderbolt",
+      "Thunder",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Swift",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Persian",
+    "health": 65,
+    "attack": 70,
+    "defense": 60,
+    "sp_attack": 65,
+    "sp_defense": 65,
+    "speed": 115,
+    "weight_kg": 32.0,
+    "description": "Although its fur has many admirers, it is tough to raise as a pet because of its fickle personality.",
+    "type": [
+      "Normal"
+    ],
+    "abilities": [
+      "Technician",
+      "Limber",
+      "Unnerve"
+    ],
+    "ability_descriptions": {
+      "Limber": "Prevents paralysis.",
+      "Technician": "Powers up the POKEMON's weaker moves.",
+      "Unnerve": "Prevents opponents from eating Berries."
+    },
+    "Learnable": [
+      "Scratch",
+      "Growl",
+      "Bite",
+      "Pay Day",
+      "Screech",
+      "Fury Swipes",
+      "Hyper Beam",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Water Gun",
+      "Bubble Beam",
+      "Thunderbolt",
+      "Thunder",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Swift",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Psyduck",
+    "health": 50,
+    "attack": 52,
+    "defense": 48,
+    "sp_attack": 65,
+    "sp_defense": 50,
+    "speed": 55,
+    "weight_kg": 19.6,
+    "description": "While lulling its enemies with its vacant look, this wily POKEMON will use psychokinetic powers.",
+    "type": [
+      "Water"
+    ],
+    "abilities": [
+      "Damp",
+      "Cloud Nine",
+      "Swift Swim"
+    ],
+    "ability_descriptions": {
+      "Damp": "Prevents the use of self-destructing moves.",
+      "Cloud Nine": "Eliminates the effects of weather.",
+      "Swift Swim": "Boosts Speed in rain."
+    },
+    "Learnable": [
+      "Scratch",
+      "Tail Whip",
+      "Disable",
+      "Confusion",
+      "Fury Swipes",
+      "Hydro Pump",
+      "Surf",
+      "Ice Beam",
+      "Blizzard",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Water Gun",
+      "Bubble Beam",
+      "Pay Day",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Strength",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Golduck",
+    "health": 80,
+    "attack": 82,
+    "defense": 78,
+    "sp_attack": 95,
+    "sp_defense": 80,
+    "speed": 85,
+    "weight_kg": 76.6,
+    "description": "Often seen swimming elegantly by lake shores. It is often mistaken for the Japanese monster, Kappa.",
+    "type": [
+      "Water"
+    ],
+    "abilities": [
+      "Cloud Nine",
+      "Damp",
+      "Swift Swim"
+    ],
+    "ability_descriptions": {
+      "Damp": "Prevents the use of self-destructing moves.",
+      "Cloud Nine": "Eliminates the effects of weather.",
+      "Swift Swim": "Boosts Speed in rain."
+    },
+    "Learnable": [
+      "Scratch",
+      "Tail Whip",
+      "Disable",
+      "Confusion",
+      "Fury Swipes",
+      "Hyper Beam",
+      "Hydro Pump",
+      "Surf",
+      "Ice Beam",
+      "Blizzard",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Water Gun",
+      "Bubble Beam",
+      "Pay Day",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Strength",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Mankey",
+    "health": 40,
+    "attack": 80,
+    "defense": 35,
+    "sp_attack": 35,
+    "sp_defense": 45,
+    "speed": 70,
+    "weight_kg": 28.0,
+    "description": "Extremely quick to anger. It could be docile one moment then thrashing away the next instant.",
+    "type": [
+      "Fighting"
+    ],
+    "abilities": [
+      "Anger Point",
+      "Vital Spirit",
+      "Defiant"
+    ],
+    "ability_descriptions": {
+      "Vital Spirit": "Prevents the POKEMON from falling asleep.",
+      "Anger Point": "Maxes Attack after taking a critical hit.",
+      "Defiant": "Boosts Attack when stats are lowered by an opponent."
+    },
+    "Learnable": [
+      "Scratch",
+      "Leer",
+      "Karate Chop",
+      "Fury Swipes",
+      "Focus Energy",
+      "Seismic Toss",
+      "Thrash",
+      "Mega Punch",
+      "Mega Kick",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Pay Day",
+      "Submission",
+      "Counter",
+      "Strength",
+      "Dig",
+      "Thunderbolt",
+      "Thunder",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Metronome",
+      "Swift",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Primeape",
+    "health": 65,
+    "attack": 105,
+    "defense": 60,
+    "sp_attack": 60,
+    "sp_defense": 70,
+    "speed": 95,
+    "weight_kg": 32.0,
+    "description": "Always furious and tenacious to boot. It will not abandon chasing its quarry until it is caught.",
+    "type": [
+      "Fighting"
+    ],
+    "abilities": [
+      "Anger Point",
+      "Vital Spirit",
+      "Defiant"
+    ],
+    "ability_descriptions": {
+      "Vital Spirit": "Prevents the POKEMON from falling asleep.",
+      "Anger Point": "Maxes Attack after taking a critical hit.",
+      "Defiant": "Boosts Attack when stats are lowered by an opponent."
+    },
+    "Learnable": [
+      "Scratch",
+      "Leer",
+      "Karate Chop",
+      "Fury Swipes",
+      "Focus Energy",
+      "Seismic Toss",
+      "Thrash",
+      "Hyper Beam",
+      "Mega Punch",
+      "Mega Kick",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Pay Day",
+      "Submission",
+      "Counter",
+      "Strength",
+      "Dig",
+      "Thunderbolt",
+      "Thunder",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Metronome",
+      "Swift",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Growlithe",
+    "health": 55,
+    "attack": 70,
+    "defense": 45,
+    "sp_attack": 70,
+    "sp_defense": 50,
+    "speed": 60,
+    "weight_kg": 19.0,
+    "description": "Very protective of its territory. It will bark and bite to repel intruders from its space.",
+    "type": [
+      "Fire"
+    ],
+    "abilities": [
+      "Intimidate",
+      "Flash Fire",
+      "Justified"
+    ],
+    "ability_descriptions": {
+      "Intimidate": "Lowers opponents' Attack stat upon entering battle.",
+      "Flash Fire": "Powers up SPAtk if hit by Fire-type moves.",
+      "Justified": "Boosts Attack when hit by a Dark-type move."
+    },
+    "Learnable": [
+      "Bite",
+      "Roar",
+      "Ember",
+      "Leer",
+      "Take Down",
+      "Agility",
+      "Flamethrower",
+      "Body Slam",
+      "Double-Edge",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Reflect",
+      "Bide",
+      "Fire Blast",
+      "Swift",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Arcanine",
+    "health": 90,
+    "attack": 110,
+    "defense": 80,
+    "sp_attack": 100,
+    "sp_defense": 80,
+    "speed": 95,
+    "weight_kg": 155.0,
+    "description": "A POKEMON that has been admired since the past for its beauty. It runs agilely as if on wings.",
+    "type": [
+      "Fire"
+    ],
+    "abilities": [
+      "Intimidate",
+      "Flash Fire",
+      "Justified"
+    ],
+    "ability_descriptions": {
+      "Intimidate": "Lowers opponents' Attack stat upon entering battle.",
+      "Flash Fire": "Powers up SPAtk if hit by Fire-type moves.",
+      "Justified": "Boosts Attack when hit by a Dark-type move."
+    },
+    "Learnable": [
+      "Bite",
+      "Roar",
+      "Ember",
+      "Leer",
+      "Take Down",
+      "Agility",
+      "Flamethrower",
+      "Hyper Beam",
+      "Body Slam",
+      "Double-Edge",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Reflect",
+      "Bide",
+      "Fire Blast",
+      "Swift",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Poliwag",
+    "health": 40,
+    "attack": 50,
+    "defense": 40,
+    "sp_attack": 40,
+    "sp_defense": 40,
+    "speed": 90,
+    "weight_kg": 12.4,
+    "description": "Its newly grown legs are fickle. It seems to prefer swimming in a water stream over walking.",
+    "type": [
+      "Water"
+    ],
+    "abilities": [
+      "Water Absorb",
+      "Damp",
+      "Swift Swim"
+    ],
+    "ability_descriptions": {
+      "Water Absorb": "Heals if hit by a Water-type move.",
+      "Damp": "Prevents the use of self-destructing moves.",
+      "Swift Swim": "Boosts Speed in rain."
+    },
+    "Learnable": [
+      "Bubble",
+      "Hypnosis",
+      "Water Gun",
+      "Double Slap",
+      "Body Slam",
+      "Amnesia",
+      "Hydro Pump",
+      "Surf",
+      "Ice Beam",
+      "Blizzard",
+      "Bubble Beam",
+      "Take Down",
+      "Double-Edge",
+      "Psychic",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Poliwhirl",
+    "health": 65,
+    "attack": 65,
+    "defense": 65,
+    "sp_attack": 50,
+    "sp_defense": 50,
+    "speed": 90,
+    "weight_kg": 20.0,
+    "description": "Capable of living in or out of water. When out of water, it constantly sweats to keep its body slimy.",
+    "type": [
+      "Water"
+    ],
+    "abilities": [
+      "Water Absorb",
+      "Damp",
+      "Swift Swim"
+    ],
+    "ability_descriptions": {
+      "Water Absorb": "Heals if hit by a Water-type move.",
+      "Damp": "Prevents the use of self-destructing moves.",
+      "Swift Swim": "Boosts Speed in rain."
+    },
+    "Learnable": [
+      "Bubble",
+      "Hypnosis",
+      "Water Gun",
+      "Double Slap",
+      "Body Slam",
+      "Amnesia",
+      "Hydro Pump",
+      "Surf",
+      "Ice Beam",
+      "Blizzard",
+      "Bubble Beam",
+      "Mega Punch",
+      "Mega Kick",
+      "Take Down",
+      "Double-Edge",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Strength",
+      "Earthquake",
+      "Fissure",
+      "Dig",
+      "Psychic",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Poliwrath",
+    "health": 90,
+    "attack": 95,
+    "defense": 95,
+    "sp_attack": 70,
+    "sp_defense": 90,
+    "speed": 70,
+    "weight_kg": 54.0,
+    "description": "An adept swimmer at both the front crawl and breast stroke. Easily overtakes human swimmers.",
+    "type": [
+      "Water",
+      "Fighting"
+    ],
+    "abilities": [
+      "Water Absorb",
+      "Damp",
+      "Swift Swim"
+    ],
+    "ability_descriptions": {
+      "Water Absorb": "Heals if hit by a Water-type move.",
+      "Damp": "Prevents the use of self-destructing moves.",
+      "Swift Swim": "Boosts Speed in rain."
+    },
+    "Learnable": [
+      "Bubble",
+      "Hypnosis",
+      "Water Gun",
+      "Double Slap",
+      "Body Slam",
+      "Amnesia",
+      "Hydro Pump",
+      "Surf",
+      "Ice Beam",
+      "Blizzard",
+      "Bubble Beam",
+      "Hyper Beam",
+      "Mega Punch",
+      "Mega Kick",
+      "Take Down",
+      "Double-Edge",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Strength",
+      "Earthquake",
+      "Fissure",
+      "Dig",
+      "Psychic",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Abra",
+    "health": 25,
+    "attack": 20,
+    "defense": 15,
+    "sp_attack": 105,
+    "sp_defense": 55,
+    "speed": 90,
+    "weight_kg": 19.5,
+    "description": "Using its ability to read minds, it will identify impending danger and TELEPORT to safety.",
+    "type": [
+      "Psychic"
+    ],
+    "abilities": [
+      "Synchronize",
+      "Inner Focus",
+      "Magic Guard"
+    ],
+    "ability_descriptions": {
+      "Synchronize": "Passes on status conditions like paralysis, poison, or burn.",
+      "Inner Focus": "Prevents flinching.",
+      "Magic Guard": "Only takes damage from direct attacks."
+    },
+    "Learnable": [
+      "Teleport"
+    ]
+  },
+  {
+    "name": "Kadabra",
+    "health": 40,
+    "attack": 35,
+    "defense": 30,
+    "sp_attack": 120,
+    "sp_defense": 70,
+    "speed": 105,
+    "weight_kg": 56.5,
+    "description": "It emits special alpha waves from its body that induce headaches just by being close by.",
+    "type": [
+      "Psychic"
+    ],
+    "abilities": [
+      "Synchronize",
+      "Inner Focus",
+      "Magic Guard"
+    ],
+    "ability_descriptions": {
+      "Synchronize": "Passes on status conditions like paralysis, poison, or burn.",
+      "Inner Focus": "Prevents flinching.",
+      "Magic Guard": "Only takes damage from direct attacks."
+    },
+    "Learnable": [
+      "Teleport",
+      "Confusion",
+      "Disable",
+      "Psybeam",
+      "Recover",
+      "Psychic",
+      "Reflect",
+      "Mega Punch",
+      "Mega Kick",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Counter",
+      "Seismic Toss",
+      "Submission",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Metronome",
+      "Swift",
+      "Skull Bash",
+      "Substitute",
+      "Flash",
+      "Tri Attack"
+    ]
+  },
+  {
+    "name": "Alakazam",
+    "health": 55,
+    "attack": 50,
+    "defense": 45,
+    "sp_attack": 135,
+    "sp_defense": 95,
+    "speed": 120,
+    "weight_kg": 48.0,
+    "description": "Its brain can outperform a supercomputer. Its IQ is rumored to be around 5,000.",
+    "type": [
+      "Psychic"
+    ],
+    "abilities": [
+      "Synchronize",
+      "Inner Focus",
+      "Magic Guard"
+    ],
+    "ability_descriptions": {
+      "Synchronize": "Passes on status conditions like paralysis, poison, or burn.",
+      "Inner Focus": "Prevents flinching.",
+      "Magic Guard": "Only takes damage from direct attacks."
+    },
+    "Learnable": [
+      "Teleport",
+      "Confusion",
+      "Disable",
+      "Psybeam",
+      "Recover",
+      "Psychic",
+      "Reflect",
+      "Hyper Beam",
+      "Mega Punch",
+      "Mega Kick",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Counter",
+      "Seismic Toss",
+      "Submission",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Metronome",
+      "Swift",
+      "Skull Bash",
+      "Substitute",
+      "Flash",
+      "Tri Attack"
+    ]
+  },
+  {
+    "name": "Machop",
+    "health": 70,
+    "attack": 80,
+    "defense": 50,
+    "sp_attack": 35,
+    "sp_defense": 35,
+    "speed": 35,
+    "weight_kg": 19.5,
+    "description": "Loves to build its muscles. It trains in all styles of martial arts to become even stronger.",
+    "type": [
+      "Fighting"
+    ],
+    "abilities": [
+      "No Guard",
+      "Guts",
+      "Steadfast"
+    ],
+    "ability_descriptions": {
+      "Guts": "Boosts Attack if afflicted with a status condition.",
+      "No Guard": "Ensures attacks by and against the POKEMON never miss.",
+      "Steadfast": "Raises Speed each time the POKEMON flinches."
+    },
+    "Learnable": [
+      "Karate Chop",
+      "Leer",
+      "Focus Energy",
+      "Seismic Toss",
+      "Submission",
+      "Mega Punch",
+      "Mega Kick",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Counter",
+      "Strength",
+      "Dig",
+      "Earthquake",
+      "Fissure",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Metronome",
+      "Swift",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Machoke",
+    "health": 80,
+    "attack": 100,
+    "defense": 70,
+    "sp_attack": 50,
+    "sp_defense": 60,
+    "speed": 45,
+    "weight_kg": 70.5,
+    "description": "Its muscular body is so powerful, it must wear a power-save belt to be able to regulate its motions.",
+    "type": [
+      "Fighting"
+    ],
+    "abilities": [
+      "No Guard",
+      "Guts",
+      "Steadfast"
+    ],
+    "ability_descriptions": {
+      "Guts": "Boosts Attack if afflicted with a status condition.",
+      "No Guard": "Ensures attacks by and against the POKEMON never miss.",
+      "Steadfast": "Raises Speed each time the POKEMON flinches."
+    },
+    "Learnable": [
+      "Karate Chop",
+      "Leer",
+      "Focus Energy",
+      "Seismic Toss",
+      "Submission",
+      "Mega Punch",
+      "Mega Kick",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Counter",
+      "Strength",
+      "Dig",
+      "Earthquake",
+      "Fissure",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Metronome",
+      "Swift",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Machamp",
+    "health": 90,
+    "attack": 130,
+    "defense": 80,
+    "sp_attack": 65,
+    "sp_defense": 85,
+    "speed": 55,
+    "weight_kg": 130.0,
+    "description": "Using its four powerful arms, it hits the opposition with an unstoppable flurry of punches.",
+    "type": [
+      "Fighting"
+    ],
+    "abilities": [
+      "No Guard",
+      "Guts",
+      "Steadfast"
+    ],
+    "ability_descriptions": {
+      "Guts": "Boosts Attack if afflicted with a status condition.",
+      "No Guard": "Ensures attacks by and against the POKEMON never miss.",
+      "Steadfast": "Raises Speed each time the POKEMON flinches."
+    },
+    "Learnable": [
+      "Karate Chop",
+      "Leer",
+      "Focus Energy",
+      "Seismic Toss",
+      "Submission",
+      "Hyper Beam",
+      "Mega Punch",
+      "Mega Kick",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Counter",
+      "Strength",
+      "Dig",
+      "Earthquake",
+      "Fissure",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Metronome",
+      "Swift",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Bellsprout",
+    "health": 50,
+    "attack": 75,
+    "defense": 35,
+    "sp_attack": 70,
+    "sp_defense": 30,
+    "speed": 40,
+    "weight_kg": 4.0,
+    "description": "A carnivorous POKEMON that traps and eats bugs. It appears to use its root feet to absorb moisture.",
+    "type": [
+      "Grass",
+      "Poison"
+    ],
+    "abilities": [
+      "Chlorophyll",
+      "Gluttony"
+    ],
+    "ability_descriptions": {
+      "Chlorophyll": "Boosts Speed in harsh sunlight.",
+      "Gluttony": "Encourages the early use of a held Berry."
+    },
+    "Learnable": [
+      "Vine Whip",
+      "Growth",
+      "Wrap",
+      "Poison Powder",
+      "Sleep Powder",
+      "Stun Spore",
+      "Acid",
+      "Razor Leaf",
+      "Slam",
+      "Swords Dance",
+      "Cut",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Mega Drain",
+      "Solar Beam",
+      "Toxic",
+      "Double Team",
+      "Bide",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Weepinbell",
+    "health": 65,
+    "attack": 90,
+    "defense": 50,
+    "sp_attack": 85,
+    "sp_defense": 45,
+    "speed": 55,
+    "weight_kg": 6.4,
+    "description": "It spits out POISONPOWDER to immobilize the enemy and then finishes it with a spray of ACID.",
+    "type": [
+      "Grass",
+      "Poison"
+    ],
+    "abilities": [
+      "Chlorophyll",
+      "Gluttony"
+    ],
+    "ability_descriptions": {
+      "Chlorophyll": "Boosts Speed in harsh sunlight.",
+      "Gluttony": "Encourages the early use of a held Berry."
+    },
+    "Learnable": [
+      "Vine Whip",
+      "Growth",
+      "Wrap",
+      "Poison Powder",
+      "Sleep Powder",
+      "Stun Spore",
+      "Acid",
+      "Razor Leaf",
+      "Slam",
+      "Swords Dance",
+      "Cut",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Mega Drain",
+      "Solar Beam",
+      "Toxic",
+      "Double Team",
+      "Bide",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Victreebel",
+    "health": 80,
+    "attack": 105,
+    "defense": 65,
+    "sp_attack": 100,
+    "sp_defense": 70,
+    "speed": 70,
+    "weight_kg": 15.5,
+    "description": "Said to live in huge colonies deep in jungles, although no one has ever returned from there.",
+    "type": [
+      "Grass",
+      "Poison"
+    ],
+    "abilities": [
+      "Chlorophyll",
+      "Gluttony"
+    ],
+    "ability_descriptions": {
+      "Chlorophyll": "Boosts Speed in harsh sunlight.",
+      "Gluttony": "Encourages the early use of a held Berry."
+    },
+    "Learnable": [
+      "Sunny Day",
+      "Vine Whip",
+      "Growth",
+      "Wrap",
+      "Poison Powder",
+      "Sleep Powder",
+      "Stun Spore",
+      "Acid",
+      "Razor Leaf",
+      "Hyper Beam",
+      "Swords Dance",
+      "Cut",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Mega Drain",
+      "Solar Beam",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Tentacool",
+    "health": 40,
+    "attack": 40,
+    "defense": 35,
+    "sp_attack": 50,
+    "sp_defense": 100,
+    "speed": 70,
+    "weight_kg": 45.5,
+    "description": "Drifts in shallow seas. Anglers who hook them by accident are often punished by its burning stingers.",
+    "type": [
+      "Water",
+      "Poison"
+    ],
+    "abilities": [
+      "Clear Body",
+      "Liquid Ooze",
+      "Rain Dish"
+    ],
+    "ability_descriptions": {
+      "Clear Body": "Prevents other POKEMON from lowering its stats.",
+      "Liquid Ooze": "Damages attackers who try to drain its HP.",
+      "Rain Dish": "Gradually regains HP when it is raining."
+    },
+    "Learnable": [
+      "Acid",
+      "Supersonic",
+      "Wrap",
+      "Poison Sting",
+      "Water Gun",
+      "Hydro Pump",
+      "Surf",
+      "Ice Beam",
+      "Blizzard",
+      "Bubble Beam",
+      "Cut",
+      "Swords Dance",
+      "Take Down",
+      "Double-Edge",
+      "Mega Drain",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Tentacruel",
+    "health": 80,
+    "attack": 70,
+    "defense": 65,
+    "sp_attack": 80,
+    "sp_defense": 120,
+    "speed": 100,
+    "weight_kg": 55.0,
+    "description": "The tentacles are normally short. On hunts, they extend to ensnare and immobilize prey.",
+    "type": [
+      "Water",
+      "Poison"
+    ],
+    "abilities": [
+      "Clear Body",
+      "Liquid Ooze",
+      "Rain Dish"
+    ],
+    "ability_descriptions": {
+      "Clear Body": "Prevents other POKEMON from lowering its stats.",
+      "Liquid Ooze": "Damages attackers who try to drain its HP.",
+      "Rain Dish": "Gradually regains HP when it is raining."
+    },
+    "Learnable": [
+      "Acid",
+      "Supersonic",
+      "Wrap",
+      "Poison Sting",
+      "Water Gun",
+      "Hydro Pump",
+      "Surf",
+      "Ice Beam",
+      "Blizzard",
+      "Bubble Beam",
+      "Hyper Beam",
+      "Cut",
+      "Swords Dance",
+      "Take Down",
+      "Double-Edge",
+      "Mega Drain",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Geodude",
+    "health": 40,
+    "attack": 80,
+    "defense": 100,
+    "sp_attack": 30,
+    "sp_defense": 30,
+    "speed": 20,
+    "weight_kg": 20.0,
+    "description": "Found in fields and mountains. Mistaking them for boulders, people often step on them or trip over them.",
+    "type": [
+      "Rock",
+      "Ground"
+    ],
+    "abilities": [
+      "Sturdy",
+      "Rock Head",
+      "Sand Veil"
+    ],
+    "ability_descriptions": {
+      "Rock Head": "Protects the POKEMON from recoil damage.",
+      "Sturdy": "Prevents the POKEMON from being knocked out in one hit.",
+      "Sand Veil": "Boosts evasion in a sandstorm."
+    },
+    "Learnable": [
+      "Sandstorm",
+      "Tackle",
+      "Defense Curl",
+      "Rock Throw",
+      "Self-Destruct",
+      "Harden",
+      "Explosion",
+      "Mega Punch",
+      "Mega Kick",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Strength",
+      "Dig",
+      "Earthquake",
+      "Fissure",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Metronome",
+      "Fire Blast",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Graveler",
+    "health": 55,
+    "attack": 95,
+    "defense": 115,
+    "sp_attack": 45,
+    "sp_defense": 45,
+    "speed": 35,
+    "weight_kg": 105.0,
+    "description": "Rolls down slopes to move. It rolls over any obstacle without slowing down or changing its direction.",
+    "type": [
+      "Rock",
+      "Ground"
+    ],
+    "abilities": [
+      "Sturdy",
+      "Rock Head",
+      "Sand Veil"
+    ],
+    "ability_descriptions": {
+      "Rock Head": "Protects the POKEMON from recoil damage.",
+      "Sturdy": "Prevents the POKEMON from being knocked out in one hit.",
+      "Sand Veil": "Boosts evasion in a sandstorm."
+    },
+    "Learnable": [
+      "Sandstorm",
+      "Tackle",
+      "Defense Curl",
+      "Rock Throw",
+      "Self-Destruct",
+      "Harden",
+      "Explosion",
+      "Mega Punch",
+      "Mega Kick",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Strength",
+      "Dig",
+      "Earthquake",
+      "Fissure",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Metronome",
+      "Fire Blast",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Golem",
+    "health": 80,
+    "attack": 120,
+    "defense": 130,
+    "sp_attack": 55,
+    "sp_defense": 65,
+    "speed": 45,
+    "weight_kg": 300.0,
+    "description": "Its stone-like body is so tough, even dynamite blasts fails to scratch its hard exterior.",
+    "type": [
+      "Rock",
+      "Ground"
+    ],
+    "abilities": [
+      "Sturdy",
+      "Rock Head",
+      "Sand Veil"
+    ],
+    "ability_descriptions": {
+      "Rock Head": "Protects the POKEMON from recoil damage.",
+      "Sturdy": "Prevents the POKEMON from being knocked out in one hit.",
+      "Sand Veil": "Boosts evasion in a sandstorm."
+    },
+    "Learnable": [
+      "Sandstorm",
+      "Tackle",
+      "Defense Curl",
+      "Rock Throw",
+      "Self-Destruct",
+      "Harden",
+      "Explosion",
+      "Hyper Beam",
+      "Mega Punch",
+      "Mega Kick",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Strength",
+      "Dig",
+      "Earthquake",
+      "Fissure",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Metronome",
+      "Fire Blast",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Ponyta",
+    "health": 50,
+    "attack": 85,
+    "defense": 55,
+    "sp_attack": 65,
+    "sp_defense": 65,
+    "speed": 90,
+    "weight_kg": 30.0,
+    "description": "Its hooves are 10 times harder than diamond. It can easily trample anything flat in moments.",
+    "type": [
+      "Fire"
+    ],
+    "abilities": [
+      "Flame Body",
+      "Run Away",
+      "Flash Fire"
+    ],
+    "ability_descriptions": {
+      "Run Away": "Enables a sure escape from wild battles.",
+      "Flash Fire": "Powers up SPAtk if hit by Fire-type moves.",
+      "Flame Body": "Contact with the POKEMON may burn the attacker."
+    },
+    "Learnable": [
+      "Ember",
+      "Tail Whip",
+      "Stomp",
+      "Growl",
+      "Fire Spin",
+      "Take Down",
+      "Agility",
+      "Body Slam",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Fire Blast",
+      "Swift",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Rapidash",
+    "health": 65,
+    "attack": 100,
+    "defense": 70,
+    "sp_attack": 80,
+    "sp_defense": 80,
+    "speed": 105,
+    "weight_kg": 95.0,
+    "description": "Very competitive, it will chase anything that moves fast in hopes of racing it.",
+    "type": [
+      "Fire"
+    ],
+    "abilities": [
+      "Flame Body",
+      "Run Away",
+      "Flash Fire"
+    ],
+    "ability_descriptions": {
+      "Run Away": "Enables a sure escape from wild battles.",
+      "Flash Fire": "Powers up SPAtk if hit by Fire-type moves.",
+      "Flame Body": "Contact with the POKEMON may burn the attacker."
+    },
+    "Learnable": [
+      "Ember",
+      "Tail Whip",
+      "Stomp",
+      "Growl",
+      "Fire Spin",
+      "Take Down",
+      "Agility",
+      "Hyper Beam",
+      "Body Slam",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Fire Blast",
+      "Swift",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Slowpoke",
+    "health": 90,
+    "attack": 65,
+    "defense": 65,
+    "sp_attack": 40,
+    "sp_defense": 40,
+    "speed": 15,
+    "weight_kg": 36.0,
+    "description": "Incredibly slow and sluggish. It quite literally takes 5 seconds for it to feel pain when attacked.",
+    "type": [
+      "Water",
+      "Psychic"
+    ],
+    "abilities": [
+      "Oblivious",
+      "Own Tempo",
+      "Regenerator"
+    ],
+    "ability_descriptions": {
+      "Oblivious": "Prevents the POKEMON from being infatuated or taunted.",
+      "Own Tempo": "Prevents the POKEMON from becoming confused.",
+      "Regenerator": "Restores a little HP when withdrawn from battle."
+    },
+    "Learnable": [
+      "Tackle",
+      "Growl",
+      "Water Gun",
+      "Confusion",
+      "Disable",
+      "Headbutt",
+      "Amnesia",
+      "Psychic",
+      "Hydro Pump",
+      "Surf",
+      "Ice Beam",
+      "Blizzard",
+      "Bubble Beam",
+      "Pay Day",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Fire Blast",
+      "Swift",
+      "Skull Bash",
+      "Substitute",
+      "Flash"
+    ]
+  },
+  {
+    "name": "Slowbro",
+    "health": 95,
+    "attack": 75,
+    "defense": 110,
+    "sp_attack": 100,
+    "sp_defense": 80,
+    "speed": 30,
+    "weight_kg": 78.5,
+    "description": "An attached SHELLDER won't let go because of the tasty flavor that oozes from SLOWPOKE's tail.",
+    "type": [
+      "Water",
+      "Psychic"
+    ],
+    "abilities": [
+      "Oblivious",
+      "Own Tempo",
+      "Regenerator"
+    ],
+    "ability_descriptions": {
+      "Oblivious": "Prevents the POKEMON from being infatuated or taunted.",
+      "Own Tempo": "Prevents the POKEMON from becoming confused.",
+      "Regenerator": "Restores a little HP when withdrawn from battle."
+    },
+    "Learnable": [
+      "Tackle",
+      "Growl",
+      "Water Gun",
+      "Confusion",
+      "Disable",
+      "Headbutt",
+      "Amnesia",
+      "Psychic",
+      "Hyper Beam",
+      "Hydro Pump",
+      "Surf",
+      "Ice Beam",
+      "Blizzard",
+      "Bubble Beam",
+      "Mega Punch",
+      "Mega Kick",
+      "Pay Day",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Counter",
+      "Seismic Toss",
+      "Submission",
+      "Strength",
+      "Dig",
+      "Fissure",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Fire Blast",
+      "Swift",
+      "Skull Bash",
+      "Substitute",
+      "Flash",
+      "Tri Attack"
+    ]
+  },
+  {
+    "name": "Magnemite",
+    "health": 25,
+    "attack": 35,
+    "defense": 70,
+    "sp_attack": 95,
+    "sp_defense": 55,
+    "speed": 45,
+    "weight_kg": 6.0,
+    "description": "Uses anti-gravity fields to stay suspended in the air. It moves while emitting electromagnetic waves.",
+    "type": [
+      "Electric",
+      "Steel"
+    ],
+    "abilities": [
+      "Magnet Pull",
+      "Sturdy",
+      "Analytic"
+    ],
+    "ability_descriptions": {
+      "Magnet Pull": "Prevents Steel-type POKEMON from fleeing.",
+      "Sturdy": "Prevents the POKEMON from being knocked out in one hit.",
+      "Analytic": "Boosts move power when the POKEMON moves last."
+    },
+    "Learnable": [
+      "Tackle",
+      "Sonic Boom",
+      "Thunder Shock",
+      "Supersonic",
+      "Thunder Wave",
+      "Swift",
+      "Screech",
+      "Thunderbolt",
+      "Thunder",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Substitute",
+      "Flash"
+    ]
+  },
+  {
+    "name": "Magneton",
+    "health": 50,
+    "attack": 60,
+    "defense": 95,
+    "sp_attack": 120,
+    "sp_defense": 70,
+    "speed": 70,
+    "weight_kg": 60.0,
+    "description": "Formed by three MAGNEMITE linked together by a powerful magnetism. They emit massive radio waves.",
+    "type": [
+      "Electric",
+      "Steel"
+    ],
+    "abilities": [
+      "Magnet Pull",
+      "Sturdy",
+      "Analytic"
+    ],
+    "ability_descriptions": {
+      "Magnet Pull": "Prevents Steel-type POKEMON from fleeing.",
+      "Sturdy": "Prevents the POKEMON from being knocked out in one hit.",
+      "Analytic": "Boosts move power when the POKEMON moves last."
+    },
+    "Learnable": [
+      "Tackle",
+      "Sonic Boom",
+      "Thunder Shock",
+      "Supersonic",
+      "Thunder Wave",
+      "Swift",
+      "Screech",
+      "Hyper Beam",
+      "Thunderbolt",
+      "Thunder",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Substitute",
+      "Flash"
+    ]
+  },
+  {
+    "name": "Farfetchd",
+    "health": 52,
+    "attack": 90,
+    "defense": 55,
+    "sp_attack": 58,
+    "sp_defense": 62,
+    "speed": 60,
+    "weight_kg": 15.0,
+    "description": "The sprig of green onions it holds is its weapon. It is used much like a metallic sword.",
+    "type": [
+      "Normal",
+      "Flying"
+    ],
+    "abilities": [
+      "Keen Eye",
+      "Inner Focus",
+      "Defiant"
+    ],
+    "ability_descriptions": {
+      "Keen Eye": "Prevents accuracy from being lowered.",
+      "Inner Focus": "Prevents flinching.",
+      "Defiant": "Boosts Attack when stats are lowered by an opponent."
+    },
+    "Learnable": [
+      "Peck",
+      "Sand Attack",
+      "Leer",
+      "Fury Attack",
+      "Swords Dance",
+      "Agility",
+      "Cut",
+      "Fly",
+      "Razor Wind",
+      "Whirlwind",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Swift",
+      "Skull Bash",
+      "Substitute",
+      "Reflect",
+      "Mirror Move"
+    ]
+  },
+  {
+    "name": "Doduo",
+    "health": 35,
+    "attack": 85,
+    "defense": 45,
+    "sp_attack": 35,
+    "sp_defense": 35,
+    "speed": 75,
+    "weight_kg": 39.2,
+    "description": "A bird that makes up for its poor flying abilities with its stellar running speed. Leaves giant footprints.",
+    "type": [
+      "Normal",
+      "Flying"
+    ],
+    "abilities": [
+      "Run Away",
+      "Early Bird",
+      "Tangled Feet"
+    ],
+    "ability_descriptions": {
+      "Run Away": "Enables a sure escape from wild battles.",
+      "Early Bird": "Awakens quickly from sleep.",
+      "Tangled Feet": "Raises evasion when confused."
+    },
+    "Learnable": [
+      "Peck",
+      "Growl",
+      "Fury Attack",
+      "Drill Peck",
+      "Rage",
+      "Agility",
+      "Whirlwind",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Swift",
+      "Skull Bash",
+      "Substitute",
+      "Mirror Move"
+    ]
+  },
+  {
+    "name": "Dodrio",
+    "health": 60,
+    "attack": 110,
+    "defense": 70,
+    "sp_attack": 60,
+    "sp_defense": 60,
+    "speed": 110,
+    "weight_kg": 85.2,
+    "description": "Uses its three heads to formulate complicated plans. While two heads sleep, one head always stays awake.",
+    "type": [
+      "Normal",
+      "Flying"
+    ],
+    "abilities": [
+      "Run Away",
+      "Early Bird",
+      "Tangled Feet"
+    ],
+    "ability_descriptions": {
+      "Run Away": "Enables a sure escape from wild battles.",
+      "Early Bird": "Awakens quickly from sleep.",
+      "Tangled Feet": "Raises evasion when confused."
+    },
+    "Learnable": [
+      "Peck",
+      "Growl",
+      "Fury Attack",
+      "Drill Peck",
+      "Rage",
+      "Agility",
+      "Tri Attack",
+      "Hyper Beam",
+      "Whirlwind",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Swift",
+      "Skull Bash",
+      "Substitute",
+      "Mirror Move"
+    ]
+  },
+  {
+    "name": "Seel",
+    "health": 65,
+    "attack": 45,
+    "defense": 55,
+    "sp_attack": 45,
+    "sp_defense": 70,
+    "speed": 45,
+    "weight_kg": 90.0,
+    "description": "Comfortable in frigid conditions. It loves swimming in freezing waters around 14 degrees Fahrenheit.",
+    "type": [
+      "Water"
+    ],
+    "abilities": [
+      "Thick Fat",
+      "Hydration",
+      "Ice Body"
+    ],
+    "ability_descriptions": {
+      "Thick Fat": "Boosts resistance to Fire and Ice-type moves.",
+      "Hydration": "Heals status conditions if it is raining.",
+      "Ice Body": "Gradually regains HP in a hail storm."
+    },
+    "Learnable": [
+      "Headbutt",
+      "Growl",
+      "Aurora Beam",
+      "Rest",
+      "Take Down",
+      "Ice Beam",
+      "Blizzard",
+      "Surf",
+      "Water Gun",
+      "Bubble Beam",
+      "Body Slam",
+      "Double-Edge",
+      "Pay Day",
+      "Strength",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Dewgong",
+    "health": 90,
+    "attack": 70,
+    "defense": 80,
+    "sp_attack": 70,
+    "sp_defense": 95,
+    "speed": 70,
+    "weight_kg": 120.0,
+    "description": "Stores up thermal energy within its body. It swims safely even in incredibly frozen waters.",
+    "type": [
+      "Water",
+      "Ice"
+    ],
+    "abilities": [
+      "Thick Fat",
+      "Hydration",
+      "Ice Body"
+    ],
+    "ability_descriptions": {
+      "Thick Fat": "Boosts resistance to Fire and Ice-type moves.",
+      "Hydration": "Heals status conditions if it is raining.",
+      "Ice Body": "Gradually regains HP in a hail storm."
+    },
+    "Learnable": [
+      "Headbutt",
+      "Growl",
+      "Aurora Beam",
+      "Rest",
+      "Take Down",
+      "Hyper Beam",
+      "Ice Beam",
+      "Blizzard",
+      "Surf",
+      "Water Gun",
+      "Bubble Beam",
+      "Body Slam",
+      "Double-Edge",
+      "Pay Day",
+      "Strength",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Grimer",
+    "health": 80,
+    "attack": 80,
+    "defense": 50,
+    "sp_attack": 40,
+    "sp_defense": 50,
+    "speed": 25,
+    "weight_kg": 30.0,
+    "description": "Appears in filthy areas. Thrives by sucking up toxic industrial sludge from factories.",
+    "type": [
+      "Poison"
+    ],
+    "abilities": [
+      "Poison Touch",
+      "Stench",
+      "Sticky Hold"
+    ],
+    "ability_descriptions": {
+      "Stench": "Attacks may cause the target to flinch.",
+      "Sticky Hold": "Prevents other POKEMON from stealing held items.",
+      "Poison Touch": "May poison a target when making contact."
+    },
+    "Learnable": [
+      "Pound",
+      "Disable",
+      "Poison Gas",
+      "Minimize",
+      "Sludge",
+      "Screech",
+      "Acid Armor",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Mega Drain",
+      "Thunderbolt",
+      "Thunder",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Fire Blast",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Muk",
+    "health": 105,
+    "attack": 105,
+    "defense": 75,
+    "sp_attack": 65,
+    "sp_defense": 100,
+    "speed": 50,
+    "weight_kg": 30.0,
+    "description": "Thickly covered with a rancid muck. It leaves a highly infectious, poisonous trail as it slides along.",
+    "type": [
+      "Poison"
+    ],
+    "abilities": [
+      "Poison Touch",
+      "Stench",
+      "Sticky Hold"
+    ],
+    "ability_descriptions": {
+      "Stench": "Attacks may cause the target to flinch.",
+      "Sticky Hold": "Prevents other POKEMON from stealing held items.",
+      "Poison Touch": "May poison a target when making contact."
+    },
+    "Learnable": [
+      "Pound",
+      "Disable",
+      "Poison Gas",
+      "Minimize",
+      "Sludge",
+      "Screech",
+      "Acid Armor",
+      "Hyper Beam",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Mega Drain",
+      "Thunderbolt",
+      "Thunder",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Fire Blast",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Shellder",
+    "health": 30,
+    "attack":65,
+    "defense": 100,
+    "sp_attack": 45,
+    "sp_defense": 25,
+    "speed": 40,
+    "weight_kg": 4.0,
+    "description": "Its hard shell repels any kind of attack. It is highly vulnerable when its shell opens.",
+    "type": [
+      "Water"
+    ],
+    "abilities": [
+      "Shell Armor",
+      "Skill Link",
+      "Overcoat"
+    ],
+    "ability_descriptions": {
+      "Shell Armor": "Blocks critical hits.",
+      "Skill Link": "Maximizes the number of times multi-strike moves hit.",
+      "Overcoat": "Protects the POKEMON from weather damage and powder moves."
+    },
+    "Learnable": [
+      "Tackle",
+      "Withdraw",
+      "Supersonic",
+      "Clamp",
+      "Aurora Beam",
+      "Leer",
+      "Ice Beam",
+      "Blizzard",
+      "Surf",
+      "Water Gun",
+      "Bubble Beam",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Swift",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Cloyster",
+    "health": 50,
+    "attack": 95,
+    "defense": 180,
+    "sp_attack": 85,
+    "sp_defense": 45,
+    "speed": 70,
+    "weight_kg": 132.5,
+    "description": "When attacked, it launches its internal spikes in rapid-fire succession. Its core is completely unknown.",
+    "type": [
+      "Water",
+      "Ice"
+    ],
+    "abilities": [
+      "Shell Armor",
+      "Skill Link",
+      "Overcoat"
+    ],
+    "ability_descriptions": {
+      "Shell Armor": "Blocks critical hits.",
+      "Skill Link": "Maximizes the number of times multi-strike moves hit.",
+      "Overcoat": "Protects the POKEMON from weather damage and powder moves."
+    },
+    "Learnable": [
+      "Tackle",
+      "Withdraw",
+      "Supersonic",
+      "Clamp",
+      "Aurora Beam",
+      "Leer",
+      "Spike Cannon",
+      "Hyper Beam",
+      "Ice Beam",
+      "Blizzard",
+      "Surf",
+      "Water Gun",
+      "Bubble Beam",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Swift",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Gastly",
+    "health": 30,
+    "attack": 35,
+    "defense": 30,
+    "sp_attack": 100,
+    "sp_defense": 35,
+    "speed": 80,
+    "weight_kg": 0.1,
+    "description": "Almost invisible, this gaseous POKEMON cloaks its targets and lulls them to sleep without notice.",
+    "type": [
+      "Ghost",
+      "Poison"
+    ],
+    "abilities": [
+      "Levitate"
+    ],
+    "ability_descriptions": {
+      "Levitate": "Gives full immunity to all Ground-type moves."
+    },
+    "Learnable": [
+      "Lick",
+      "Confuse Ray",
+      "Night Shade",
+      "Hypnosis",
+      "Dream Eater",
+      "Mega Drain",
+      "Thunderbolt",
+      "Thunder",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Psychic",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Haunter",
+    "health": 45,
+    "attack": 50,
+    "defense": 45,
+    "sp_attack": 115,
+    "sp_defense": 55,
+    "speed": 95,
+    "weight_kg": 0.1,
+    "description": "Because of its ability to slip through brick walls, it is rumored to belong to another dimension.",
+    "type": [
+      "Ghost",
+      "Poison"
+    ],
+    "abilities": [
+      "Levitate"
+    ],
+    "ability_descriptions": {
+      "Levitate": "Gives full immunity to all Ground-type moves."
+    },
+    "Learnable": [
+      "Lick",
+      "Confuse Ray",
+      "Night Shade",
+      "Hypnosis",
+      "Dream Eater",
+      "Mega Drain",
+      "Thunderbolt",
+      "Thunder",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Psychic",
+      "Substitute",
+      "Mega Punch",
+      "Mega Kick"
+    ]
+  },
+  {
+    "name": "Gengar",
+    "health": 60,
+    "attack": 65,
+    "defense": 60,
+    "sp_attack": 130,
+    "sp_defense": 75,
+    "speed": 110,
+    "weight_kg": 40.5,
+    "description": "Under a full moon, this POKEMON loves to mimic the shadows of people and laugh at their fright.",
+    "type": [
+      "Ghost",
+      "Poison"
+    ],
+    "abilities": [
+      "Cursed Body"
+    ],
+    "ability_descriptions": {
+      "Cursed Body": "May disable a move used against the POKEMON."
+    },
+    "Learnable": [
+      "Lick",
+      "Confuse Ray",
+      "Night Shade",
+      "Hypnosis",
+      "Dream Eater",
+      "Hyper Beam",
+      "Mega Drain",
+      "Thunderbolt",
+      "Thunder",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Psychic",
+      "Substitute",
+      "Mega Punch",
+      "Mega Kick",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Strength",
+      "Dig"
+    ]
+  },
+  {
+    "name": "Onix",
+    "health": 35,
+    "attack": 45,
+    "defense": 160,
+    "sp_attack": 30,
+    "sp_defense": 45,
+    "speed": 70,
+    "weight_kg": 210.0,
+    "description": "As it tunnels through the ground, it absorbs many hard elements. This makes its body highly solid.",
+    "type": [
+      "Rock",
+      "Ground"
+    ],
+    "abilities": [
+      "Rock Head",
+      "Sturdy"
+    ],
+    "ability_descriptions": {
+      "Sand Rush": "Boosts Speed in a sandstorm.",
+      "Rock Head": "Protects the POKEMON from recoil damage.",
+      "Sturdy": "Prevents the POKEMON from being knocked out in one hit."
+    },
+    "Learnable": [
+      "Sandstorm",
+      "Tackle",
+      "Screech",
+      "Bide",
+      "Rock Throw",
+      "Rage",
+      "Slam",
+      "Harden",
+      "Dig",
+      "Earthquake",
+      "Fissure",
+      "Strength",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Mimic",
+      "Double Team",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Steelix",
+    "health": 75,
+    "attack": 85,
+    "defense": 200,
+    "sp_attack": 55,
+    "sp_defense": 65,
+    "speed": 30,
+    "weight_kg": 400.0,
+    "description": "It is said that if an ONIX lives to be over 100 years old, its body composition changes to become diamond-like.",
+    "type": [
+      "Steel",
+      "Ground"
+    ],
+    "abilities": [
+      "Sturdy",
+      "Rock Head",
+      "Sand Rush"
+    ],
+    "ability_descriptions": {
+      "Sand Rush": "Boosts Speed in a sandstorm.",
+      "Rock Head": "Protects the POKEMON from recoil damage.",
+      "Sturdy": "Prevents the POKEMON from being knocked out in one hit."
+    },
+    "Learnable": [
+      "Sandstorm",
+      "Tackle",
+      "Screech",
+      "Bind",
+      "Rock Throw",
+      "Rage",
+      "Slam",
+      "Harden",
+      "Dig",
+      "Earthquake",
+      "Fissure",
+      "Iron Tail",
+      "Crunch",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Mimic",
+      "Double Team",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Drowzee",
+    "health": 60,
+    "attack": 48,
+    "defense": 45,
+    "sp_attack": 43,
+    "sp_defense": 90,
+    "speed": 42,
+    "weight_kg": 32.4,
+    "description": "Puts enemies to sleep then eats their dreams. It occasionally becomes ill if it eats bad dreams.",
+    "type": [
+      "Psychic"
+    ],
+    "abilities": [
+      "Insomnia",
+      "Forewarn",
+      "Inner Focus"
+    ],
+    "ability_descriptions": {
+      "Insomnia": "Prevents the POKEMON from falling asleep.",
+      "Forewarn": "Reveals the opponent's strongest move.",
+      "Inner Focus": "Prevents flinching."
+    },
+    "Learnable": [
+      "Pound",
+      "Hypnosis",
+      "Disable",
+      "Confusion",
+      "Headbutt",
+      "Poison Gas",
+      "Psychic",
+      "Dream Eater",
+      "Mega Punch",
+      "Mega Kick",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Counter",
+      "Seismic Toss",
+      "Submission",
+      "Thunder Wave",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Metronome",
+      "Skull Bash",
+      "Substitute",
+      "Flash",
+      "Tri Attack"
+    ]
+  },
+  {
+    "name": "Hypno",
+    "health": 85,
+    "attack": 73,
+    "defense": 70,
+    "sp_attack": 73,
+    "sp_defense": 115,
+    "speed": 67,
+    "weight_kg": 75.6,
+    "description": "Avoid eye contact when you cross paths with one. It will try to put you to sleep using its pendulum.",
+    "type": [
+      "Psychic"
+    ],
+    "abilities": [
+      "Insomnia",
+      "Forewarn",
+      "Inner Focus"
+    ],
+    "ability_descriptions": {
+      "Insomnia": "Prevents the POKEMON from falling asleep.",
+      "Forewarn": "Reveals the opponent's strongest move.",
+      "Inner Focus": "Prevents flinching."
+    },
+    "Learnable": [
+      "Pound",
+      "Hypnosis",
+      "Disable",
+      "Confusion",
+      "Headbutt",
+      "Poison Gas",
+      "Psychic",
+      "Dream Eater",
+      "Hyper Beam",
+      "Mega Punch",
+      "Mega Kick",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Counter",
+      "Seismic Toss",
+      "Submission",
+      "Thunder Wave",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Metronome",
+      "Skull Bash",
+      "Substitute",
+      "Flash",
+      "Tri Attack"
+    ]
+  },
+  {
+    "name": "Krabby",
+    "health": 30,
+    "attack": 105,
+    "defense": 90,
+    "sp_attack": 25,
+    "sp_defense": 25,
+    "speed": 50,
+    "weight_kg": 6.5,
+    "description": "Its pincers are superb weapons. They sometimes snap off during battle, but they grow back quickly.",
+    "type": [
+      "Water"
+    ],
+    "abilities": [
+      "Hyper Cutter",
+      "Shell Armor",
+      "Sheer Force"
+    ],
+    "ability_descriptions": {
+      "Hyper Cutter": "Prevents other POKEMON from lowering its Attack stat.",
+      "Shell Armor": "Blocks critical hits.",
+      "Sheer Force": "Removes additional move effects to increase power."
+    },
+    "Learnable": [
+      "Bubble",
+      "Leer",
+      "Vice Grip",
+      "Guillotine",
+      "Stomp",
+      "Crabhammer",
+      "Swords Dance",
+      "Cut",
+      "Surf",
+      "Water Gun",
+      "Bubble Beam",
+      "Ice Beam",
+      "Blizzard",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Strength",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Kingler",
+    "health": 55,
+    "attack": 130,
+    "defense": 115,
+    "sp_attack": 50,
+    "sp_defense": 50,
+    "speed": 75,
+    "weight_kg": 60.0,
+    "description": "One of its pincers grew to be as massive as a block of iron. It weighs 10 times more than the other.",
+    "type": [
+      "Water"
+    ],
+    "abilities": [
+      "Hyper Cutter",
+      "Shell Armor",
+      "Sheer Force"
+    ],
+    "ability_descriptions": {
+      "Hyper Cutter": "Prevents other POKEMON from lowering its Attack stat.",
+      "Shell Armor": "Blocks critical hits.",
+      "Sheer Force": "Removes additional move effects to increase power."
+    },
+    "Learnable": [
+      "Bubble",
+      "Leer",
+      "Vice Grip",
+      "Guillotine",
+      "Stomp",
+      "Crabhammer",
+      "Hyper Beam",
+      "Swords Dance",
+      "Cut",
+      "Surf",
+      "Water Gun",
+      "Bubble Beam",
+      "Ice Beam",
+      "Blizzard",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Strength",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Voltorb",
+    "health": 40,
+    "attack": 30,
+    "defense": 50,
+    "sp_attack": 55,
+    "sp_defense": 55,
+    "speed": 100,
+    "weight_kg": 10.4,
+    "description": "It is said to disguise itself as a POKÉBALL. It explodes with the slightest environmental stimulus.",
+    "type": [
+      "Electric"
+    ],
+    "abilities": [
+      "Soundproof",
+      "Static",
+      "Aftermath"
+    ],
+    "ability_descriptions": {
+      "Soundproof": "Gives full immunity to sound-based moves.",
+      "Static": "Contact with the POKEMON may cause paralysis.",
+      "Aftermath": "Damages the attacker if knocked out by a physical hit."
+    },
+    "Learnable": [
+      "Tackle",
+      "Screech",
+      "Sonic Boom",
+      "Self-Destruct",
+      "Light Screen",
+      "Swift",
+      "Explosion",
+      "Thunderbolt",
+      "Thunder",
+      "Thunder Wave",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Substitute",
+      "Flash"
+    ]
+  },
+  {
+    "name": "Electrode",
+    "health": 60,
+    "attack": 50,
+    "defense": 70,
+    "sp_attack": 80,
+    "sp_defense": 80,
+    "speed": 150,
+    "weight_kg": 66.6,
+    "description": "Stores massive amounts of electrical energy. It is known to explode under high internal pressure.",
+    "type": [
+      "Electric"
+    ],
+    "abilities": [
+      "Soundproof",
+      "Static",
+      "Aftermath"
+    ],
+    "ability_descriptions": {
+      "Soundproof": "Gives full immunity to sound-based moves.",
+      "Static": "Contact with the POKEMON may cause paralysis.",
+      "Aftermath": "Damages the attacker if knocked out by a physical hit."
+    },
+    "Learnable": [
+      "Tackle",
+      "Screech",
+      "Sonic Boom",
+      "Self-Destruct",
+      "Light Screen",
+      "Swift",
+      "Explosion",
+      "Hyper Beam",
+      "Thunderbolt",
+      "Thunder",
+      "Thunder Wave",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Substitute",
+      "Flash"
+    ]
+  },
+  {
+    "name": "Exeggcute",
+    "health": 60,
+    "attack": 40,
+    "defense": 80,
+    "sp_attack": 60,
+    "sp_defense": 45,
+    "speed": 40,
+    "weight_kg": 2.5,
+    "description": "Often mistaken for eggs. When cracks appear on their shell, it is a sign that it is close to evolution.",
+    "type": [
+      "Grass",
+      "Psychic"
+    ],
+    "abilities": [
+      "Chlorophyll",
+      "Harvest"
+    ],
+    "ability_descriptions": {
+      "Chlorophyll": "Boosts Speed in harsh sunlight.",
+      "Harvest": "May restore a used Berry after every turn."
+    },
+    "Learnable": [
+      "Barrage",
+      "Hypnosis",
+      "Reflect",
+      "Leech Seed",
+      "Stun Spore",
+      "Poison Powder",
+      "Sleep Powder",
+      "Solar Beam",
+      "Psychic",
+      "Teleport",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Self-Destruct",
+      "Egg Bomb",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Exeggutor",
+    "health": 95,
+    "attack": 95,
+    "defense": 85,
+    "sp_attack": 125,
+    "sp_defense": 75,
+    "speed": 55,
+    "weight_kg": 120.0,
+    "description": "Legend has it that if one of its heads drops off, it will transform into a new EXEGGUTE.",
+    "type": [
+      "Grass",
+      "Psychic"
+    ],
+    "abilities": [
+      "Chlorophyll",
+      "Harvest"
+    ],
+    "ability_descriptions": {
+      "Chlorophyll": "Boosts Speed in harsh sunlight.",
+      "Harvest": "May restore a used Berry after every turn."
+    },
+    "Learnable": [
+      "Barrage",
+      "Hypnosis",
+      "Reflect",
+      "Leech Seed",
+      "Stun Spore",
+      "Poison Powder",
+      "Sleep Powder",
+      "Solar Beam",
+      "Psychic",
+      "Stomp",
+      "Hyper Beam",
+      "Teleport",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Self-Destruct",
+      "Egg Bomb",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Cubone",
+    "health": 50,
+    "attack": 50,
+    "defense": 95,
+    "sp_attack": 40,
+    "sp_defense": 50,
+    "speed": 35,
+    "weight_kg": 6.5,
+    "description": "Wears the skull of its deceased mother. Its cries echo inside the skull as a mournful melody.",
+    "type": [
+      "Ground"
+    ],
+    "abilities": [
+      "Rock Head",
+      "Lightning Rod",
+      "Battle Armor"
+    ],
+    "ability_descriptions": {
+      "Rock Head": "Protects the POKEMON from recoil damage.",
+      "Lightning Rod": "Draws in Electric moves to boost its own Sp. Atk.",
+      "Battle Armor": "Blocks critical hits."
+    },
+    "Learnable": [
+      "Bone Club",
+      "Growl",
+      "Leer",
+      "Focus Energy",
+      "Thrash",
+      "Bonemerang",
+      "Rage",
+      "Mega Punch",
+      "Mega Kick",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Bubble Beam",
+      "Water Gun",
+      "Ice Beam",
+      "Blizzard",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Strength",
+      "Dig",
+      "Earthquake",
+      "Fissure",
+      "Toxic",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Fire Blast",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Marowak",
+    "health": 60,
+    "attack": 80,
+    "defense": 110,
+    "sp_attack": 50,
+    "sp_defense": 80,
+    "speed": 45,
+    "weight_kg": 45.0,
+    "description": "Small and weak originally, it became ferocious when it began utilizing various bones as weapons.",
+    "type": [
+      "Ground"
+    ],
+    "abilities": [
+      "Rock Head",
+      "Lightning Rod",
+      "Battle Armor"
+    ],
+    "ability_descriptions": {
+      "Rock Head": "Protects the POKEMON from recoil damage.",
+      "Lightning Rod": "Draws in Electric moves to boost its own Sp. Atk.",
+      "Battle Armor": "Blocks critical hits."
+    },
+    "Learnable": [
+      "Bone Club",
+      "Growl",
+      "Leer",
+      "Focus Energy",
+      "Thrash",
+      "Bonemerang",
+      "Rage",
+      "Hyper Beam",
+      "Mega Punch",
+      "Mega Kick",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Bubble Beam",
+      "Water Gun",
+      "Ice Beam",
+      "Blizzard",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Strength",
+      "Dig",
+      "Earthquake",
+      "Fissure",
+      "Toxic",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Fire Blast",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Hitmonlee",
+    "health": 50,
+    "attack": 120,
+    "defense": 53,
+    "sp_attack": 35,
+    "sp_defense": 110,
+    "speed": 87,
+    "weight_kg": 49.8,
+    "description": "When executing a flurry of kicks, its legs stretch out to double their normal length.",
+    "type": [
+      "Fighting"
+    ],
+    "abilities": [
+      "Limber",
+      "Reckless",
+      "Unburden"
+    ],
+    "ability_descriptions": {
+      "Limber": "Prevents paralysis.",
+      "Reckless": "Powers up moves that have recoil damage.",
+      "Unburden": "Raises Speed if a held item is used."
+    },
+    "Learnable": [
+      "Meditate",
+      "Rolling Kick",
+      "Jump Kick",
+      "Focus Energy",
+      "Hi Jump Kick",
+      "Mind Reader",
+      "Mega Kick",
+      "Mega Punch",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Strength",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Swift",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Hitmonchan",
+    "health": 50,
+    "attack": 105,
+    "defense": 79,
+    "sp_attack": 35,
+    "sp_defense": 110,
+    "speed": 76,
+    "weight_kg": 50.2,
+    "description": "Punches in lightning-fast rotations. Its boxing style is advanced enough to split the atmosphere.",
+    "type": [
+      "Fighting"
+    ],
+    "abilities": [
+      "Keen Eye",
+      "Iron Fist",
+      "Inner Focus"
+    ],
+    "ability_descriptions": {
+      "Keen Eye": "Prevents accuracy from being lowered.",
+      "Iron Fist": "Powers up punching moves.",
+      "Inner Focus": "Prevents flinching."
+    },
+    "Learnable": [
+      "Comet Punch",
+      "Agility",
+      "Fire Punch",
+      "Ice Punch",
+      "Thunder Punch",
+      "Counter",
+      "Mega Punch",
+      "Mega Kick",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Submission",
+      "Seismic Toss",
+      "Strength",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Swift",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Lickitung",
+    "health": 90,
+    "attack": 55,
+    "defense": 75,
+    "sp_attack": 60,
+    "sp_defense": 75,
+    "speed": 30,
+    "weight_kg": 65.5,
+    "description": "Its tongue is twice as long as its body. It uses it like an arm to grab food and attack.",
+    "type": [
+      "Normal"
+    ],
+    "abilities": [
+      "Own Tempo",
+      "Oblivious",
+      "Cloud Nine"
+    ],
+    "ability_descriptions": {
+      "Own Tempo": "Prevents the POKEMON from becoming confused.",
+      "Oblivious": "Prevents the POKEMON from being infatuated or taunted.",
+      "Cloud Nine": "Eliminates the effects of weather."
+    },
+    "Learnable": [
+      "Wrap",
+      "Supersonic",
+      "Stomp",
+      "Disable",
+      "Defense Curl",
+      "Slam",
+      "Mega Punch",
+      "Mega Kick",
+      "Hyper Beam",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Water Gun",
+      "Bubble Beam",
+      "Ice Beam",
+      "Blizzard",
+      "Thunderbolt",
+      "Thunder",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Strength",
+      "Dig",
+      "Earthquake",
+      "Fissure",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Fire Blast",
+      "Skull Bash",
+      "Substitute",
+      "Cut",
+      "Surf"
+    ]
+  },
+  {
+    "name": "Koffing",
+    "health": 40,
+    "attack": 65,
+    "defense": 95,
+    "sp_attack": 60,
+    "sp_defense": 45,
+    "speed": 35,
+    "weight_kg": 1.0,
+    "description": "Its thin, balloon-like body is inflated with highly toxic and volatile gas combinations.",
+    "type": [
+      "Poison"
+    ],
+    "abilities": [
+      "Levitate"
+    ],
+    "ability_descriptions": {
+      "Levitate": "Gives full immunity to all Ground-type moves."
+    },
+    "Learnable": [
+      "Tackle",
+      "Smog",
+      "Sludge",
+      "Smokescreen",
+      "Self-Destruct",
+      "Haze",
+      "Explosion",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Fire Blast",
+      "Thunderbolt",
+      "Thunder",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Weezing",
+    "health": 65,
+    "attack": 90,
+    "defense": 120,
+    "sp_attack": 85,
+    "sp_defense": 70,
+    "speed": 60,
+    "weight_kg": 9.5,
+    "description": "Formed when two toxic gases combine over many years. It is incredibly dangerous in enclosed spaces.",
+    "type": [
+      "Poison"
+    ],
+    "abilities": [
+      "Levitate"
+    ],
+    "ability_descriptions": {
+      "Levitate": "Gives full immunity to all Ground-type moves."
+    },
+    "Learnable": [
+      "Tackle",
+      "Smog",
+      "Sludge",
+      "Smokescreen",
+      "Self-Destruct",
+      "Haze",
+      "Explosion",
+      "Hyper Beam",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Fire Blast",
+      "Thunderbolt",
+      "Thunder",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Rhyhorn",
+    "health": 80,
+    "attack": 85,
+    "defense": 95,
+    "sp_attack": 30,
+    "sp_defense": 30,
+    "speed": 25,
+    "weight_kg": 115.0,
+    "description": "Its massive bones are 100 times harder than human bones. It can easily knock over trailer trucks.",
+    "type": [
+      "Ground",
+      "Rock"
+    ],
+    "abilities": [
+      "Lightning Rod",
+      "Rock Head",
+      "Reckless"
+    ],
+    "ability_descriptions": {
+      "Lightning Rod": "Draws in Electric moves to boost its own Sp. Atk.",
+      "Rock Head": "Protects the POKEMON from recoil damage.",
+      "Reckless": "Powers up moves that have recoil damage."
+    },
+    "Learnable": [
+      "Horn Attack",
+      "Stomp",
+      "Tail Whip",
+      "Fury Attack",
+      "Horn Drill",
+      "Leer",
+      "Take Down",
+      "Body Slam",
+      "Double-Edge",
+      "Strength",
+      "Dig",
+      "Earthquake",
+      "Fissure",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Fire Blast",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Rhydon",
+    "health": 105,
+    "attack": 130,
+    "defense": 120,
+    "sp_attack": 45,
+    "sp_defense": 45,
+    "speed": 40,
+    "weight_kg": 120.0,
+    "description": "Protected by an armor-like hide, it lives comfortably in molten lava around 3,600 degrees Fahrenheit.",
+    "type": [
+      "Ground",
+      "Rock"
+    ],
+    "abilities": [
+      "Lightning Rod",
+      "Rock Head",
+      "Reckless"
+    ],
+    "ability_descriptions": {
+      "Lightning Rod": "Draws in Electric moves to boost its own Sp. Atk.",
+      "Rock Head": "Protects the POKEMON from recoil damage.",
+      "Reckless": "Powers up moves that have recoil damage."
+    },
+    "Learnable": [
+      "Horn Attack",
+      "Stomp",
+      "Tail Whip",
+      "Fury Attack",
+      "Horn Drill",
+      "Leer",
+      "Take Down",
+      "Hyper Beam",
+      "Mega Punch",
+      "Mega Kick",
+      "Body Slam",
+      "Double-Edge",
+      "Bubble Beam",
+      "Water Gun",
+      "Ice Beam",
+      "Blizzard",
+      "Thunderbolt",
+      "Thunder",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Strength",
+      "Dig",
+      "Earthquake",
+      "Fissure",
+      "Surf",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Fire Blast",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Chansey",
+    "health": 250,
+    "attack": 5,
+    "defense": 5,
+    "sp_attack": 35,
+    "sp_defense": 105,
+    "speed": 50,
+    "weight_kg": 34.6,
+    "description": "A rare and gentle POKEMON that is said to bring great happiness to anyone who captures it.",
+    "type": [
+      "Normal"
+    ],
+    "abilities": [
+      "Natural Cure",
+      "Serene Grace",
+      "Healer"
+    ],
+    "ability_descriptions": {
+      "Natural Cure": "Heals status conditions when withdrawing from battle.",
+      "Serene Grace": "Boosts the likelihood of added effects occurring.",
+      "Healer": "May heal an ally's status conditions."
+    },
+    "Learnable": [
+      "Pound",
+      "Double Slap",
+      "Sing",
+      "Growl",
+      "Defense Curl",
+      "Light Screen",
+      "Minimize",
+      "Egg Bomb",
+      "Soft-Boiled",
+      "Mega Punch",
+      "Mega Kick",
+      "Hyper Beam",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Bubble Beam",
+      "Water Gun",
+      "Ice Beam",
+      "Blizzard",
+      "Thunderbolt",
+      "Thunder",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Strength",
+      "Teleport",
+      "Psychic",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Metronome",
+      "Fire Blast",
+      "Skull Bash",
+      "Tri Attack",
+      "Substitute",
+      "Flash"
+    ]
+  },
+  {
+    "name": "Tangela",
+    "health": 65,
+    "attack": 55,
+    "defense": 115,
+    "sp_attack": 100,
+    "sp_defense": 40,
+    "speed": 60,
+    "weight_kg": 35.0,
+    "description": "Its entire body is swathed in thick blue vines. It tickles anything that gets too close to it.",
+    "type": [
+      "Grass"
+    ],
+    "abilities": [
+      "Chlorophyll",
+      "Leaf Guard",
+      "Regenerator"
+    ],
+    "ability_descriptions": {
+      "Chlorophyll": "Boosts Speed in harsh sunlight.",
+      "Leaf Guard": "Prevents status conditions in harsh sunlight.",
+      "Regenerator": "Restores a little HP when withdrawn from battle."
+    },
+    "Learnable": [
+      "Constrict",
+      "Bind",
+      "Absorb",
+      "Poison Powder",
+      "Stun Spore",
+      "Sleep Powder",
+      "Slam",
+      "Growth",
+      "Hyper Beam",
+      "Swords Dance",
+      "Cut",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Mega Drain",
+      "Solar Beam",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Kangaskhan",
+    "health": 105,
+    "attack": 95,
+    "defense": 80,
+    "sp_attack": 40,
+    "sp_defense": 80,
+    "speed": 90,
+    "weight_kg": 80.0,
+    "description": "The infant rarely ventures out of its mother's protective pouch until it reaches 3 years of age.",
+    "type": [
+      "Normal"
+    ],
+    "abilities": [
+      "Early Bird",
+      "Scrappy",
+      "Inner Focus"
+    ],
+    "ability_descriptions": {
+      "Early Bird": "Awakens quickly from sleep.",
+      "Scrappy": "Allows the POKEMON to hit Ghost-types with Normal moves.",
+      "Inner Focus": "Prevents flinching."
+    },
+    "Learnable": [
+      "Comet Punch",
+      "Leer",
+      "Bite",
+      "Tail Whip",
+      "Mega Punch",
+      "Mega Kick",
+      "Hyper Beam",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Bubble Beam",
+      "Water Gun",
+      "Ice Beam",
+      "Blizzard",
+      "Thunderbolt",
+      "Thunder",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Strength",
+      "Surf",
+      "Dig",
+      "Fissure",
+      "Earthquake",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Fire Blast",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Horsea",
+    "health": 30,
+    "attack": 40,
+    "defense": 70,
+    "sp_attack": 70,
+    "sp_defense": 25,
+    "speed": 60,
+    "weight_kg": 8.0,
+    "description": "Known to shoot down flying insects from the surface by precision spraying ink from its snout.",
+    "type": [
+      "Water"
+    ],
+    "abilities": [
+      "Swift Swim",
+      "Sniper",
+      "Damp"
+    ],
+    "ability_descriptions": {
+      "Swift Swim": "Boosts Speed in rain.",
+      "Sniper": "Powers up critical hits.",
+      "Damp": "Prevents the use of self-destructing moves."
+    },
+    "Learnable": [
+      "Bubble",
+      "Smokescreen",
+      "Water Gun",
+      "Leer",
+      "Hydro Pump",
+      "Agility",
+      "Surf",
+      "Ice Beam",
+      "Blizzard",
+      "Bubble Beam",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Swift",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Seadra",
+    "health": 55,
+    "attack": 65,
+    "defense": 95,
+    "sp_attack": 95,
+    "sp_defense": 45,
+    "speed": 85,
+    "weight_kg": 25.0,
+    "description": "Its sharp, defensive back fins contain toxic elements. Touching it carelessly can induce fainting.",
+    "type": [
+      "Water"
+    ],
+    "abilities": [
+      "Swift Swim",
+      "Sniper",
+      "Damp"
+    ],
+    "ability_descriptions": {
+      "Swift Swim": "Boosts Speed in rain.",
+      "Sniper": "Powers up critical hits.",
+      "Damp": "Prevents the use of self-destructing moves."
+    },
+    "Learnable": [
+      "Rain Dance",
+      "Bubble",
+      "Smokescreen",
+      "Water Gun",
+      "Leer",
+      "Hydro Pump",
+      "Agility",
+      "Hyper Beam",
+      "Surf",
+      "Ice Beam",
+      "Blizzard",
+      "Bubble Beam",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Swift",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+
+  {
+  "name": "Kingdra",
+  "health": 75,
+  "attack": 95,
+  "defense": 95,
+  "sp_attack": 95,
+  "sp_defense": 95,
+  "speed": 85,
+  "weight_kg": 152.0,
+  "description": "It sleeps deep on the ocean floor to build its energy. It is said to cause whirlpools as it awakens.",
+  "type": [
+    "Water",
+    "Dragon"
+  ],
+  "abilities": [
+    "Swift Swim",
+    "Sniper",
+    "Damp"
+  ],
+  "ability_descriptions": {
+    "Swift Swim": "Boosts Speed in rain.",
+    "Sniper": "Powers up critical hits.",
+    "Damp": "Prevents the use of self-destructing moves."
+  },
+  "Learnable": [
+    "Rain Dance",
+    "Bubble",
+    "Smokescreen",
+    "Water Gun",
+    "Leer",
+    "Hydro Pump",
+    "Agility",
+    "Surf",
+    "Ice Beam",
+    "Blizzard",
+    "Bubble Beam",
+    "Take Down",
+    "Double-Edge",
+    "Toxic",
+    "Rage",
+    "Mimic",
+    "Double Team",
+    "Bide",
+    "Swift",
+    "Skull Bash",
+    "Substitute",
+    "Dragon Pulse",
+    "Dragon Dance",
+    "Flash Cannon",
+    "Draco Meteor",
+    "Hyper Beam",
+    "Giga Impact",
+    "Waterfall"
+  ]
+},
+  {
+    "name": "Goldeen",
+    "health": 45,
+    "attack": 67,
+    "defense": 60,
+    "sp_attack": 35,
+    "sp_defense": 50,
+    "speed": 63,
+    "weight_kg": 15.0,
+    "description": "Its elegant tail fin flutters beautifully in the water like a dress. Known as the Water Queen.",
+    "type": [
+      "Water"
+    ],
+    "abilities": [
+      "Water Veil",
+      "Swift Swim",
+      "Lightning Rod"
+    ],
+    "ability_descriptions": {
+      "Swift Swim": "Boosts Speed in rain.",
+      "Water Veil": "Prevents the POKEMON from getting burned.",
+      "Lightning Rod": "Draws in Electric moves to boost its own Sp. Atk."
+    },
+    "Learnable": [
+      "Peck",
+      "Tail Whip",
+      "Supersonic",
+      "Horn Attack",
+      "Fury Attack",
+      "Waterfall",
+      "Horn Drill",
+      "Agility",
+      "Surf",
+      "Water Gun",
+      "Ice Beam",
+      "Blizzard",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Swift",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Seaking",
+    "health": 80,
+    "attack": 92,
+    "defense": 65,
+    "sp_attack": 65,
+    "sp_defense": 80,
+    "speed": 68,
+    "weight_kg": 39.0,
+    "description": "In autumn, they can be seen aggressively drilling holes into riverbed boulders to nest eggs.",
+    "type": [
+      "Water"
+    ],
+    "abilities": [
+      "Water Veil",
+      "Swift Swim",
+      "Lightning Rod"
+    ],
+    "ability_descriptions": {
+      "Swift Swim": "Boosts Speed in rain.",
+      "Water Veil": "Prevents the POKEMON from getting burned.",
+      "Lightning Rod": "Draws in Electric moves to boost its own Sp. Atk."
+    },
+    "Learnable": [
+      "Peck",
+      "Tail Whip",
+      "Supersonic",
+      "Horn Attack",
+      "Fury Attack",
+      "Waterfall",
+      "Horn Drill",
+      "Agility",
+      "Hyper Beam",
+      "Surf",
+      "Water Gun",
+      "Ice Beam",
+      "Blizzard",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Swift",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Staryu",
+    "health": 30,
+    "attack": 45,
+    "defense": 55,
+    "sp_attack": 70,
+    "sp_defense": 55,
+    "speed": 85,
+    "weight_kg": 34.5,
+    "description": "An enigmatic creature that can easily regenerate any severed appendage as long as its red core remains intact.",
+    "type": [
+      "Water"
+    ],
+    "abilities": [
+      "Illuminate",
+      "Natural Cure",
+      "Analytic"
+    ],
+    "ability_descriptions": {
+      "Illuminate": "Raises the likelihood of meeting wild POKEMON.",
+      "Natural Cure": "Heals status conditions when withdrawing from battle.",
+      "Analytic": "Boosts move power when the POKEMON moves last."
+    },
+    "Learnable": [
+      "Tackle",
+      "Water Gun",
+      "Harden",
+      "Recover",
+      "Swift",
+      "Bubble Beam",
+      "Minimize",
+      "Light Screen",
+      "Hydro Pump",
+      "Surf",
+      "Ice Beam",
+      "Blizzard",
+      "Thunderbolt",
+      "Thunder",
+      "Thunder Wave",
+      "Psychic",
+      "Teleport",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Skull Bash",
+      "Substitute",
+      "Flash"
+    ]
+  },
+  {
+    "name": "Starmie",
+    "health": 60,
+    "attack": 75,
+    "defense": 85,
+    "sp_attack": 100,
+    "sp_defense": 85,
+    "speed": 115,
+    "weight_kg": 80.0,
+    "description": "Its central core glows multiple colors when communicating. It is rumored to originate from space.",
+    "type": [
+      "Water",
+      "Psychic"
+    ],
+    "abilities": [
+      "Illuminate",
+      "Natural Cure",
+      "Analytic"
+    ],
+    "ability_descriptions": {
+      "Illuminate": "Raises the likelihood of meeting wild POKEMON.",
+      "Natural Cure": "Heals status conditions when withdrawing from battle.",
+      "Analytic": "Boosts move power when the POKEMON moves last."
+    },
+    "Learnable": [
+      "Tackle",
+      "Water Gun",
+      "Harden",
+      "Recover",
+      "Swift",
+      "Bubble Beam",
+      "Minimize",
+      "Light Screen",
+      "Hydro Pump",
+      "Hyper Beam",
+      "Surf",
+      "Ice Beam",
+      "Blizzard",
+      "Thunderbolt",
+      "Thunder",
+      "Thunder Wave",
+      "Psychic",
+      "Teleport",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Skull Bash",
+      "Substitute",
+      "Flash"
+    ]
+  },
+  {
+    "name": "MrMime",
+    "health": 40,
+    "attack": 45,
+    "defense": 65,
+    "sp_attack": 100,
+    "sp_defense": 120,
+    "speed": 90,
+    "weight_kg": 54.5,
+    "description": "If interrupted while miming, it will abruptly break character and slap the offender aggressively.",
+    "type": [
+      "Psychic",
+      "Fairy"
+    ],
+    "abilities": [
+      "Filter",
+      "Soundproof",
+      "Technician"
+    ],
+    "ability_descriptions": {
+      "Soundproof": "Gives full immunity to sound-based moves.",
+      "Filter": "Reduces damage taken from super-effective attacks.",
+      "Technician": "Powers up the POKEMON's weaker moves."
+    },
+    "Learnable": [
+      "Confusion",
+      "Barrier",
+      "Light Screen",
+      "Double Slap",
+      "Meditate",
+      "Substitute",
+      "Hyper Beam",
+      "Mega Punch",
+      "Mega Kick",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Counter",
+      "Seismic Toss",
+      "Submission",
+      "Thunderbolt",
+      "Thunder",
+      "Thunder Wave",
+      "Psychic",
+      "Teleport",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Metronome",
+      "Skull Bash",
+      "Flash",
+      "Wave"
+    ]
+  },
+  {
+    "name": "Scyther",
+    "health": 70,
+    "attack": 110,
+    "defense": 80,
+    "sp_attack": 55,
+    "sp_defense": 80,
+    "speed": 105,
+    "weight_kg": 56.0,
+    "description": "Leaps out from tall grass and slices prey with its scythes. Its movements are blindingly fast.",
+    "type": [
+      "Bug",
+      "Flying"
+    ],
+    "abilities": [
+      "Swarm",
+      "Technician",
+      "Steadfast"
+    ],
+    "ability_descriptions": {
+      "Swarm": "Powers up Bug moves when HP is low.",
+      "Technician": "Powers up the POKEMON's weaker moves.",
+      "Steadfast": "Raises Speed each time the POKEMON flinches."
+    },
+    "Learnable": [
+      "Quick Attack",
+      "Leer",
+      "Focus Energy",
+      "Agility",
+      "Slash",
+      "Swords Dance",
+      "Cut",
+      "Wing Attack",
+      "Hyper Beam",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Swift",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Jynx",
+    "health": 65,
+    "attack": 50,
+    "defense": 35,
+    "sp_attack": 115,
+    "sp_defense": 95,
+    "speed": 95,
+    "weight_kg": 40.6,
+    "description": "It seductively shakes its hips as it walks. It can cause people to dance in unison with it.",
+    "type": [
+      "Ice",
+      "Psychic"
+    ],
+    "abilities": [
+      "Oblivious",
+      "Forewarn",
+      "Dry Skin"
+    ],
+    "ability_descriptions": {
+      "Oblivious": "Prevents the POKEMON from being infatuated or taunted.",
+      "Forewarn": "Reveals the opponent's strongest move.",
+      "Dry Skin": "Heals in rain or via Water moves; takes more damage from Fire."
+    },
+    "Learnable": [
+      "Pound",
+      "Lovely Kiss",
+      "Lick",
+      "Double Slap",
+      "Ice Punch",
+      "Thrash",
+      "Blizzard",
+      "Psychic",
+      "Hyper Beam",
+      "Mega Punch",
+      "Mega Kick",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Bubble Beam",
+      "Water Gun",
+      "Ice Beam",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Teleport",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Metronome",
+      "Skull Bash",
+      "Substitute",
+      "Flash"
+    ]
+  },
+  {
+    "name": "Electabuzz",
+    "health": 65,
+    "attack": 83,
+    "defense": 57,
+    "sp_attack": 95,
+    "sp_defense": 85,
+    "speed": 105,
+    "weight_kg": 30.0,
+    "description": "Often nests near power plants. It can cause major blackouts if it begins eating city electricity.",
+    "type": [
+      "Electric"
+    ],
+    "abilities": [
+      "Static",
+      "Vital Spirit"
+    ],
+    "ability_descriptions": {
+      "Static": "Contact with the POKEMON may cause paralysis.",
+      "Vital Spirit": "Prevents the POKEMON from falling asleep."
+    },
+    "Learnable": [
+      "Quick Attack",
+      "Leer",
+      "Thunder Punch",
+      "Light Screen",
+      "Swift",
+      "Screech",
+      "Thunderbolt",
+      "Thunder",
+      "Hyper Beam",
+      "Mega Punch",
+      "Mega Kick",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Strength",
+      "Thunder Wave",
+      "Psychic",
+      "Teleport",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Metronome",
+      "Skull Bash",
+      "Substitute",
+      "Flash"
+    ]
+  },
+  {
+    "name": "Magmar",
+    "health": 65,
+    "attack": 95,
+    "defense": 57,
+    "sp_attack": 100,
+    "sp_defense": 85,
+    "speed": 93,
+    "weight_kg": 44.5,
+    "description": "Its entire body is constantly burning with an orange aura. It hides perfectly within active volcanos.",
+    "type": [
+      "Fire"
+    ],
+    "abilities": [
+      "Flame Body",
+      "Vital Spirit"
+    ],
+    "ability_descriptions": {
+      "Flame Body": "Contact with the POKEMON may burn the attacker.",
+      "Vital Spirit": "Prevents the POKEMON from falling asleep."
+    },
+    "Learnable": [
+      "Sunny Day",
+      "Ember",
+      "Leer",
+      "Confuse Ray",
+      "Fire Punch",
+      "Smog",
+      "Flamethrower",
+      "Hyper Beam",
+      "Mega Punch",
+      "Mega Kick",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Strength",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Metronome",
+      "Fire Blast",
+      "Skull Bash",
+      "Substitute",
+      "Psychic",
+      "Teleport"
+    ]
+  },
+  {
+    "name": "Pinsir",
+    "health": 65,
+    "attack": 125,
+    "defense": 100,
+    "sp_attack": 55,
+    "sp_defense": 70,
+    "speed": 85,
+    "weight_kg": 55.0,
+    "description": "If it fails to crush the target in its pincers, it will swing them around and throw them violently.",
+    "type": [
+      "Bug"
+    ],
+    "abilities": [
+      "Hyper Cutter",
+      "Mold Breaker",
+      "Moxie"
+    ],
+    "ability_descriptions": {
+      "Hyper Cutter": "Prevents other POKEMON from lowering its Attack stat.",
+      "Mold Breaker": "Moves can be used regardless of the target's Abilities.",
+      "Moxie": "Boosts Attack after knocking out a POKEMON."
+    },
+    "Learnable": [
+      "Vice Grip",
+      "Seismic Toss",
+      "Guillotine",
+      "Swords Dance",
+      "Cut",
+      "Hyper Beam",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Submission",
+      "Counter",
+      "Strength",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Tauros",
+    "health": 75,
+    "attack": 100,
+    "defense": 95,
+    "sp_attack": 40,
+    "sp_defense": 70,
+    "speed": 110,
+    "weight_kg": 88.4,
+    "description": "A rowdy POKEMON that whips itself into a charging frenzy using its three distinct tails.",
+    "type": [
+      "Normal"
+    ],
+    "abilities": [
+      "Intimidate",
+      "Anger Point",
+      "Sheer Force"
+    ],
+    "ability_descriptions": {
+      "Intimidate": "Lowers opponents' Attack stat upon entering battle.",
+      "Anger Point": "Maxes Attack after taking a critical hit.",
+      "Sheer Force": "Removes additional move effects to increase power."
+    },
+    "Learnable": [
+      "Tackle",
+      "Tail Whip",
+      "Stomp",
+      "Rage",
+      "Leer",
+      "Take Down",
+      "Hyper Beam",
+      "Body Slam",
+      "Double-Edge",
+      "Ice Beam",
+      "Blizzard",
+      "Thunderbolt",
+      "Thunder",
+      "Strength",
+      "Surf",
+      "Toxic",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Fire Blast",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Magikarp",
+    "health": 20,
+    "attack": 10,
+    "defense": 55,
+    "sp_attack": 15,
+    "sp_defense": 20,
+    "speed": 80,
+    "weight_kg": 10.0,
+    "description": "In the distant past, it was somewhat stronger than the horribly weak descendants that exist today.",
+    "type": [
+      "Water"
+    ],
+    "abilities": [
+      "Swift Swim",
+      "Rattled"
+    ],
+    "ability_descriptions": {
+      "Swift Swim": "Boosts Speed in rain.",
+      "Rattled": "Dark, Ghost, and Bug-type attacks scare the POKEMON and boost Speed."
+    },
+    "Learnable": [
+      "Splash",
+      "Tackle"
+    ]
+  },
+  {
+    "name": "Gyarados",
+    "health": 95,
+    "attack": 125,
+    "defense": 79,
+    "sp_attack": 60,
+    "sp_defense": 100,
+    "speed": 81,
+    "weight_kg": 235.0,
+    "description": "Rarely seen in the wild. Huge and vicious, it is capable of destroying entire cities in a rage.",
+    "type": [
+      "Water",
+      "Flying"
+    ],
+    "abilities": [
+      "Intimidate",
+      "Moxie"
+    ],
+    "ability_descriptions": {
+      "Intimidate": "Lowers opponents' Attack stat upon entering battle.",
+      "Moxie": "Boosts Attack after knocking out a POKEMON."
+    },
+    "Learnable": [
+      "Splash",
+      "Tackle",
+      "Bite",
+      "Dragon Rage",
+      "Leer",
+      "Hydro Pump",
+      "Hyper Beam",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Bubble Beam",
+      "Water Gun",
+      "Ice Beam",
+      "Blizzard",
+      "Strength",
+      "Surf",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Fire Blast",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Lapras",
+    "health": 130,
+    "attack": 85,
+    "defense": 80,
+    "sp_attack": 85,
+    "sp_defense": 95,
+    "speed": 60,
+    "weight_kg": 220.0,
+    "description": "A gentle soul that can read the minds of humans. It gladly carries people across the ocean waters.",
+    "type": [
+      "Water",
+      "Ice"
+    ],
+    "abilities": [
+      "Water Absorb",
+      "Shell Armor",
+      "Hydration"
+    ],
+    "ability_descriptions": {
+      "Water Absorb": "Heals if hit by a Water-type move.",
+      "Shell Armor": "Blocks critical hits.",
+      "Hydration": "Heals status conditions if it is raining."
+    },
+    "Learnable": [
+      "Water Gun",
+      "Growl",
+      "Sing",
+      "Mist",
+      "Body Slam",
+      "Confuse Ray",
+      "Ice Beam",
+      "Hydro Pump",
+      "Blizzard",
+      "Hyper Beam",
+      "Take Down",
+      "Double-Edge",
+      "Bubble Beam",
+      "Solar Beam",
+      "Dragon Rage",
+      "Thunderbolt",
+      "Thunder",
+      "Psychic",
+      "Strength",
+      "Surf",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Fire Blast",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Ditto",
+    "health": 48,
+    "attack": 48,
+    "defense": 48,
+    "sp_attack": 48,
+    "sp_defense": 48,
+    "speed": 48,
+    "weight_kg": 4.0,
+    "description": "Capable of reorganizing its cellular structure into whatever object or organism it observes.",
+    "type": [
+      "Normal"
+    ],
+    "abilities": [
+      "Limber",
+      "Imposter"
+    ],
+    "ability_descriptions": {
+      "Limber": "Prevents paralysis.",
+      "Imposter": "Immediately transforms into the opponent upon entering battle."
+    },
+    "Learnable": [
+      "Transform"
+    ]
+  },
+  {
+    "name": "Eevee",
+    "health": 55,
+    "attack": 55,
+    "defense": 50,
+    "sp_attack": 45,
+    "sp_defense": 65,
+    "speed": 55,
+    "weight_kg": 6.5,
+    "description": "Its genetic makeup is highly irregular. It can mutate into multiple forms depending on exposure.",
+    "type": [
+      "Normal"
+    ],
+    "abilities": [
+      "Run Away",
+      "Adaptability",
+      "Anticipation"
+    ],
+    "ability_descriptions": {
+      "Run Away": "Enables a sure escape from wild battles.",
+      "Adaptability": "Powers up moves of the same type as the POKEMON.",
+      "Anticipation": "Senses an opponent's dangerous moves."
+    },
+    "Learnable": [
+      "Tackle",
+      "Tail Whip",
+      "Sand Attack",
+      "Growl",
+      "Quick Attack",
+      "Bite",
+      "Take Down",
+      "Body Slam",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Swift",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Vaporeon",
+    "health": 130,
+    "attack": 65,
+    "defense": 60,
+    "sp_attack": 110,
+    "sp_defense": 95,
+    "speed": 65,
+    "weight_kg": 29.0,
+    "description": "Lives close to water. Its long tail fin is often mistaken for a mermaid's tail appendage.",
+    "type": [
+      "Water"
+    ],
+    "abilities": [
+      "Water Absorb",
+      "Hydration"
+    ],
+    "ability_descriptions": {
+      "Water Absorb": "Heals if hit by a Water-type move.",
+      "Hydration": "Heals status conditions if it is raining."
+    },
+    "Learnable": [
+      "Tackle",
+      "Tail Whip",
+      "Sand Attack",
+      "Growl",
+      "Quick Attack",
+      "Bite",
+      "Water Gun",
+      "Acid Armor",
+      "Hydro Pump",
+      "Hyper Beam",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Bubble Beam",
+      "Ice Beam",
+      "Blizzard",
+      "Strength",
+      "Surf",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Swift",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Jolteon",
+    "health": 65,
+    "attack": 65,
+    "defense": 60,
+    "sp_attack": 110,
+    "sp_defense": 95,
+    "speed": 130,
+    "weight_kg": 24.5,
+    "description": "It accumulates negative ions in the atmosphere to blast out sparks of 10,000-volt currents.",
+    "type": [
+      "Electric"
+    ],
+    "abilities": [
+      "Volt Absorb",
+      "Quick Feet"
+    ],
+    "ability_descriptions": {
+      "Volt Absorb": "Heals if hit by an Electric-type move.",
+      "Quick Feet": "Boosts Speed if afflicted with a status condition."
+    },
+    "Learnable": [
+      "Tackle",
+      "Tail Whip",
+      "Sand Attack",
+      "Growl",
+      "Quick Attack",
+      "Bite",
+      "Thunder Shock",
+      "Thunder Wave",
+      "Agility",
+      "Pin Missile",
+      "Thunderbolt",
+      "Thunder",
+      "Hyper Beam",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Strength",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Swift",
+      "Skull Bash",
+      "Substitute",
+      "Flash"
+    ]
+  },
+  {
+    "name": "Flareon",
+    "health": 65,
+    "attack": 130,
+    "defense": 60,
+    "sp_attack": 95,
+    "sp_defense": 110,
+    "speed": 65,
+    "weight_kg": 25.0,
+    "description": "When storing thermal energy, its internal body temperature can reach up to 1,650 degrees.",
+    "type": [
+      "Fire"
+    ],
+    "abilities": [
+      "Flash Fire",
+      "Guts"
+    ],
+    "ability_descriptions": {
+      "Flash Fire": "Powers up SPAtk if hit by Fire-type moves.",
+      "Guts": "Boosts Attack if afflicted with a status condition."
+    },
+    "Learnable": [
+      "Tackle",
+      "Tail Whip",
+      "Sand Attack",
+      "Growl",
+      "Quick Attack",
+      "Bite",
+      "Ember",
+      "Fire Spin",
+      "Smog",
+      "Flamethrower",
+      "Hyper Beam",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Strength",
+      "Dig",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Fire Blast",
+      "Swift",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Porygon",
+    "health": 65,
+    "attack": 60,
+    "defense": 70,
+    "sp_attack": 85,
+    "sp_defense": 75,
+    "speed": 40,
+    "weight_kg": 36.5,
+    "description": "A POKEMON consisting entirely of code. It is fully capable of moving through cyber space.",
+    "type": [
+      "Normal"
+    ],
+    "abilities": [
+      "Trace",
+      "Download",
+      "Analytic"
+    ],
+    "ability_descriptions": {
+      "Trace": "Copies the opponent's Ability.",
+      "Download": "Adjusts power based on the target's lower defensive stat.",
+      "Analytic": "Boosts move power when the POKEMON moves last."
+    },
+    "Learnable": [
+      "Tackle",
+      "Sharpen",
+      "Conversion",
+      "Psybeam",
+      "Recover",
+      "Agility",
+      "Tri Attack",
+      "Hyper Beam",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Ice Beam",
+      "Blizzard",
+      "Thunderbolt",
+      "Thunder",
+      "Psychic",
+      "Teleport",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Swift",
+      "Skull Bash",
+      "Substitute",
+      "Flash"
+    ]
+  },
+  {
+    "name": "Omanyte",
+    "health": 35,
+    "attack": 40,
+    "defense": 100,
+    "sp_attack": 90,
+    "sp_defense": 55,
+    "speed": 35,
+    "weight_kg": 7.5,
+    "description": "An ancient POKEMON that was regenerated from a fossil. It swam deep prehistoric seas using its tentacles.",
+    "type": [
+      "Rock",
+      "Water"
+    ],
+    "abilities": [
+      "Swift Swim",
+      "Shell Armor",
+      "Weak Armor"
+    ],
+    "ability_descriptions": {
+      "Swift Swim": "Boosts Speed in rain.",
+      "Shell Armor": "Blocks critical hits.",
+      "Weak Armor": "Physical attacks lower Defense but raise Speed."
+    },
+    "Learnable": [
+      "Water Gun",
+      "Withdraw",
+      "Horn Attack",
+      "Leer",
+      "Spike Cannon",
+      "Hydro Pump",
+      "Surf",
+      "Ice Beam",
+      "Blizzard",
+      "Bubble Beam",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Omastar",
+    "health": 70,
+    "attack": 60,
+    "defense": 125,
+    "sp_attack": 115,
+    "sp_defense": 70,
+    "speed": 55,
+    "weight_kg": 35.0,
+    "description": "Sharp beak-like teeth cracked open ancient Shellder shells. It went extinct due to its heavy armor shell.",
+    "type": [
+      "Rock",
+      "Water"
+    ],
+    "abilities": [
+      "Swift Swim",
+      "Shell Armor",
+      "Weak Armor"
+    ],
+    "ability_descriptions": {
+      "Swift Swim": "Boosts Speed in rain.",
+      "Shell Armor": "Blocks critical hits.",
+      "Weak Armor": "Physical attacks lower Defense but raise Speed."
+    },
+    "Learnable": [
+      "Water Gun",
+      "Withdraw",
+      "Horn Attack",
+      "Leer",
+      "Spike Cannon",
+      "Hydro Pump",
+      "Hyper Beam",
+      "Surf",
+      "Ice Beam",
+      "Blizzard",
+      "Bubble Beam",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Kabuto",
+    "health": 30,
+    "attack": 80,
+    "defense": 90,
+    "sp_attack": 55,
+    "sp_defense": 45,
+    "speed": 55,
+    "weight_kg": 11.5,
+    "description": "Regenerated from an ancient beach fossil. It protected its body with a strong, highly sturdy shell.",
+    "type": [
+      "Rock",
+      "Water"
+    ],
+    "abilities": [
+      "Battle Armor",
+      "Swift Swim",
+      "Weak Armor"
+    ],
+    "ability_descriptions": {
+      "Swift Swim": "Boosts Speed in rain.",
+      "Battle Armor": "Blocks critical hits.",
+      "Weak Armor": "Physical attacks lower Defense but raise Speed."
+    },
+    "Learnable": [
+      "Scratch",
+      "Harden",
+      "Absorb",
+      "Leer",
+      "Slash",
+      "Hydro Pump",
+      "Surf",
+      "Ice Beam",
+      "Blizzard",
+      "Bubble Beam",
+      "Water Gun",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Mega Drain",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Kabutops",
+    "health": 60,
+    "attack": 115,
+    "defense": 105,
+    "sp_attack": 65,
+    "sp_defense": 70,
+    "speed": 80,
+    "weight_kg": 40.5,
+    "description": "An adept swimmer that sliced ocean targets with its scythes before draining their interior fluids.",
+    "type": [
+      "Rock",
+      "Water"
+    ],
+    "abilities": [
+      "Battle Armor",
+      "Swift Swim",
+      "Weak Armor"
+    ],
+    "ability_descriptions": {
+      "Swift Swim": "Boosts Speed in rain.",
+      "Battle Armor": "Blocks critical hits.",
+      "Weak Armor": "Physical attacks lower Defense but raise Speed."
+    },
+    "Learnable": [
+      "Scratch",
+      "Harden",
+      "Absorb",
+      "Leer",
+      "Slash",
+      "Hyper Beam",
+      "Hydro Pump",
+      "Surf",
+      "Ice Beam",
+      "Blizzard",
+      "Bubble Beam",
+      "Water Gun",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Mega Drain",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Aerodactyl",
+    "health": 80,
+    "attack": 105,
+    "defense": 65,
+    "sp_attack": 60,
+    "sp_defense": 75,
+    "speed": 130,
+    "weight_kg": 59.0,
+    "description": "A vicious flying dinosaur that was resurrected using genetic material found inside old amber.",
+    "type": [
+      "Rock",
+      "Flying"
+    ],
+    "abilities": [
+      "Rock Head",
+      "Pressure",
+      "Unnerve"
+    ],
+    "ability_descriptions": {
+      "Rock Head": "Protects the POKEMON from recoil damage.",
+      "Pressure": "Forces the opponent to expend double PP for moves.",
+      "Unnerve": "Prevents opponents from eating Berries."
+    },
+    "Learnable": [
+      "Wing Attack",
+      "Agility",
+      "Supersonic",
+      "Bite",
+      "Take Down",
+      "Hyper Beam",
+      "Fly",
+      "Razor Wind",
+      "Whirlwind",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Fire Blast",
+      "Swift",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Snorlax",
+    "health": 160,
+    "attack": 110,
+    "defense": 65,
+    "sp_attack": 65,
+    "sp_defense": 110,
+    "speed": 30,
+    "weight_kg": 460.0,
+    "description": "Very lazy, it spends its entire existence sleeping or consuming food. Its stomach acids melt anything.",
+    "type": [
+      "Normal"
+    ],
+    "abilities": [
+      "Immunity",
+      "Thick Fat",
+      "Gluttony"
+    ],
+    "ability_descriptions": {
+      "Immunity": "Prevents the POKEMON from getting poisoned.",
+      "Thick Fat": "Boosts resistance to Fire and Ice-type moves.",
+      "Gluttony": "Encourages the early use of a held Berry."
+    },
+    "Learnable": [
+      "Tackle",
+      "Amnesia",
+      "Rest",
+      "Snore",
+      "Body Slam",
+      "Hyper Beam",
+      "Mega Punch",
+      "Mega Kick",
+      "Take Down",
+      "Double-Edge",
+      "Bubble Beam",
+      "Water Gun",
+      "Ice Beam",
+      "Blizzard",
+      "Thunderbolt",
+      "Thunder",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Strength",
+      "Surf",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Metronome",
+      "Fire Blast",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Articuno",
+    "health": 90,
+    "attack": 85,
+    "defense": 100,
+    "sp_attack": 95,
+    "sp_defense": 125,
+    "speed": 85,
+    "weight_kg": 55.4,
+    "description": "A legendary bird POKEMON that is said to appear to people lost on frozen mountains.",
+    "type": [
+      "Ice",
+      "Flying"
+    ],
+    "abilities": [
+      "Pressure",
+      "Snow Cloak"
+    ],
+    "ability_descriptions": {
+      "Pressure": "Forces the opponent to expend double PP for moves.",
+      "Snow Cloak": "Boosts evasion in a hail storm."
+    },
+    "Learnable": [
+      "Gust",
+      "Ice Beam",
+      "Mist",
+      "Agility",
+      "Blizzard",
+      "Fly",
+      "Razor Wind",
+      "Whirlwind",
+      "Hyper Beam",
+      "Take Down",
+      "Double-Edge",
+      "Bubble Beam",
+      "Water Gun",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Swift",
+      "Sky Attack",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Zapdos",
+    "health": 90,
+    "attack": 90,
+    "defense": 85,
+    "sp_attack": 125,
+    "sp_defense": 90,
+    "speed": 100,
+    "weight_kg": 52.6,
+    "description": "A legendary bird POKEMON that controls electricity. It lives inside thunderstorm clouds.",
+    "type": [
+      "Electric",
+      "Flying"
+    ],
+    "abilities": [
+      "Pressure",
+      "Static"
+    ],
+    "ability_descriptions": {
+      "Pressure": "Forces the opponent to expend double PP for moves.",
+      "Static": "Contact with the POKEMON may cause paralysis."
+    },
+    "Learnable": [
+      "Thunder Shock",
+      "Drill Peck",
+      "Thunder Wave",
+      "Agility",
+      "Thunder",
+      "Fly",
+      "Razor Wind",
+      "Whirlwind",
+      "Hyper Beam",
+      "Take Down",
+      "Double-Edge",
+      "Thunderbolt",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Swift",
+      "Sky Attack",
+      "Substitute",
+      "Flash"
+    ]
+  },
+  {
+    "name": "Moltres",
+    "health": 90,
+    "attack": 100,
+    "defense": 90,
+    "sp_attack": 125,
+    "sp_defense": 85,
+    "speed": 90,
+    "weight_kg": 60.0,
+    "description": "Known as the legendary bird of fire. Every flap of its wings generates brilliant glowing embers.",
+    "type": [
+      "Fire",
+      "Flying"
+    ],
+    "abilities": [
+      "Pressure",
+      "Flame Body"
+    ],
+    "ability_descriptions": {
+      "Pressure": "Forces the opponent to expend double PP for moves.",
+      "Flame Body": "Contact with the POKEMON may burn the attacker."
+    },
+    "Learnable": [
+      "Sunny Day",
+      "Gust",
+      "Ember",
+      "Fire Spin",
+      "Agility",
+      "Flamethrower",
+      "Fly",
+      "Razor Wind",
+      "Whirlwind",
+      "Hyper Beam",
+      "Take Down",
+      "Double-Edge",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Fire Blast",
+      "Swift",
+      "Sky Attack",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Dratini",
+    "health": 41,
+    "attack": 64,
+    "defense": 45,
+    "sp_attack": 50,
+    "sp_defense": 50,
+    "speed": 50,
+    "weight_kg": 3.3,
+    "description": "Long considered a mythical creature until a fisherman recently discovered a small underwater colony.",
+    "type": [
+      "Dragon"
+    ],
+    "abilities": [
+      "Shed Skin",
+      "Marvel Scale"
+    ],
+    "ability_descriptions": {
+      "Shed Skin": "May cure its own status conditions by shedding skin.",
+      "Marvel Scale": "Boosts Defense if afflicted with a status condition."
+    },
+    "Learnable": [
+      "Wrap",
+      "Leer",
+      "Thunder Wave",
+      "Agility",
+      "Slam",
+      "Dragon Rage",
+      "Hyper Beam",
+      "Take Down",
+      "Double-Edge",
+      "Bubble Beam",
+      "Water Gun",
+      "Ice Beam",
+      "Blizzard",
+      "Thunderbolt",
+      "Thunder",
+      "Surf",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Fire Blast",
+      "Swift",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Dragonair",
+    "health": 61,
+    "attack": 84,
+    "defense": 65,
+    "sp_attack": 70,
+    "sp_defense": 70,
+    "speed": 70,
+    "weight_kg": 16.5,
+    "description": "An elegant creature that emits a gentle aura. It can alter the weather using the crystal beads on its tail.",
+    "type": [
+      "Dragon"
+    ],
+    "abilities": [
+      "Shed Skin",
+      "Marvel Scale"
+    ],
+    "ability_descriptions": {
+      "Shed Skin": "May cure its own status conditions by shedding skin.",
+      "Marvel Scale": "Boosts Defense if afflicted with a status condition."
+    },
+    "Learnable": [
+      "Wrap",
+      "Leer",
+      "Thunder Wave",
+      "Agility",
+      "Slam",
+      "Dragon Rage",
+      "Hyper Beam",
+      "Take Down",
+      "Double-Edge",
+      "Bubble Beam",
+      "Water Gun",
+      "Ice Beam",
+      "Blizzard",
+      "Thunderbolt",
+      "Thunder",
+      "Surf",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Fire Blast",
+      "Swift",
+      "Skull Bash",
+      "Substitute"
+    ]
+  },
+  {
+    "name": "Dragonite",
+    "health": 91,
+    "attack": 134,
+    "defense": 95,
+    "sp_attack": 100,
+    "sp_defense": 100,
+    "speed": 80,
+    "weight_kg": 210.0,
+    "description": "Extremely intelligent and physically strong. It is capable of circling the globe in just 16 hours.",
+    "type": [
+      "Dragon",
+      "Flying"
+    ],
+    "abilities": [
+      "Inner Focus",
+      "Multiscale"
+    ],
+    "ability_descriptions": {
+      "Inner Focus": "Prevents flinching.",
+      "Multiscale": "Reduces damage taken when HP is completely full."
+    },
+    "Learnable": [
+      "Wrap",
+      "Leer",
+      "Thunder Wave",
+      "Agility",
+      "Slam",
+      "Dragon Rage",
+      "Hyper Beam",
+      "Take Down",
+      "Double-Edge",
+      "Bubble Beam",
+      "Water Gun",
+      "Ice Beam",
+      "Blizzard",
+      "Thunderbolt",
+      "Thunder",
+      "Surf",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Fire Blast",
+      "Swift",
+      "Skull Bash",
+      "Substitute",
+      "Mega Punch",
+      "Mega Kick",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Strength",
+      "Fly"
+    ]
+  },
+  {
+    "name": "Mewtwo",
+    "health": 106,
+    "attack": 110,
+    "defense": 90,
+    "sp_attack": 154,
+    "sp_defense": 90,
+    "speed": 130,
+    "weight_kg": 122.0,
+    "description": "A POKEMON created by a scientist after years of horrific gene-splicing experiments on MEW.",
+    "type": [
+      "Psychic"
+    ],
+    "abilities": [
+      "Pressure",
+      "Unnerve"
+    ],
+    "ability_descriptions": {
+      "Pressure": "Forces the opponent to expend double PP for moves.",
+      "Unnerve": "Prevents opponents from eating Berries."
+    },
+    "Learnable": [
+      "Confusion",
+      "Disable",
+      "Swift",
+      "Barrier",
+      "Psychic",
+      "Recover",
+      "Amnesia",
+      "Mist",
+      "Hyper Beam",
+      "Mega Punch",
+      "Mega Kick",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Bubble Beam",
+      "Water Gun",
+      "Ice Beam",
+      "Blizzard",
+      "Thunderbolt",
+      "Thunder",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Strength",
+      "Teleport",
+      "Toxic",
+      "Rage",
+      "Mimic",
+      "Double Team",
+      "Bide",
+      "Reflect",
+      "Metronome",
+      "Fire Blast",
+      "Skull Bash",
+      "Tri Attack",
+      "Substitute",
+      "Flash",
+      "Solar Beam"
+    ]
+  },
+  {
+    "name": "Mew",
+    "health": 100,
+    "attack": 100,
+    "defense": 100,
+    "sp_attack": 100,
+    "sp_defense": 100,
+    "speed": 100,
+    "weight_kg": 4.0,
+    "description": "So rare that many experts still believe it is a mirage. Only a small handful of humans have seen it.",
+    "type": [
+      "Psychic"
+    ],
+    "abilities": [
+      "Synchronize"
+    ],
+    "ability_descriptions": {
+      "Synchronize": "Passes on status conditions like paralysis, poison, or burn."
+    },
+    "Learnable": [
+      "Sunny Day",
+      "Pound",
+      "Transform",
+      "Mega Punch",
+      "Razor Wind",
+      "Swords Dance",
+      "Whirlwind",
+      "Mega Kick",
+      "Toxic",
+      "Horn Drill",
+      "Body Slam",
+      "Take Down",
+      "Double-Edge",
+      "Bubble Beam",
+      "Water Gun",
+      "Ice Beam",
+      "Blizzard",
+      "Hyper Beam",
+      "Submission",
+      "Counter",
+      "Seismic Toss",
+      "Strength",
+      "Mega Drain",
+      "Solar Beam",
+      "Dragon Rage",
+      "Thunderbolt",
+      "Thunder",
+      "Thunder Wave",
+      "Earthquake",
+      "Fissure",
+      "Dig",
+      "Psychic",
+      "Teleport",
+      "Mimic",
+      "Double Team",
+      "Reflect",
+      "Bide",
+      "Metronome",
+      "Self-Destruct",
+      "Egg Bomb",
+      "Fire Blast",
+      "Swift",
+      "Skull Bash",
+      "Soft-Boiled",
+      "Explosion",
+      "Tri Attack",
+      "Substitute",
+      "Cut",
+      "Fly",
+      "Surf",
+      "Flash"
+    ]
+  }
+]
+

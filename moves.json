@@ -1,0 +1,1407 @@
+[
+  {
+    "name": "Pound",
+    "type": "Normal",
+    "damage": 40,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "Pounds with forelegs or tail.",
+    "contact": true
+  },
+  {
+    "name": "Karate Chop",
+    "type": "Fighting",
+    "damage": 50,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "High critical-hit ratio.",
+    "contact": true
+  },
+  {
+    "name": "Double Slap",
+    "type": "Normal",
+    "damage": 15,
+    "damage_type": "Physical",
+    "accuracy": 85,
+    "description": "Slaps 2 to 5 times.",
+    "contact": true
+  },
+  {
+    "name": "Comet Punch",
+    "type": "Normal",
+    "damage": 18,
+    "damage_type": "Physical",
+    "accuracy": 85,
+    "description": "Punches 2 to 5 times.",
+    "contact": true
+  },
+  {
+    "name": "Mega Punch",
+    "type": "Normal",
+    "damage": 80,
+    "damage_type": "Physical",
+    "accuracy": 85,
+    "description": "A powerful punch.",
+    "contact": true
+  },
+  {
+    "name": "Pay Day",
+    "type": "Normal",
+    "damage": 40,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "Throws coins; awards money after battle.",
+    "contact": false
+  },
+  {
+    "name": "Fire Punch",
+    "type": "Fire",
+    "damage": 75,
+    "damage_type": "Special",
+    "accuracy": 100,
+    "description": "May burn the target.",
+    "contact": true
+  },
+  {
+    "name": "Ice Punch",
+    "type": "Ice",
+    "damage": 75,
+    "damage_type": "Special",
+    "accuracy": 100,
+    "description": "May freeze the target.",
+    "contact": true
+  },
+  {
+    "name": "Thunder Punch",
+    "type": "Electric",
+    "damage": 75,
+    "damage_type": "Special",
+    "accuracy": 100,
+    "description": "May paralyze the target.",
+    "contact": true
+  },
+  {
+    "name": "Scratch",
+    "type": "Normal",
+    "damage": 40,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "Scratches with sharp claws.",
+    "contact": true
+  },
+  {
+    "name": "Vise Grip",
+    "type": "Normal",
+    "damage": 55,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "Grips with powerful pincers.",
+    "contact": true
+  },
+  {
+    "name": "Guillotine",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Physical",
+    "accuracy": 30,
+    "description": "One-hit KO move. Requires higher or equal Speed.",
+    "contact": true
+  },
+  {
+    "name": "Razor Wind",
+    "type": "Normal",
+    "damage": 140,
+    "damage_type": "Physical",
+    "accuracy": 90,
+    "description": "Charges turn 1, hits turn 2. High crit.",
+    "contact": false
+  },
+  {
+    "name": "Swords Dance",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": null,
+    "description": "Sharply raises Attack.",
+    "contact": false
+  },
+  {
+    "name": "Cut",
+    "type": "Normal",
+    "damage": 50,
+    "damage_type": "Physical",
+    "accuracy": 95,
+    "description": "Cuts with claws or scythes.",
+    "contact": true
+  },
+  {
+    "name": "Gust",
+    "type": "Normal",
+    "damage": 40,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "Strikes with a gust of wind.",
+    "contact": false
+  },
+  {
+    "name": "Wing Attack",
+    "type": "Flying",
+    "damage": 35,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "Strikes with wings.",
+    "contact": true
+  },
+  {
+    "name": "Whirlwind",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": 85,
+    "description": "Ends wild battles. Fails in trainer battles.",
+    "contact": false
+  },
+  {
+    "name": "Fly",
+    "type": "Flying",
+    "damage": 70,
+    "damage_type": "Physical",
+    "accuracy": 95,
+    "description": "Flies up turn 1, hits turn 2.",
+    "contact": true
+  },
+  {
+    "name": "Bind",
+    "type": "Normal",
+    "damage": 15,
+    "damage_type": "Physical",
+    "accuracy": 75,
+    "description": "Traps and damages for 2 to 5 turns.",
+    "contact": true
+  },
+  {
+    "name": "Slam",
+    "type": "Normal",
+    "damage": 80,
+    "damage_type": "Physical",
+    "accuracy": 75,
+    "description": "Slams with a tail or vine.",
+    "contact": true
+  },
+  {
+    "name": "Vine Whip",
+    "type": "Grass",
+    "damage": 35,
+    "damage_type": "Special",
+    "accuracy": 100,
+    "description": "Strikes with slender vines.",
+    "contact": true
+  },
+  {
+    "name": "Stomp",
+    "type": "Normal",
+    "damage": 65,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "May cause flinching.",
+    "contact": true
+  },
+  {
+    "name": "Double Kick",
+    "type": "Fighting",
+    "damage": 30,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "Kicks twice.",
+    "contact": true
+  },
+  {
+    "name": "Mega Kick",
+    "type": "Normal",
+    "damage": 120,
+    "damage_type": "Physical",
+    "accuracy": 75,
+    "description": "A powerful kick.",
+    "contact": true
+  },
+  {
+    "name": "Jump Kick",
+    "type": "Fighting",
+    "damage": 70,
+    "damage_type": "Physical",
+    "accuracy": 95,
+    "description": "User takes 1 crash damage on miss.",
+    "contact": true
+  },
+  {
+    "name": "Rolling Kick",
+    "type": "Fighting",
+    "damage": 60,
+    "damage_type": "Physical",
+    "accuracy": 85,
+    "description": "Fast kick; may cause flinch.",
+    "contact": true
+  },
+  {
+    "name": "Sand Attack",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": 100,
+    "description": "Lowers target's accuracy.",
+    "contact": false
+  },
+  {
+    "name": "Sandstorm",
+    "type": "Rock",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": null,
+    "description": "Summons a sandstorm for 5 turns.",
+    "contact": false
+  },
+  {
+    "name": "Headbutt",
+    "type": "Normal",
+    "damage": 70,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "May cause flinching.",
+    "contact": true
+  },
+  {
+    "name": "Horn Attack",
+    "type": "Normal",
+    "damage": 65,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "Strikes with a sharp horn.",
+    "contact": true
+  },
+  {
+    "name": "Fury Attack",
+    "type": "Normal",
+    "damage": 15,
+    "damage_type": "Physical",
+    "accuracy": 85,
+    "description": "Jabs 2 to 5 times.",
+    "contact": true
+  },
+  {
+    "name": "Horn Drill",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Physical",
+    "accuracy": 30,
+    "description": "One-hit KO. Requires higher or equal Speed.",
+    "contact": true
+  },
+  {
+    "name": "Tackle",
+    "type": "Normal",
+    "damage": 35,
+    "damage_type": "Physical",
+    "accuracy": 95,
+    "description": "Charges with a full-body lunge.",
+    "contact": true
+  },
+  {
+    "name": "Body Slam",
+    "type": "Normal",
+    "damage": 85,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "May cause paralysis.",
+    "contact": true
+  },
+  {
+    "name": "Wrap",
+    "type": "Normal",
+    "damage": 15,
+    "damage_type": "Physical",
+    "accuracy": 85,
+    "description": "Traps and completely immobilizes for 2-5 turns.",
+    "contact": true
+  },
+  {
+    "name": "Take Down",
+    "type": "Normal",
+    "damage": 90,
+    "damage_type": "Physical",
+    "accuracy": 85,
+    "description": "Deals 1/4 recoil damage.",
+    "contact": true
+  },
+  {
+    "name": "Thrash",
+    "type": "Normal",
+    "damage": 90,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "Attacks for 2-3 turns, then confuses user.",
+    "contact": true
+  },
+  {
+    "name": "Double-Edge",
+    "type": "Normal",
+    "damage": 100,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "Deals 1/4 recoil damage.",
+    "contact": true
+  },
+  {
+    "name": "Tail Whip",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": 100,
+    "description": "Lowers target's Defense.",
+    "contact": false
+  },
+  {
+    "name": "Poison Sting",
+    "type": "Poison",
+    "damage": 15,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "May poison the target.",
+    "contact": false
+  },
+  {
+    "name": "Twineedle",
+    "type": "Bug",
+    "damage": 25,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "Hits twice. May poison.",
+    "contact": false
+  },
+  {
+    "name": "Pin Missile",
+    "type": "Bug",
+    "damage": 14,
+    "damage_type": "Physical",
+    "accuracy": 85,
+    "description": "Fires pins 2 to 5 times.",
+    "contact": false
+  },
+  {
+    "name": "Leer",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": 100,
+    "description": "Lowers target's Defense.",
+    "contact": false
+  },
+  {
+    "name": "Bite",
+    "type": "Normal",
+    "damage": 60,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "May cause flinch.",
+    "contact": true
+  },
+  {
+    "name": "Growl",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": 100,
+    "description": "Lowers target's Attack.",
+    "contact": false
+  },
+  {
+    "name": "Roar",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": 100,
+    "description": "Ends wild battles. Fails in trainer battles.",
+    "contact": false
+  },
+  {
+    "name": "Sing",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": 55,
+    "description": "Puts target to sleep.",
+    "contact": false
+  },
+  {
+    "name": "Supersonic",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": 55,
+    "description": "Confuses the target.",
+    "contact": false
+  },
+  {
+    "name": "Sonic Boom",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Physical",
+    "accuracy": 90,
+    "description": "Deals exactly 20 HP damage.",
+    "contact": false
+  },
+  {
+    "name": "Disable",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": 55,
+    "description": "Disables a random move for 2-7 turns.",
+    "contact": false
+  },
+  {
+    "name": "Acid",
+    "type": "Poison",
+    "damage": 40,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "May lower target's Defense.",
+    "contact": false
+  },
+  {
+    "name": "Ember",
+    "type": "Fire",
+    "damage": 40,
+    "damage_type": "Special",
+    "accuracy": 100,
+    "description": "May burn the target.",
+    "contact": false
+  },
+  {
+    "name": "Flamethrower",
+    "type": "Fire",
+    "damage": 95,
+    "damage_type": "Special",
+    "accuracy": 100,
+    "description": "May burn the target.",
+    "contact": false
+  },
+  {
+    "name": "Mist",
+    "type": "Ice",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": null,
+    "description": "Protects user's stats from lowering.",
+    "contact": false
+  },
+  {
+    "name": "Water Gun",
+    "type": "Water",
+    "damage": 40,
+    "damage_type": "Special",
+    "accuracy": 100,
+    "description": "Squirts water at the target.",
+    "contact": false
+  },
+  {
+    "name": "Hydro Pump",
+    "type": "Water",
+    "damage": 120,
+    "damage_type": "Special",
+    "accuracy": 80,
+    "description": "Powerful water attack.",
+    "contact": false
+  },
+  {
+    "name": "Surf",
+    "type": "Water",
+    "damage": 95,
+    "damage_type": "Special",
+    "accuracy": 100,
+    "description": "Creates a crashing wave.",
+    "contact": false
+  },
+  {
+    "name": "Ice Beam",
+    "type": "Ice",
+    "damage": 95,
+    "damage_type": "Special",
+    "accuracy": 100,
+    "description": "May freeze the target.",
+    "contact": false
+  },
+  {
+    "name": "Blizzard",
+    "type": "Ice",
+    "damage": 120,
+    "damage_type": "Special",
+    "accuracy": 90,
+    "description": "Hits all targets. May freeze.",
+    "contact": false
+  },
+  {
+    "name": "Psybeam",
+    "type": "Psychic",
+    "damage": 65,
+    "damage_type": "Special",
+    "accuracy": 100,
+    "description": "May confuse the target.",
+    "contact": false
+  },
+  {
+    "name": "Bubble Beam",
+    "type": "Water",
+    "damage": 65,
+    "damage_type": "Special",
+    "accuracy": 100,
+    "description": "May lower target's Speed.",
+    "contact": false
+  },
+  {
+    "name": "Aurora Beam",
+    "type": "Ice",
+    "damage": 65,
+    "damage_type": "Special",
+    "accuracy": 100,
+    "description": "May lower target's Attack.",
+    "contact": false
+  },
+
+  {
+  "name": "Rain Dance",
+  "type": "Water",
+  "damage": null,
+  "damage_type": "Status",
+  "accuracy": null,
+  "description": "Summons a heavy rain that falls for five turns.",
+  "contact": false
+  },
+  {
+  "name": "Sunny Day",
+  "type": "Fire",
+  "damage": null,
+  "damage_type": "Status",
+  "accuracy": null,
+  "description": "The user intensifies the sun for five turns.",
+  "contact": false
+  },
+  {
+    "name": "Hyper Beam",
+    "type": "Normal",
+    "damage": 80,
+    "damage_type": "Physical",
+    "accuracy": 90,
+    "description": "A powerful beam of energy.",
+    "contact": false
+  },
+  {
+    "name": "Peck",
+    "type": "Flying",
+    "damage": 35,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "Jabs with a beak.",
+    "contact": true
+  },
+  {
+    "name": "Drill Peck",
+    "type": "Flying",
+    "damage": 80,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "A spinning beak strike.",
+    "contact": true
+  },
+  {
+    "name": "Submission",
+    "type": "Fighting",
+    "damage": 80,
+    "damage_type": "Physical",
+    "accuracy": 80,
+    "description": "Deals 1/4 recoil damage.",
+    "contact": true
+  },
+  {
+    "name": "Low Kick",
+    "type": "Fighting",
+    "damage": 50,
+    "damage_type": "Physical",
+    "accuracy": 90,
+    "description": "Causes flinching.",
+    "contact": true
+  },
+  {
+    "name": "Counter",
+    "type": "Fighting",
+    "damage": null,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "Returns double Normal/Fighting damage taken.",
+    "contact": false
+  },
+  {
+    "name": "Seismic Toss",
+    "type": "Fighting",
+    "damage": 50,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "Deals damage equal to user's level.",
+    "contact": true
+  },
+  {
+    "name": "Strength",
+    "type": "Normal",
+    "damage": 80,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "Powerful physical slam.",
+    "contact": true
+  },
+  {
+    "name": "Absorb",
+    "type": "Grass",
+    "damage": 20,
+    "damage_type": "Special",
+    "accuracy": 100,
+    "description": "Heals user for half of damage dealt.",
+    "contact": false
+  },
+  {
+    "name": "Mega Drain",
+    "type": "Grass",
+    "damage": 40,
+    "damage_type": "Special",
+    "accuracy": 100,
+    "description": "Heals user for half of damage dealt.",
+    "contact": false
+  },
+  {
+    "name": "Leech Seed",
+    "type": "Grass",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": 90,
+    "description": "Steals HP every turn.",
+    "contact": false
+  },
+  {
+    "name": "Growth",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": null,
+    "description": "Raises Special stat.",
+    "contact": false
+  },
+  {
+    "name": "Razor Leaf",
+    "type": "Grass",
+    "damage": 55,
+    "damage_type": "Special",
+    "accuracy": 95,
+    "description": "Almost always lands a critical hit.",
+    "contact": false
+  },
+  {
+    "name": "Solar Beam",
+    "type": "Grass",
+    "damage": 120,
+    "damage_type": "Special",
+    "accuracy": 100,
+    "description": "Charges turn 1, hits turn 2.",
+    "contact": false
+  },
+  {
+    "name": "Poison Powder",
+    "type": "Poison",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": 75,
+    "description": "Poisons the target.",
+    "contact": false
+  },
+  {
+    "name": "Stun Spore",
+    "type": "Grass",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": 75,
+    "description": "Paralyzes the target.",
+    "contact": false
+  },
+  {
+    "name": "Sleep Powder",
+    "type": "Grass",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": 75,
+    "description": "Puts target to sleep.",
+    "contact": false
+  },
+  {
+    "name": "Petal Dance",
+    "type": "Grass",
+    "damage": 70,
+    "damage_type": "Special",
+    "accuracy": 100,
+    "description": "Attacks 2-3 turns, then confuses user.",
+    "contact": true
+  },
+  {
+    "name": "String Shot",
+    "type": "Bug",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": 95,
+    "description": "Lowers target's Speed.",
+    "contact": false
+  },
+  {
+    "name": "Dragon Rage",
+    "type": "Dragon",
+    "damage": null,
+    "damage_type": "Special",
+    "accuracy": 100,
+    "description": "Deals exactly 40 HP damage.",
+    "contact": false
+  },
+  {
+    "name": "Fire Spin",
+    "type": "Fire",
+    "damage": 15,
+    "damage_type": "Special",
+    "accuracy": 70,
+    "description": "Traps and immobilizes target for 2-5 turns.",
+    "contact": false
+  },
+  {
+    "name": "Thunder Shock",
+    "type": "Electric",
+    "damage": 40,
+    "damage_type": "Special",
+    "accuracy": 100,
+    "description": "May paralyze the target.",
+    "contact": false
+  },
+  {
+    "name": "Thunderbolt",
+    "type": "Electric",
+    "damage": 95,
+    "damage_type": "Special",
+    "accuracy": 100,
+    "description": "May paralyze the target.",
+    "contact": false
+  },
+  {
+    "name": "Thunder Wave",
+    "type": "Electric",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": 100,
+    "description": "Accurately paralyzes the target.",
+    "contact": false
+  },
+  {
+    "name": "Thunder",
+    "type": "Electric",
+    "damage": 120,
+    "damage_type": "Special",
+    "accuracy": 70,
+    "description": "May paralyze the target.",
+    "contact": false
+  },
+  {
+    "name": "Rock Throw",
+    "type": "Rock",
+    "damage": 50,
+    "damage_type": "Physical",
+    "accuracy": 65,
+    "description": "Throws a rock.",
+    "contact": false
+  },
+  {
+    "name": "Earthquake",
+    "type": "Ground",
+    "damage": 100,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "Powerful ground-shaking attack.",
+    "contact": false
+  },
+  {
+    "name": "Fissure",
+    "type": "Ground",
+    "damage": null,
+    "damage_type": "Physical",
+    "accuracy": 30,
+    "description": "One-hit KO. Requires higher or equal Speed.",
+    "contact": false
+  },
+  {
+    "name": "Dig",
+    "type": "Ground",
+    "damage": 100,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "Underground turn 1, hits turn 2.",
+    "contact": true
+  },
+  {
+    "name": "Toxic",
+    "type": "Poison",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": 85,
+    "description": "Badly poisons target; worsen over time.",
+    "contact": false
+  },
+  {
+    "name": "Confusion",
+    "type": "Psychic",
+    "damage": 50,
+    "damage_type": "Special",
+    "accuracy": 100,
+    "description": "May confuse the target.",
+    "contact": false
+  },
+  {
+    "name": "Psychic",
+    "type": "Psychic",
+    "damage": 90,
+    "damage_type": "Special",
+    "accuracy": 100,
+    "description": "May lower target's Special stat.",
+    "contact": false
+  },
+  {
+    "name": "Hypnosis",
+    "type": "Psychic",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": 60,
+    "description": "Puts target to sleep.",
+    "contact": false
+  },
+  {
+    "name": "Meditate",
+    "type": "Psychic",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": null,
+    "description": "Raises user's Attack.",
+    "contact": false
+  },
+  {
+    "name": "Agility",
+    "type": "Psychic",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": null,
+    "description": "Sharply raises user's Speed.",
+    "contact": false
+  },
+  {
+    "name": "Quick Attack",
+    "type": "Normal",
+    "damage": 40,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "Always strikes first.",
+    "contact": true
+  },
+  {
+    "name": "Rage",
+    "type": "Normal",
+    "damage": 20,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "Attacks automatically; Attack rises when hit.",
+    "contact": true
+  },
+  {
+    "name": "Teleport",
+    "type": "Psychic",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": null,
+    "description": "Escapes wild battles instantly.",
+    "contact": false
+  },
+  {
+    "name": "Night Shade",
+    "type": "Ghost",
+    "damage": null,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "Deals damage equal to user's level.",
+    "contact": false
+  },
+  {
+    "name": "Mimic",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": 100,
+    "description": "Copies one of the target's moves.",
+    "contact": false
+  },
+  {
+    "name": "Screech",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": 85,
+    "description": "Sharply lowers target's Defense.",
+    "contact": false
+  },
+  {
+    "name": "Double Team",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": null,
+    "description": "Raises user's Evasion.",
+    "contact": false
+  },
+  {
+    "name": "Recover",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": null,
+    "description": "Restores half max HP.",
+    "contact": false
+  },
+  {
+    "name": "Harden",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": null,
+    "description": "Raises user's Defense.",
+    "contact": false
+  },
+  {
+    "name": "Minimize",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": null,
+    "description": "Raises user's Evasion.",
+    "contact": false
+  },
+  {
+    "name": "Smokescreen",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": 100,
+    "description": "Lowers target's accuracy.",
+    "contact": false
+  },
+  {
+    "name": "Confuse Ray",
+    "type": "Ghost",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": 100,
+    "description": "Confuses the target.",
+    "contact": false
+  },
+  {
+    "name": "Withdraw",
+    "type": "Water",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": null,
+    "description": "Raises user's Defense.",
+    "contact": false
+  },
+  {
+    "name": "Defense Curl",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": null,
+    "description": "Raises user's Defense.",
+    "contact": false
+  },
+  {
+    "name": "Barrier",
+    "type": "Psychic",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": null,
+    "description": "Sharply raises user's Defense.",
+    "contact": false
+  },
+  {
+    "name": "Light Screen",
+    "type": "Psychic",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": null,
+    "description": "Halves incoming Special damage.",
+    "contact": false
+  },
+  {
+    "name": "Haze",
+    "type": "Ice",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": null,
+    "description": "Resets all stats and status conditions.",
+    "contact": false
+  },
+  {
+    "name": "Reflect",
+    "type": "Psychic",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": null,
+    "description": "Halves incoming Physical damage.",
+    "contact": false
+  },
+  {
+    "name": "Focus Energy",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": null,
+    "description": "Glitched: Divides critical hit rate by 4.",
+    "contact": false
+  },
+  {
+    "name": "Bide",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "Endures damage for 2-3 turns, returns double.",
+    "contact": false
+  },
+  {
+    "name": "Metronome",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": null,
+    "description": "Triggers a random move.",
+    "contact": false
+  },
+  {
+    "name": "Mirror Move",
+    "type": "Flying",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": null,
+    "description": "Copies target's last used move.",
+    "contact": false
+  },
+  {
+    "name": "Explosion",
+    "type": "Normal",
+    "damage": 170,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "User faints. Halves target's Defense calculation.",
+    "contact": false
+  },
+  {
+    "name": "Fury Swipes",
+    "type": "Normal",
+    "damage": 18,
+    "damage_type": "Physical",
+    "accuracy": 80,
+    "description": "Scratches 2 to 5 times.",
+    "contact": true
+  },
+  {
+    "name": "Bonemerang",
+    "type": "Ground",
+    "damage": 50,
+    "damage_type": "Physical",
+    "accuracy": 90,
+    "description": "Hits twice.",
+    "contact": false
+  },
+  {
+    "name": "Fire Blast",
+    "type": "Fire",
+    "damage": 120,
+    "damage_type": "Special",
+    "accuracy": 85,
+    "description": "May burn the target.",
+    "contact": false
+  },
+  {
+    "name": "Waterfall",
+    "type": "Water",
+    "damage": 80,
+    "damage_type": "Special",
+    "accuracy": 100,
+    "description": "Charges with a watery slam.",
+    "contact": true
+  },
+  {
+    "name": "Clamp",
+    "type": "Water",
+    "damage": 35,
+    "damage_type": "Special",
+    "accuracy": 75,
+    "description": "Traps and immobilizes target for 2-5 turns.",
+    "contact": true
+  },
+  {
+    "name": "Swift",
+    "type": "Normal",
+    "damage": 60,
+    "damage_type": "Physical",
+    "accuracy": null,
+    "description": "Bypasses accuracy checks; never misses.",
+    "contact": false
+  },
+  {
+    "name": "Skull Bash",
+    "type": "Normal",
+    "damage": 100,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "Tucks head turn 1, hits turn 2.",
+    "contact": true
+  },
+  {
+    "name": "Spike Cannon",
+    "type": "Normal",
+    "damage": 20,
+    "damage_type": "Physical",
+    "accuracy": 85,
+    "description": "Fires spikes 2 to 5 times.",
+    "contact": false
+  },
+  {
+    "name": "Constrict",
+    "type": "Normal",
+    "damage": 10,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "May lower target's Speed.",
+    "contact": true
+  },
+  {
+    "name": "Amnesia",
+    "type": "Psychic",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": null,
+    "description": "Sharply raises Special.",
+    "contact": false
+  },
+  {
+    "name": "Kinesis",
+    "type": "Psychic",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": 80,
+    "description": "Lowers target's accuracy.",
+    "contact": false
+  },
+  {
+    "name": "Soft-Boiled",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": null,
+    "description": "Restores half max HP.",
+    "contact": false
+  },
+  {
+    "name": "Hi Jump Kick",
+    "type": "Fighting",
+    "damage": 85,
+    "damage_type": "Physical",
+    "accuracy": 90,
+    "description": "User takes 1 damage on miss.",
+    "contact": true
+  },
+  {
+    "name": "Glare",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": 75,
+    "description": "Paralyzes the target.",
+    "contact": false
+  },
+  {
+    "name": "Dream Eater",
+    "type": "Psychic",
+    "damage": 100,
+    "damage_type": "Special",
+    "accuracy": 100,
+    "description": "Heals half of damage dealt. Target must sleep.",
+    "contact": false
+  },
+  {
+    "name": "Poison Gas",
+    "type": "Poison",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": 55,
+    "description": "Poisons the target.",
+    "contact": false
+  },
+  {
+    "name": "Barrage",
+    "type": "Normal",
+    "damage": 15,
+    "damage_type": "Physical",
+    "accuracy": 85,
+    "description": "Hits 2 to 5 times.",
+    "contact": false
+  },
+  {
+    "name": "Leech Life",
+    "type": "Bug",
+    "damage": 20,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "Heals user for half of damage dealt.",
+    "contact": true
+  },
+  {
+    "name": "Lovely Kiss",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": 75,
+    "description": "Puts target to sleep.",
+    "contact": false
+  },
+  {
+    "name": "Sky Attack",
+    "type": "Flying",
+    "damage": 140,
+    "damage_type": "Physical",
+    "accuracy": 90,
+    "description": "Glows turn 1, hits turn 2. High crit.",
+    "contact": true
+  },
+  {
+    "name": "Conversion",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": null,
+    "description": "Changes user's type to match target's.",
+    "contact": false
+  },
+  {
+    "name": "Tri Attack",
+    "type": "Normal",
+    "damage": 80,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "Fires three physical rays.",
+    "contact": false
+  },
+  {
+    "name": "Super Fang",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Physical",
+    "accuracy": 90,
+    "description": "Cuts target's current HP in half.",
+    "contact": true
+  },
+  {
+    "name": "Slash",
+    "type": "Normal",
+    "damage": 70,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "High critical-hit ratio.",
+    "contact": true
+  },
+  {
+    "name": "Substitute",
+    "type": "Normal",
+    "damage": null,
+    "damage_type": "Status",
+    "accuracy": null,
+    "description": "Sacrifices a quarter of max HP to make a clone.",
+    "contact": false
+  },
+  {
+    "name": "Struggle",
+    "type": "Normal",
+    "damage": 50,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "Used when out of PP. Deals half recoil damage.",
+    "contact": true
+  },
+  {
+    "name": "Sludge",
+    "type": "Poison",
+    "damage": 65,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "May poison the target.",
+    "contact": false
+  },
+  {
+    "name": "Bone Club",
+    "type": "Ground",
+    "damage": 65,
+    "damage_type": "Physical",
+    "accuracy": 85,
+    "description": "May cause flinching.",
+    "contact": false
+  },
+  {
+    "name": "Self-Destruct",
+    "type": "Normal",
+    "damage": 130,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "User faints. Halves target's Defense.",
+    "contact": false
+  },
+  {
+    "name": "Egg Bomb",
+    "type": "Normal",
+    "damage": 100,
+    "damage_type": "Physical",
+    "accuracy": 75,
+    "description": "Large egg hurls at target.",
+    "contact": false
+  },
+  {
+    "name": "Lick",
+    "type": "Ghost",
+    "damage": 20,
+    "damage_type": "Physical",
+    "accuracy": 100,
+    "description": "May paralyze the target.",
+    "contact": true
+  },
+  {
+    "name": "Smog",
+    "type": "Poison",
+    "damage": 20,
+    "damage_type": "Physical",
+    "accuracy": 70,
+    "description": "May poison the target.",
+    "contact": false
+  },
+  {
+    "name": "Bone Rush",
+    "type": "Ground",
+    "damage": 25,
+    "damage_type": "Physical",
+    "accuracy": 85,
+    "description": "Hits 2 to 5 times.",
+    "contact": false
+  }
+]

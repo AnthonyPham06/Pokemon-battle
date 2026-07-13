@@ -1,0 +1,218 @@
+[
+  {
+    "id": 1,
+    "name": "choice-band",
+    "type": "Stat Modifier",
+    "effect": "Boosts Attack, locks move."
+  },
+  {
+    "id": 2,
+    "name": "leftovers",
+    "type": "Passive Recovery",
+    "effect": "Restores HP each turn."
+  },
+  {
+    "id": 3,
+    "name": "lum-berry",
+    "type": "Status Recovery",
+    "effect": "Cures any status condition."
+  },
+  {
+    "id": 4,
+    "name": "white-herb",
+    "type": "Stat Recovery",
+    "effect": "Restores lowered stats once."
+  },
+  {
+    "id": 5,
+    "name": "mental-herb",
+    "type": "Status Recovery",
+    "effect": "Cures infatuation once smoothly."
+  },
+  {
+    "id": 6,
+    "name": "bright-powder",
+    "type": "Evasion",
+    "effect": "Lowers opponent's accuracy. "
+  },
+  {
+    "id": 7,
+    "name": "focus-band",
+    "type": "Survival",
+    "effect": "Chance to survive death."
+  },
+  {
+    "id": 8,
+    "name": "kings-rock",
+    "type": "Status Infliction",
+    "effect": "Attacks may cause flinching."
+  },
+  {
+    "id": 9,
+    "name": "scope-lens",
+    "type": "Stat Modifier",
+    "effect": "Raises critical hit ratio."
+  },
+  {
+    "id": 10,
+    "name": "quick-claw",
+    "type": "Priority",
+    "effect": "Chance to move first."
+  },
+  {
+    "id": 11,
+    "name": "shell-bell",
+    "type": "Passive Recovery",
+    "effect": "Heals from damage dealt."
+  },
+  {
+    "id": 12,
+    "name": "soul-dew",
+    "type": "Signature Modifier",
+    "effect": "Boosts Latios and Latias."
+  },
+  {
+    "id": 13,
+    "name": "light-ball",
+    "type": "Signature Modifier",
+    "effect": "Doubles Pikachu's SPAtk."
+  },
+  {
+    "id": 14,
+    "name": "thick-club",
+    "type": "Signature Modifier",
+    "effect": "Doubles Cubone Marowak Attack."
+  },
+  {
+    "id": 15,
+    "name": "deep-sea-tooth",
+    "type": "Signature Modifier",
+    "effect": "Doubles Clamperl's SPAtk."
+  },
+  {
+    "id": 16,
+    "name": "deep-sea-scale",
+    "type": "Signature Modifier",
+    "effect": "Doubles Clamperl's SPDef."
+  },
+  {
+    "id": 18,
+    "name": "sea-incense",
+    "type": "Type Booster",
+    "effect": "Boosts Water type moves."
+  },
+  {
+    "id": 19,
+    "name": "lax-incense",
+    "type": "Evasion",
+    "effect": "Reduces incoming attack accuracy."
+  },
+  {
+    "id": 20,
+    "name": "silk-scarf",
+    "type": "Type Booster",
+    "effect": "Boosts Normal type moves."
+  },
+  {
+    "id": 21,
+    "name": "black-glasses",
+    "type": "Type Booster",
+    "effect": "Boosts Dark type moves."
+  },
+  {
+    "id": 22,
+    "name": "charcoal",
+    "type": "Type Booster",
+    "effect": "Boosts Fire type moves."
+  },
+  {
+    "id": 23,
+    "name": "dragon-fang",
+    "type": "Type Booster",
+    "effect": "Boosts Dragon type moves."
+  },
+  {
+    "id": 24,
+    "name": "hard-stone",
+    "type": "Type Booster",
+    "effect": "Boosts Rock type moves."
+  },
+  {
+    "id": 25,
+    "name": "magnet",
+    "type": "Type Booster",
+    "effect": "Boosts Electric type moves."
+  },
+  {
+    "id": 26,
+    "name": "miracle-seed",
+    "type": "Type Booster",
+    "effect": "Boosts Grass type moves."
+  },
+  {
+    "id": 27,
+    "name": "mystic-water",
+    "type": "Type Booster",
+    "effect": "Boosts Water type moves."
+  },
+  {
+    "id": 28,
+    "name": "never-melt-ice",
+    "type": "Type Booster",
+    "effect": "Boosts Ice type moves."
+  },
+  {
+    "id": 29,
+    "name": "poison-barb",
+    "type": "Type Booster",
+    "effect": "Boosts Poison type moves."
+  },
+  {
+    "id": 30,
+    "name": "sharp-beak",
+    "type": "Type Booster",
+    "effect": "Boosts Flying type moves."
+  },
+  {
+    "id": 31,
+    "name": "silver-powder",
+    "type": "Type Booster",
+    "effect": "Boosts Bug type moves."
+  },
+  {
+    "id": 32,
+    "name": "soft-sand",
+    "type": "Type Booster",
+    "effect": "Boosts Ground type moves."
+  },
+  {
+    "id": 33,
+    "name": "spell-tag",
+    "type": "Type Booster",
+    "effect": "Boosts Ghost type moves."
+  },
+  {
+    "id": 34,
+    "name": "twisted-spoon",
+    "type": "Type Booster",
+    "effect": "Boosts Psychic type moves."
+  },
+  {
+    "id": 35,
+    "name": "metal-coat",
+    "type": "Type Booster / Evolution",
+    "effect": "Boosts Steel type moves."
+  },
+  {
+    "id": 37,
+    "name": "amulet-coin",
+    "type": "Utility",
+    "effect": "Doubles prize money earned."
+  },
+  {
+    "id": 38,
+    "name": "assault-vest",
+    "type": "Stat Modifier",
+    "effect": "Up SPDef, no Status moves."
+  }
+]

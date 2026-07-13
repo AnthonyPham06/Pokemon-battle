@@ -1,0 +1,102 @@
+[
+  {
+    "nature": "Hardy",
+    "description": "Balanced"
+  },
+  {
+    "nature": "Lonely",
+    "description": "+ATK, -DEF."
+  },
+  {
+    "nature": "Brave",
+    "description": "+ATK, -Speed."
+  },
+  {
+    "nature": "Adamant",
+    "description": "+ATK, -SPATK."
+  },
+  {
+    "nature": "Naughty",
+    "description": "+ATK, -SPDEF."
+  },
+  {
+    "nature": "Bold",
+    "description": "+DEF, -ATK."
+  },
+  {
+    "nature": "Docile",
+    "description": "Balanced"
+  },
+  {
+    "nature": "Relaxed",
+    "description": "+DEF, -Speed."
+  },
+  {
+    "nature": "Impish",
+    "description": "+DEF, -SPATK."
+  },
+  {
+    "nature": "Lax",
+    "description": "+DEF, -SPDEF."
+  },
+  {
+    "nature": "Timid",
+    "description": "+Speed, -ATK."
+  },
+  {
+    "nature": "Hasty",
+    "description": "+Speed, -DEF."
+  },
+  {
+    "nature": "Serious",
+    "description": "Balanced"
+  },
+  {
+    "nature": "Jolly",
+    "description": "+Speed, -SPATK."
+  },
+  {
+    "nature": "Naive",
+    "description": "+Speed, -SPDEF."
+  },
+  {
+    "nature": "Modest",
+    "description": "+SPATK, -ATK."
+  },
+  {
+    "nature": "Mild",
+    "description": "+SPATK, -DEF."
+  },
+  {
+    "nature": "Quiet",
+    "description": "+SPATK, -Speed."
+  },
+  {
+    "nature": "Bashful",
+    "description": "Balanced"
+  },
+  {
+    "nature": "Rash",
+    "description": "+SPATK, -SPDEF."
+  },
+  {
+    "nature": "Calm",
+    "description": "+SPDEF, -ATK."
+  },
+  {
+    "nature": "Gentle",
+    "description": "+SPDEF, -DEF."
+  },
+  {
+    "nature": "Sassy",
+    "description": "+SPDEF, -Speed."
+  },
+  {
+    "nature": "Careful",
+    "description": "+SPDEF, -SPATK."
+  },
+  {
+    "nature": "Quirky",
+    "description": "Balanced"
+  }
+]
