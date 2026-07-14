@@ -290,22 +290,16 @@ class Battle(pygame.sprite.Sprite):
 
 
 
-        #
-        black_list = ["bulbasaur", 'squirtle','rattata','raticate','ivysaur','sandshrew', 'nidoqueen','diglett','golduck','golem','magnemite']
-        if self.pokemon_name not in black_list:  #this if statement fix the dimensions of some pokemon
-            TARGET_HEIGHT = 120
-            self.bottom = 333
-        else: 
-            if self.pokemon_name == 'ivysaur':
-                TARGET_HEIGHT = 140
-                self.bottom = 350
+        # ADJUST POKEMON SPRITE DIMENSIONS BASED ON POKEMON NAME
+        SPRITE_SIZES = {   # SPECIFIC HEIGHT AND BOTTOM POSITION FOR EACH POKEMON
+        "ivysaur":   (140, 350),
+        "nidoqueen": (190, 362),
+        "golduck":   (190, 362),
+        "dodrio":    (170, 348),
+        }
+        TARGET_HEIGHT, self.bottom = SPRITE_SIZES.get(self.pokemon_name, (120, 333))
 
-            elif self.pokemon_name == 'nidoqueen' or self.pokemon_name =="golduck":
-                TARGET_HEIGHT = 190
-                self.bottom = 362
-            else:
-                TARGET_HEIGHT = 90
-                self.bottom = 335
+        # Draw the sprite of pokemon 1
 
         self.pokemon1_sprite = pygame.image.load(f'pokemon_sprites/{self.pokemon_name}/{self.pokemon_name}_battle.png').convert_alpha()
         self.pokemon1_sprite = self.crop_sprite(self.pokemon1_sprite)
@@ -543,7 +537,7 @@ class Battle(pygame.sprite.Sprite):
                         self.sleep_animation_pokemon1_done = False
                     elif not asleep:
                         self.pokemon1_current_status =""
-                        self.message_queue.append(f"{self.opponent_name.capitalize()} woke up!")
+                        self.message_queue.append(f"{self.pokemon_name.capitalize()} woke up!")
 
 
                 if self.pokemon1_confusion:
@@ -686,7 +680,7 @@ class Battle(pygame.sprite.Sprite):
 
 
                                 # CHECK FOR MULTI HIT MOVE
-                                if self.chosen_move.lower() == "comet punch": # multimove
+                                if self.chosen_move.lower() in self.engine.multi_hit_move: # multimove
                                     self.damage = self.damage * len(self.animator.state.get("positions", [1]))
                                     self.message_queue.append(f"Hit {len(self.animator.state.get("positions", [1]))} times!")
 
@@ -1049,6 +1043,7 @@ class Battle(pygame.sprite.Sprite):
 
                 # WHEN BOTH TURN ARE DONE AND ALL THE STATUS AND STUFF ARE DONE
                 if self.turn_done and self.status_done_damage_this_turn and self.weather_done_damage_this_turn and not self.pokemon1_health_decreasing: 
+                    print(self.message_duration)
                     self.turn_done = False 
                     self.chosen_move = ""
                     self.pokemon2_chosen_move = ""
@@ -1075,12 +1070,14 @@ class Battle(pygame.sprite.Sprite):
                         self.status_timer = pygame.time.get_ticks()
 
                     self.end_turn_status(screen,pokemon_rect) # check the end turn status
-                    
+                    print("game bi dung")
+                    print(f"status done damage this turn: {self.status_done_damage_this_turn}")
+
 
 
 
     def run_opponent_turn(self, screen, pokemon_rect):
-        move_list = ["tackle"]  # hahah
+        move_list = ["sleep powder"]  # hahah
         if self.pokemon2_chosen_move == "":
             self.pokemon2_chosen_move = random.choice(move_list)
    
@@ -1193,7 +1190,7 @@ class Battle(pygame.sprite.Sprite):
                     self.message_queue.append("But it failed!")
                     animation_done = True
 
-                if self.pokemon2_chosen_move.lower() == "sandstorm" and self.engine.current_weather == "sandstorm":
+                elif self.pokemon2_chosen_move.lower() == "sandstorm" and self.engine.current_weather == "sandstorm":
                     self.message_queue.append("But it failed!")
                     animation_done = True
 
@@ -1206,6 +1203,7 @@ class Battle(pygame.sprite.Sprite):
                     animation_done = True
 
                 elif self.engine.check_effectiveness() == 0: # dont play the animation when move is unaffected
+                    self.message_queue.append(f"It doesnt affect {self.pokemon_name.capitalize()}!")
                     animation_done = True
 
                 else:
@@ -1277,6 +1275,12 @@ class Battle(pygame.sprite.Sprite):
                         new_hp2_recoil = self.hp2_ratio
                         secondary = ""
                         opponent_heal = False
+
+
+                    # CHECK FOR MULTI HIT MOVE
+                    if self.pokemon2_chosen_move.lower() in self.engine.multi_hit_move: # multimove
+                        damage = damage * len(self.animator.state.get("positions", [1]))
+                        self.message_queue.append(f"Hit {len(self.animator.state.get("positions", [1]))} times!")
 
 
                     # CONTACT ABILITY
@@ -1503,7 +1507,7 @@ class Battle(pygame.sprite.Sprite):
     def _end_opponent_turn(self):
         self.opponent_turn = False
         if self.go_first_this_turn == "pokemon_1" or self.chosen_move == "change": # IF ITS A CHANGE MOVE
-            self.turn_done = True # turn is done if both pokemon finish moving, is False if p1 doesnt move yet    
+            self.turn_done = True # turn is done if both pokemon finish moving, is False if p1 doesnt move yet   
         
         # restore engine to normal player-attacks-opponent orientation
         self.engine.get_pokemon1_atk_spatk(self.atk_pokemon1, self.spatk_pokemon1)
@@ -1537,6 +1541,7 @@ class Battle(pygame.sprite.Sprite):
         print(f"status of p2 op turn:{self.engine.status_pokemon2}")
         print(f"status of p1 op turn:{self.engine.my_pokemon_status}")
         print(f"status of p2 op turn:{self.engine.opponent_pokemon_status}")
+        print(f"status damage done:{self.status_done_damage_this_turn}")
         print("!!!!!!!!!!!!!!!!!!!!!!!!!!")
 
 
@@ -1708,7 +1713,7 @@ class Battle(pygame.sprite.Sprite):
 
 
     def end_turn_status(self,screen, pokemon_rect):
-        if (self.pokemon2_current_status != "" or self.pokemon1_current_status !="") and self.status_timer != 0: # if there is a status effect
+        if (self.pokemon2_current_status in ("poison","bad_poison","burn") or self.pokemon1_current_status in ("poison","bad_poison","burn")) and self.status_timer != 0: # if there is a status effect
             if pygame.time.get_ticks() - self.status_timer >= 1300 and not self.message_queue and not self.current_message:
 
                 # play animation for p2 first

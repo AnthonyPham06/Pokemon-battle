@@ -180,6 +180,8 @@ class Battle_Engine:
 
         self.charging_move = ""
 
+        self.multi_hit_move = ("double slap", "double kick", "comet punch", "fury attack", "fury swipes", "pin missile", "twineedle", "bone rush", "bullet seed","bonemerang")
+
 
 
 
@@ -301,7 +303,7 @@ class Battle_Engine:
 
 
             if crit: 
-                if self.pokemon2_ability == "anger point" and self.pokemon1_move_data["name"] != "comet punch": # if crit is true 
+                if self.pokemon2_ability == "anger point" and self.pokemon1_move_data["name"] not in self.multi_hit_move: # if crit is true 
                     self.crit_for_anger_point = True # this variables serves as a check for anger point ability
 
                 if self.pokemon1_ability == "sniper": # check for ability Sniper
@@ -588,9 +590,12 @@ class Battle_Engine:
 
 
     def still_asleep(self):
-        if self.status_pokemon1 == "sleep" or self.status_pokemon2 == "sleep":
-            chance = random.randint(1,3)
-            if chance == 1:
+        if self.status_pokemon1 == "sleep":
+            chance = random.randint(1,4)
+            if (chance == 2 or chance == 1) and self.pokemon1_ability == "early bird": # higher probability to wake up if the ability is early bird
+                self.status_pokemon1 = None
+                return False
+            if chance == 1:  # if ability is not early bird, 25% chance to wake up
                 self.status_pokemon1 = None
                 return False 
             return True

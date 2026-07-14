@@ -76,7 +76,9 @@ class BattleAnimation:
             "dig": (self._load_dig, self.anim_dig),
             "fly": (self._load_fly, self.anim_fly),
             "sky attack": (self._load_sky_attack, self.anim_sky_attack),
-
+            "pin missile": (self._load_pin_missile, self.anim_pin_missile),
+            "bonemerang": (self._load_bonemerang, self.anim_bonemerang),
+            
         }
 
     # ------------------------------------------------------------------ #
@@ -469,6 +471,24 @@ class BattleAnimation:
         self.state["spawn_timer"] = 0
         self.state["sky_overlay"] = pygame.Surface((800, 500))
 
+
+    def _load_pin_missile(self, name):
+        img = pygame.image.load('move_sprites/poison_sting/poison_sting.png').convert_alpha()
+        img = pygame.transform.scale(img, (int(img.get_width() * 0.6), int(img.get_height() * 0.6)))
+        self.state["sound"] = pygame.mixer.Sound('move_sprites/poison_sting/poison_sting.mp3')
+        self.state["img"] = img
+        self.state["start"] = None
+        self.state["hit_count"] = 0
+        self.state["next_hit_time"] = 0
+        self.state["positions"] = []
+        self.state["flash_until"] = 0
+
+    def _load_bonemerang(self, name):
+        img = pygame.image.load('move_sprites/bonemerang/bonemerang.png').convert_alpha()
+        self.state["img"]   = pygame.transform.scale(img, (int(img.get_width()*0.5), int(img.get_height()*0.5)))
+        self.state["sound"] = pygame.mixer.Sound('move_sprites/bonemerang/bonemerang.mp3')
+        self.state["start"] = None
+        self.state["positions"] = []
     
 
 
@@ -2516,3 +2536,74 @@ class BattleAnimation:
                 s["start"] = None
                 s["particles"] = []
             return done
+        
+
+    def anim_pin_missile(self, move_name, screen, opponent_sprite, opponent_rect, my_sprite, my_rect):
+        now = pygame.time.get_ticks()
+        s = self.state
+        if s["start"] is None:
+            s["start"] = now
+            self.frame = 0
+            num_hits = random.randint(2, 5)
+            s["positions"] = [(opponent_rect.centerx + random.randint(-20, 20), opponent_rect.centery + random.randint(-20, 20)) for _ in range(num_hits)]
+            s["hit_count"] = 0
+            s["next_hit_time"] = now + 150
+            s["showing_until"] = 0
+            s["current_pos"] = None
+
+        screen.blit(opponent_sprite, opponent_rect)
+
+        if s["current_pos"] is not None and now < s["showing_until"]:
+            cx, cy = s["current_pos"]
+            img_rect = s["img"].get_rect(center=(cx, cy))
+            screen.blit(s["img"], img_rect)
+            return False
+
+        if s["hit_count"] < len(s["positions"]) and now >= s["next_hit_time"]:
+            cx, cy = s["positions"][s["hit_count"]]
+            s["current_pos"] = (cx, cy)
+            s["showing_until"] = now + 200
+            img_rect = s["img"].get_rect(center=(cx, cy))
+            screen.blit(s["img"], img_rect)
+            s["sound"].play()
+            s["hit_count"] += 1
+            s["next_hit_time"] = now + 250
+            return False
+
+        if s["hit_count"] >= len(s["positions"]) and now >= s["next_hit_time"]:
+            done = self._flash_phase(screen, opponent_sprite, opponent_rect)
+            if done:
+                s["start"] = None
+            return done
+
+        return False
+
+
+    def anim_bonemerang(self, move_name, screen, opponent_sprite, opponent_rect, my_sprite, my_rect):
+        now = pygame.time.get_ticks()
+        s = self.state
+        if s["start"] is None:
+            s["start"] = now
+
+        elapsed = now - s["start"]
+        THROW, GAP = 400, 200
+        CYCLE = THROW + GAP
+        hit_index = elapsed // CYCLE
+
+        if hit_index < 2:
+            screen.blit(opponent_sprite, opponent_rect)
+            phase = elapsed % CYCLE
+            if phase < THROW:
+                t = phase / THROW
+                x = int(my_rect.centerx + (opponent_rect.centerx - my_rect.centerx) * t)
+                y = int(my_rect.centery + (opponent_rect.centery - my_rect.centery) * t) - int(40 * math.sin(t * math.pi))
+                screen.blit(s["img"], s["img"].get_rect(center=(x, y)))
+            elif len(s["positions"]) == hit_index:
+                s["positions"].append(opponent_rect.center)
+                s["sound"].play()
+            return False
+
+        done = self._flash_phase(screen, opponent_sprite, opponent_rect)
+        if done:
+            s["start"] = None
+        return done
