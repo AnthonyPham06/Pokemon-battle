@@ -156,7 +156,7 @@ class Battle(pygame.sprite.Sprite):
         # ==========================================
         # 9. OPPONENT (POKEMON 2) SPECIFIC BATTLE STATES
         # ==========================================
-        self.pokemon_list = ["rapidash"] #"pidgeot","charizard","venusaur","blastoise","butterfree","raichu",
+        self.pokemon_list = ["charizard"] #"pidgeot","charizard","venusaur","blastoise","butterfree","raichu",
         self.opponent_name = random.choice(self.pokemon_list)
 
         # test opponent pokemon, with animation when entering
@@ -223,6 +223,10 @@ class Battle(pygame.sprite.Sprite):
         self.battle_over = False
         self.low_health_music = False
 
+        # ==========================================
+        # 13. MIRROR MOVE
+        # ==========================================
+        self.mirror_move_checked = False
 
 
     def fade_in(self): 
@@ -296,6 +300,7 @@ class Battle(pygame.sprite.Sprite):
         "nidoqueen": (190, 362),
         "golduck":   (190, 362),
         "dodrio":    (170, 348),
+        "bulbasaur":  (100, 333),
         }
         TARGET_HEIGHT, self.bottom = SPRITE_SIZES.get(self.pokemon_name, (120, 333))
 
@@ -395,10 +400,20 @@ class Battle(pygame.sprite.Sprite):
                     cry.play()
                     self.cry_done = True
 
-                    if self.pokemon_ability.lower() in ("intimidate","arena trap","cloud nine"):
-                        self.ability_box_showing = True
-                        self.ability_box_text = self.pokemon_ability.capitalize()
-                        self.engine.process_entry_abilities(self.pokemon_ability,self.pokemon_name,"intimidate",self.opponent_name,self.message_queue)
+                    if self.pokemon_ability.lower() in ("intimidate","arena trap","cloud nine") or self.ability_pokemon2.lower() in ("intimidate","arena trap","cloud nine"):
+                        p1_showing, p2_showing = self.engine.process_entry_abilities(self.pokemon_ability,self.pokemon_name,self.ability_pokemon2,self.opponent_name,self.message_queue)
+
+                        if p1_showing:  
+                            self.ability_box_showing = True
+                            self.ability_box_text = self.pokemon_ability.capitalize()
+                        
+                        if p2_showing:
+                            self.opponent_ability_box_showing = True
+                            self.opponent_ability_box_text = self.ability_pokemon2.capitalize()
+                        
+
+
+                        
 
 
             elif self.pokemon2_fainted:
@@ -675,8 +690,8 @@ class Battle(pygame.sprite.Sprite):
                 
                             if animation_done:
                                 self.damage_applied = True
-                                self.engine.stage_calculation()
-                                self.damage, crit, effectiveness = self.engine.damage_calculation()
+                                self.engine.stage_calculation(self.opponent_turn, self.message_queue)
+                                self.damage, crit, effectiveness = self.engine.damage_calculation(self.opponent_turn)
 
 
                                 # CHECK FOR MULTI HIT MOVE
@@ -823,6 +838,9 @@ class Battle(pygame.sprite.Sprite):
                                  # MESSAGE FOR DAMAGE AND CHECKING FOR SECONDARY EFFECTS OF ATTACKS   
                                 if self.damage > 0:
                                     # DAMAGE CALCULATION
+
+
+
                                     self.hp2_ratio = self.pokemon2_previous_hp_percent - self.damage / self.pokemon_data[self.opponent_name]["health"]
 
                                     # CHECK STURDY
@@ -855,7 +873,7 @@ class Battle(pygame.sprite.Sprite):
                                         self.message_queue.append(f"{self.opponent_name.capitalize()} was poisoned!")
                                         self.pokemon2_current_status = "poison"
                                         self.status_done_damage_this_turn = False
-                                    elif secondary == "flinch":
+                                    elif secondary == "flinch" and self.pokemon2_ability != "inner focus":
                                         self.message_queue.append(f"{self.opponent_name.capitalize()} flinched!")
                                         self.turn_done = True
 
@@ -888,7 +906,7 @@ class Battle(pygame.sprite.Sprite):
 
 
                                 # IF ITS A STATUS OR NON DAMAGING MOVE
-                                elif self.damage == 0 and (self.engine.pokemon1_move_data["damage_type"] == "Status") and (self.engine.pokemon1_move_data["name"].lower() not in self.engine.weather_moves) and self.engine.charging_move == "" and self.chosen_move.lower() != "leech seed":  # status move or unaffect, also it cant be leech seed
+                                elif self.damage == 0 and (self.engine.pokemon1_move_data["damage_type"] == "Status") and (self.engine.pokemon1_move_data["name"].lower() not in self.engine.weather_moves) and self.engine.charging_move == "" and self.chosen_move.lower() not in  ("leech seed","light screen","reflect","aurora veil"):  # status move or unaffect, also it cant be some special moves
                                     status = self.engine.status_pokemon2
 
                                     if self.engine.status_moves[self.chosen_move.lower()][3] == "self": # if its a stat increases
@@ -940,6 +958,7 @@ class Battle(pygame.sprite.Sprite):
                                             self.message_queue.append(f"{self.opponent_name.capitalize()} is unaffected!")
 
 
+
                                 
                                 # THIS IS THE UPDATE TO SHOW THE STATUS ICON 
                                 if self.engine.my_pokemon_status is None or self.engine.my_pokemon_status =="" or self.engine.my_pokemon_status == "freeze"  or self.engine.my_pokemon_status == "sleep":
@@ -955,6 +974,9 @@ class Battle(pygame.sprite.Sprite):
 
                                 if self.being_trapped_p2 or self.being_trapped_p1 or self.seeded_p2 or self.seeded_p1:
                                     self.trapped_done_damage_this_turn = False
+
+                                if self.engine.p1_screen or self.engine.p2_screen:
+                                    self.mirror_move_checked = False
 
 
 
@@ -982,6 +1004,9 @@ class Battle(pygame.sprite.Sprite):
 
                             if self.being_trapped_p2 or self.being_trapped_p1 or self.seeded_p1 or self.seeded_p2:
                                 self.trapped_done_damage_this_turn = False
+
+                            if self.engine.p1_screen or self.engine.p2_screen:
+                                self.mirror_move_checked = False
                                 
 
                 #CHECK WHICH TURN IT IS, AND END IF MY POKEMON MOVE LAST
@@ -989,7 +1014,6 @@ class Battle(pygame.sprite.Sprite):
                     self.turn_done = True
                     print(f"status of p1 my turn(2): {self.engine.status_pokemon1}")
                     print(f"status of p2 my turn(2): {self.engine.status_pokemon2}")
-                    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11")
 
 
             # RUN THE OPPONENT TURN IF ITS THE OPPONENT TURN
@@ -1041,8 +1065,8 @@ class Battle(pygame.sprite.Sprite):
                         self.opponent_damage_applied = False 
                         self.swap_turn_timer_start = pygame.time.get_ticks()
 
-                # WHEN BOTH TURN ARE DONE AND ALL THE STATUS AND STUFF ARE DONE
-                if self.turn_done and self.status_done_damage_this_turn and self.weather_done_damage_this_turn and not self.pokemon1_health_decreasing: 
+                # WHEN BOTH TURN ARE DONE AND ALL THE STATUS AND STUFF ARE DONE (MIRROR IS USED BECAUSE MIRROR IS CHECK LAST)
+                if self.turn_done and self.mirror_move_checked and not self.pokemon1_health_decreasing and not self.message_queue and not self.current_message: 
                     print(self.message_duration)
                     self.turn_done = False 
                     self.chosen_move = ""
@@ -1070,14 +1094,15 @@ class Battle(pygame.sprite.Sprite):
                         self.status_timer = pygame.time.get_ticks()
 
                     self.end_turn_status(screen,pokemon_rect) # check the end turn status
-                    print("game bi dung")
-                    print(f"status done damage this turn: {self.status_done_damage_this_turn}")
+
+                if not self.mirror_move_checked and self.status_done_damage_this_turn and not self.pokemon1_health_decreasing and self.pokemon2_previous_hp_percent == self.hp2_ratio:
+                    self.check_screen_effect()
 
 
 
 
     def run_opponent_turn(self, screen, pokemon_rect):
-        move_list = ["sleep powder"]  # hahah
+        move_list = ["light screen"]  # hahah
         if self.pokemon2_chosen_move == "":
             self.pokemon2_chosen_move = random.choice(move_list)
    
@@ -1211,8 +1236,8 @@ class Battle(pygame.sprite.Sprite):
 
                 if animation_done:
                     self.opponent_damage_applied = True
-                    self.engine.stage_calculation()
-                    damage, crit, effectiveness = self.engine.damage_calculation()
+                    self.engine.stage_calculation(self.opponent_turn, self.message_queue)
+                    damage, crit, effectiveness = self.engine.damage_calculation(self.opponent_turn)
 
                     # CHECK WEATHER, RECOIL AND SECOANDAY
                     if not self.engine.check_absorb_move_ability():
@@ -1373,7 +1398,7 @@ class Battle(pygame.sprite.Sprite):
                             self.message_queue.append(f"{self.pokemon_name.capitalize()} was poisoned!")
                             self.status_done_damage_this_turn = False
 
-                        elif secondary == "flinch" and self.go_first_this_turn == "pokemon_2":
+                        elif secondary == "flinch" and self.go_first_this_turn == "pokemon_2" and self.pokemon1_ability != "inner focus":
                             self.turn_done = True
                             self.message_queue.append(f"{self.pokemon_name.capitalize()} flinched!")
 
@@ -1416,7 +1441,7 @@ class Battle(pygame.sprite.Sprite):
 
 
 
-                    elif damage == 0 and self.engine.pokemon1_move_data["damage_type"] == "Status" and self.engine.pokemon1_move_data["name"].lower() not in self.engine.weather_moves and self.pokemon2_chosen_move.lower() != "leech seed":
+                    elif damage == 0 and self.engine.pokemon1_move_data["damage_type"] == "Status" and self.engine.pokemon1_move_data["name"].lower() not in self.engine.weather_moves and self.pokemon2_chosen_move.lower() not in ("leech seed", "light screen","reflect","aurora veil"):
                         status = self.engine.status_pokemon2
 
                         if self.engine.status_moves[self.pokemon2_chosen_move.lower()][3] == "self":
@@ -1474,6 +1499,8 @@ class Battle(pygame.sprite.Sprite):
 
                             else:
                                 self.message_queue.append(f"{self.pokemon_name.capitalize()} is unaffected!")
+
+
 
 
                     # SHOW STATUS ICON 
@@ -1536,12 +1563,13 @@ class Battle(pygame.sprite.Sprite):
         if self.being_trapped_p1 or self.being_trapped_p2 or self.seeded_p1 or self.seeded_p2:
             self.trapped_done_damage_this_turn = False
 
+        if self.engine.p1_screen or self.engine.p2_screen:
+            self.mirror_move_checked = False
 
         print(f"status of p1 op turn:{self.engine.status_pokemon1}")
         print(f"status of p2 op turn:{self.engine.status_pokemon2}")
         print(f"status of p1 op turn:{self.engine.my_pokemon_status}")
         print(f"status of p2 op turn:{self.engine.opponent_pokemon_status}")
-        print(f"status damage done:{self.status_done_damage_this_turn}")
         print("!!!!!!!!!!!!!!!!!!!!!!!!!!")
 
 
@@ -1899,8 +1927,25 @@ class Battle(pygame.sprite.Sprite):
             self.seed_animation_transition = False
 
 
+    def check_screen_effect(self):
+        if self.engine.p1_screen and self.engine.turn_screen_p1 < 5:
+            self.engine.turn_screen_p1 += 1
+        if self.engine.p2_screen and self.engine.turn_screen_p2 < 5:
+            self.engine.turn_screen_p2 += 1
 
-                
+        if self.engine.turn_screen_p1 == 5:
+            self.engine.p1_screen = False
+            self.engine.turn_screen_p1 = 0
+            self.engine.p1_screen_name = ""
+            self.message_queue.append("Your screen faded!")
+
+        if self.engine.turn_screen_p2 == 5:
+            self.engine.p2_screen = False
+            self.engine.turn_screen_p2 = 0
+            self.engine.p2_screen_name = ""
+            self.message_queue.append("The opponent's screen faded!")
+
+        self.mirror_move_checked = True
 
     def check_fainting(self):
         # check pokemon 1 health

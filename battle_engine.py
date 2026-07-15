@@ -229,6 +229,18 @@ class Battle_Engine:
         self.my_pokemon_status = None
         self.opponent_pokemon_status = None
 
+        # check entry pokemon showing
+        self.p1_showing = False
+        self.p2_showing = False
+
+        # light screen, reflect, aurora veil check
+        self.p1_screen = False
+        self.p2_screen = False
+        self.turn_screen_p1 = 0
+        self.turn_screen_p2 = 0
+        self.p1_screen_name = ""
+        self.p2_screen_name = ""
+
     # get move for pokemon 1
     def get_move(self, move):
         self.pokemon1_move_name = move
@@ -276,7 +288,7 @@ class Battle_Engine:
         self.pokemon2_hp = hp 
 
 
-    def damage_calculation(self):
+    def damage_calculation(self, is_opponent_turn):
         effectiveness = self.check_effectiveness()
         print(self.pokemon1_move_name)
 
@@ -294,13 +306,13 @@ class Battle_Engine:
                     
             crit = self.crit_chance()
 
+            if self.pokemon1_ability == "technician" and self.pokemon1_move_data["damage"] <= 60:
+                self.pokemon1_move_data["damage"] = int(self.pokemon1_move_data["damage"]*1.5)
+                print(f"technician activated, damage is now {self.pokemon1_move_data['damage']}")
+
 
             self.weather_multiplier() # check weather multiplier
             print(f"{self.weather_damage_multiplier} damage thoi tiet" )
-
-            
-            
-
 
             if crit: 
                 if self.pokemon2_ability == "anger point" and self.pokemon1_move_data["name"] not in self.multi_hit_move: # if crit is true 
@@ -340,7 +352,7 @@ class Battle_Engine:
                     
                 random_roll = random.randint(85,100)    # random roll for damage
                 damage = (damage * random_roll)/100
-                if self.status_pokemon1 =="burn": # cut the damage in half if burned
+                if self.status_pokemon1 =="burn" or (is_opponent_turn and self.p1_screen_name == "reflect") or (not is_opponent_turn and self.p2_screen_name == "reflect"): # cut the damage in half if burned
                     return int(damage/2), crit, effectiveness
                 
                 print(f"thong so la:{damage},{crit},{effectiveness}")
@@ -352,6 +364,9 @@ class Battle_Engine:
 
         elif self.pokemon1_move_data["damage_type"] == "Special":
             crit = self.crit_chance()
+
+            if self.pokemon1_ability == "technician" and self.pokemon1_move_data["damage"] <= 60:
+                self.pokemon1_move_data["damage"] = int(self.pokemon1_move_data["damage"]*1.5)
 
             self.weather_multiplier() # check weather damage mul
             print(f"{self.weather_damage_multiplier} damage thoi tiet" )
@@ -385,19 +400,46 @@ class Battle_Engine:
             if self.accuracy:
                 random_roll_special = random.randint(85,100)
                 damage = int((damage*random_roll_special)/100)
+
+                print(f"dang dung {self.p2_screen_name}")
+                print(f"luot cua thang lon: {is_opponent_turn}")
+
+                if (is_opponent_turn and self.p1_screen_name == "light screen") or (not is_opponent_turn and self.p2_screen_name == "light screen"): # cut the damage in half if burned
+                    print("light screen is up, damage is halved")
+                    return int(damage/2), crit, effectiveness
+                
                 return damage, crit, effectiveness
             else:
-                print("you missed")
                 return 0, False, 1.0
             
         return 0, False, 1.0
     
 
     
-    def stage_calculation(self):
-        # only run if the move is a status move
-        if self.pokemon1_move_data["damage_type"] != "Status" and self.pokemon1_move_data["name"] in self.weather_moves:
+    def stage_calculation(self, is_opponent_turn, message_queue):
+        # only run if the move is a status move, not damaging move, or if the move is a weather move
+        if self.pokemon1_move_data["damage_type"] != "Status" or self.pokemon1_move_data["name"] in self.weather_moves:
             return 0
+        
+
+        # check if the move is light screen or reflect, and print a message if it is
+        if self.pokemon1_move_data["name"].lower() == "light screen" or self.pokemon1_move_data["name"].lower() == "reflect":
+
+            if (not is_opponent_turn and self.p1_screen) or (is_opponent_turn and self.p2_screen): # if the screen is already up
+                message_queue.append(f"But it failed!")
+                return 0
+                                     
+            if not is_opponent_turn and not self.p1_screen: # not have light screen or reflect yet
+                self.p1_screen = True
+                message_queue.append(f"A magic barrier formed on your side!")
+                self.p1_screen_name = self.pokemon1_move_data["name"].lower()
+
+            elif is_opponent_turn and not self.p2_screen: # not have light screen or reflect yet
+                self.p2_screen = True
+                message_queue.append(f"A magic barrier formed on the opponent's side!")
+                self.p2_screen_name = self.pokemon1_move_data["name"].lower()
+
+
 
         # get the move name in lowercase so it matches the status_moves dictionary keys
         move_key = self.pokemon1_move_name.lower()
@@ -691,17 +733,40 @@ class Battle_Engine:
     def process_entry_abilities(self, pokemon_1_ability, pokemon_1_name, pokemon_2_ability, pokemon_2_name, message_queue):
         p1_ability = pokemon_1_ability.lower().strip()
         p2_ability = pokemon_2_ability.lower().strip()
+        self.p1_showing = False
+        self.p2_showing = False
 
-        if p1_ability == "intimidate":
-            self.stages_pokemon2["attack"] = max(-6, self.stages_pokemon2["attack"] - 1)
-            message_queue.append(f"{pokemon_1_name.capitalize()}'s Intimidate cut the foe's Attack!")
+        if (p1_ability == "intimidate" or p2_ability == "intimidate"):
+            if p1_ability == "intimidate" and p2_ability not in ("clear body", "hyper cutter", "white smoke"):
+                self.stages_pokemon2["attack"] = max(-6, self.stages_pokemon2["attack"] - 1)
+                message_queue.append(f"{pokemon_1_name.capitalize()}'s Intimidate cut the foe's Attack!")
+                self.p1_showing = True
 
-        elif p1_ability == "arena trap":
-            self.active_field_trapped = True
-            message_queue.append(f"{pokemon_1_name.capitalize()} trapped the field with Arena Trap!")
+            if p2_ability == "intimidate" and p1_ability not in ("clear body", "hyper cutter", "white smoke"):
+                self.stages_pokemon1["attack"] = max(-6, self.stages_pokemon1["attack"] - 1)
+                message_queue.append(f"Foe {pokemon_2_name.capitalize()}'s Intimidate cut {pokemon_1_name.capitalize()}'s Attack!")
+                self.p2_showing = True
 
-        elif p1_ability == "cloud nine":
+        if (p1_ability == "arena trap" or p2_ability == "arena trap"):
+            if p1_ability == "arena trap" and p2_ability != "levitate" and "Ghost" not in self.pokemon2_type and "Flying" not in self.pokemon2_type:
+                self.active_field_trapped = True
+                message_queue.append(f"{pokemon_2_name.capitalize()} is trapped!")  
+                self.p1_showing = True
+
+            if p2_ability == "arena trap" and p1_ability != "levitate" and "Ghost" not in self.pokemon1_type and "Flying" not in self.pokemon1_type:
+                self.active_field_trapped = True
+                message_queue.append(f"{pokemon_1_name.capitalize()} is trapped!")
+                self.p2_showing = True
+                
+        if (p1_ability == "cloud nine" or p2_ability == "cloud nine"):
+            if p1_ability == "cloud nine":
+                self.p1_showing = True
+            if p2_ability == "cloud nine":
+                self.p2_showing = True
             message_queue.append("The effects of weather are negated!")
+
+
+        return self.p1_showing, self.p2_showing
 
 
 

@@ -78,6 +78,8 @@ class BattleAnimation:
             "sky attack": (self._load_sky_attack, self.anim_sky_attack),
             "pin missile": (self._load_pin_missile, self.anim_pin_missile),
             "bonemerang": (self._load_bonemerang, self.anim_bonemerang),
+            "reflect":      (self._load_reflect,      self.anim_screen_move),
+            "light screen": (self._load_light_screen, self.anim_screen_move),
             
         }
 
@@ -489,6 +491,16 @@ class BattleAnimation:
         self.state["sound"] = pygame.mixer.Sound('move_sprites/bonemerang/bonemerang.mp3')
         self.state["start"] = None
         self.state["positions"] = []
+
+    def _load_reflect(self, name):
+        self.state["sound"] = pygame.mixer.Sound('move_sprites/screen_move/screen_move.mp3')
+        self.state["start"] = None
+        self.state["colors"] = ((150, 150, 160), (220, 235, 255), (100, 100, 110), (255, 255, 255))
+
+    def _load_light_screen(self, name):
+        self.state["sound"] = pygame.mixer.Sound('move_sprites/screen_move/screen_move.mp3')
+        self.state["start"] = None
+        self.state["colors"] = ((60, 110, 200), (150, 200, 255), (30, 60, 140), (200, 230, 255))
     
 
 
@@ -2607,3 +2619,36 @@ class BattleAnimation:
         if done:
             s["start"] = None
         return done
+    
+
+    def anim_screen_move(self, move_name, screen, opponent_sprite, opponent_rect, my_sprite, my_rect):
+        s = self.state
+        elapsed = self._start_animation(True)
+        frame_c, glass_c, outline_c, shine_c = s["colors"]
+
+        IN, SHINE, OUT = 300, 1100, 1400
+        if elapsed >= OUT:
+            self.current_loaded_move = None
+            return True
+
+        if elapsed < IN:
+            alpha = int(255 * (elapsed / IN))
+        elif elapsed < SHINE:
+            alpha = 255
+        else:
+            alpha = int(255 * (1 - (elapsed - SHINE) / (OUT - SHINE)))
+
+        w, h = 70, 110
+        mirror = pygame.Surface((w, h), pygame.SRCALPHA)
+        pygame.draw.ellipse(mirror, (*frame_c, alpha), (0, 0, w, h))
+        pygame.draw.ellipse(mirror, (*glass_c, int(alpha * 0.75)), (6, 6, w - 12, h - 12))
+        pygame.draw.ellipse(mirror, (*outline_c, alpha), (0, 0, w, h), 4)
+
+        if IN <= elapsed < SHINE:
+            sweep_x = int((elapsed - IN) / (SHINE - IN) * (w + 40)) - 20
+            shine = pygame.Surface((w, h), pygame.SRCALPHA)
+            pygame.draw.line(shine, (*shine_c, 220), (sweep_x, 0), (sweep_x - 25, h), 10)
+            mirror.blit(shine, (0, 0), special_flags=pygame.BLEND_RGBA_ADD)
+
+        screen.blit(mirror, mirror.get_rect(center=(my_rect.centerx, my_rect.centery - 20)))
+        return False
