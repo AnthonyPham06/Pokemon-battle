@@ -1139,8 +1139,8 @@
       "Electric"
     ],
     "abilities": [
-      "Lightning Rod",
-      "Static"
+      "Static",
+      "Lightning Rod"
     ],
     "ability_descriptions": {
       "Static": "Contact with the Pokemon may cause paralysis.",
@@ -3124,6 +3124,7 @@
       "Magic Guard": "Only takes damage from direct attacks."
     },
     "Learnable": [
+      "Light Screen",
       "Teleport",
       "Confusion",
       "Disable",
@@ -4779,9 +4780,9 @@
       "Water"
     ],
     "abilities": [
+      "Sheer Force",
       "Hyper Cutter",
-      "Shell Armor",
-      "Sheer Force"
+      "Shell Armor"
     ],
     "ability_descriptions": {
       "Hyper Cutter": "Prevents other POKEMON from lowering its Attack stat.",
@@ -4880,8 +4881,8 @@
       "Electric"
     ],
     "abilities": [
-      "Soundproof",
       "Static",
+      "Soundproof",
       "Aftermath"
     ],
     "ability_descriptions": {
@@ -4926,8 +4927,8 @@
       "Electric"
     ],
     "abilities": [
-      "Soundproof",
       "Static",
+      "Soundproof",
       "Aftermath"
     ],
     "ability_descriptions": {

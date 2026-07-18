@@ -1068,7 +1068,7 @@
     "damage": null,
     "damage_type": "Status",
     "accuracy": null,
-    "description": "Glitched: Divides critical hit rate by 4.",
+    "description": "Increase critical-hit chance.",
     "contact": false
   },
   {
@@ -1140,7 +1140,7 @@
     "damage": 80,
     "damage_type": "Special",
     "accuracy": 100,
-    "description": "Charges with a watery slam.",
+    "description": "Charges with a potent current.",
     "contact": true
   },
   {
@@ -1158,7 +1158,7 @@
     "damage": 60,
     "damage_type": "Physical",
     "accuracy": null,
-    "description": "Bypasses accuracy checks; never misses.",
+    "description": "This attack never misses.",
     "contact": false
   },
   {
@@ -1216,12 +1216,12 @@
     "contact": false
   },
   {
-    "name": "Hi Jump Kick",
+    "name": "High Jump Kick",
     "type": "Fighting",
     "damage": 85,
     "damage_type": "Physical",
     "accuracy": 90,
-    "description": "User takes 1 damage on miss.",
+    "description": "User takes half health damage on miss.",
     "contact": true
   },
   {

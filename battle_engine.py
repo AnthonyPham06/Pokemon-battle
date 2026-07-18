@@ -1,6 +1,7 @@
 import json
 import random 
 import pygame
+import math
 
 class Battle_Engine:
     def __init__(self):
@@ -163,7 +164,7 @@ class Battle_Engine:
     "low kick":     ("flinch",    30),
     "bone club":    ("flinch",    10),
     "rolling kick": ("flinch",    30),
-    "psybeam":      ("confusion", 100),
+    "psybeam":      ("confusion", 10),
     "confusion":    ("confusion", 10),
     "acid":         ("defense", 10),
     "aurora beam":  ("attack", 10),
@@ -174,7 +175,7 @@ class Battle_Engine:
         self.flat_damage_move = ["super fang","dragon rage","sonic boom","seismic toss"]
 
 
-        self.high_crit_moves = ("karate chop", "razor wind","slash")
+        self.high_crit_moves = ("karate chop", "razor wind","slash","sky attack")
 
         self.two_turn_move = ("razor wind", "fly", "solar beam", "dig", "skull bash", "sky attack", "thrash")
 
@@ -218,6 +219,11 @@ class Battle_Engine:
 
         # check for unaware 
         self.unaware = 1
+
+        # sleep and sleep counter
+        self.pokemon1_sleep_counter = 0
+        self.pokemon2_sleep_counter = 0
+        self.sleep_turn = 0
 
         # weather multiplier
         self.weather_damage_multiplier = 1
@@ -353,6 +359,7 @@ class Battle_Engine:
                 random_roll = random.randint(85,100)    # random roll for damage
                 damage = (damage * random_roll)/100
                 if self.status_pokemon1 =="burn" or (is_opponent_turn and self.p1_screen_name == "reflect") or (not is_opponent_turn and self.p2_screen_name == "reflect"): # cut the damage in half if burned
+                    print("burn or reflect is up, damage is halved")
                     return int(damage/2), crit, effectiveness
                 
                 print(f"thong so la:{damage},{crit},{effectiveness}")
@@ -511,7 +518,7 @@ class Battle_Engine:
             if target == "opponent":
                 if self.status_pokemon2 is None:
                     if self.accuracy:
-                        if stat == "paralysis" and "Electric" in self.pokemon2_type:
+                        if (stat == "paralysis" and "Electric" in self.pokemon2_type) or self.pokemon2_ability == "limber":
                             pass
 
                         elif (stat == "poison" or stat == "bad_poison") and "Poison" in self.pokemon2_type:
@@ -563,11 +570,12 @@ class Battle_Engine:
         chance = -1 if (self.pokemon1_move_data["name"].lower() == "thunder" and self.current_weather == "rain dance" and self.pokemon1_ability != "cloud nine") else chance
 
 
+        print(f"co hoi sau la {chance}")
+
         if chance == -1:
             self.accuracy = True
             return
         
-        print(f"co hoi sau la {chance}")
 
         if chance <= int(check_sure_hit): # the lower the chance the higher the hit ratio
             self.accuracy = True
@@ -632,15 +640,22 @@ class Battle_Engine:
 
 
     def still_asleep(self):
-        if self.status_pokemon1 == "sleep":
+        if self.status_pokemon1 == "sleep" and self.pokemon1_sleep_counter == 0:
             chance = random.randint(1,4)
-            if (chance == 2 or chance == 1) and self.pokemon1_ability == "early bird": # higher probability to wake up if the ability is early bird
-                self.status_pokemon1 = None
-                return False
-            if chance == 1:  # if ability is not early bird, 25% chance to wake up
-                self.status_pokemon1 = None
-                return False 
+            chance = math.floor(chance/2) if self.pokemon1_ability == "early bird" else chance # check for ability early bird
+            self.sleep_turn = chance
+            print(f"ngu {chance} luot")
+
+        if self.pokemon1_sleep_counter < self.sleep_turn:
+            self.pokemon1_sleep_counter += 1
+            print(f"dang ngu luot {self.pokemon1_sleep_counter}")
             return True
+        
+        else:
+            self.status_pokemon1 = None
+            self.pokemon1_sleep_counter = 0
+            self.sleep_turn = 0
+            return False
 
 
 
@@ -710,7 +725,7 @@ class Battle_Engine:
             if self.status_pokemon2 is None or status in ("flinch","confusion","attack","defense","sp_defense","speed"): # EVEN IF POKEMON HAS NON VOLATILE EFFECTS, IT CAN STILL BE CONFUSE AND FLINCH
                 if status == "burn" and "Fire" in self.pokemon2_type:
                     return None
-                elif status == "paralyze" and "Electric" in self.pokemon2_type:
+                elif (status == "paralyze" and "Electric" in self.pokemon2_type) or self.pokemon2_ability == "limber":
                     return None
                 elif status == "poison" and "Poison" in self.pokemon2_type:
                     return None
@@ -816,6 +831,9 @@ class Battle_Engine:
         elif self.pokemon2_ability == "damp" and self.pokemon1_move_data["name"] == "Explosion" and self.accuracy: # treat damp as an abosrb ability
             return True
         
+        elif self.pokemon2_ability == "levitate" and move_type == "ground" and self.accuracy:
+            return True
+        
         return False
     
 
@@ -823,7 +841,7 @@ class Battle_Engine:
     def check_contact_ability(self):
 
         chance = random.randint(0,100) # chance of getting the status effect
-        if self.pokemon2_ability == "static" and self.pokemon1_move_data["contact"] and chance <= 30 and self.status_pokemon1 is None and "Electric" not in self.pokemon1_type and self.charging_move == "": # if my pokemon touch a pokemonn with static
+        if self.pokemon2_ability == "static" and self.pokemon1_move_data["contact"] and chance <= 100 and self.status_pokemon1 is None and "Electric" not in self.pokemon1_type and self.charging_move == "" and self.pokemon1_ability != "limber": # if my pokemon touch a pokemonn with static
             self.status_pokemon1 = "paralysis"
             return "paralysis"
         

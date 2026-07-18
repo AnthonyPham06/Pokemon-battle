@@ -91,7 +91,6 @@ class Battle(pygame.sprite.Sprite):
         self.move_done = True
         self.move_hit = None  
         self.damage_applied = False 
-        self.check_accuracy_yet = False
         self.active_field_trapped = True 
 
 
@@ -102,6 +101,8 @@ class Battle(pygame.sprite.Sprite):
         self.go_first_this_turn = None # the pokemon who goes first
         self.present_weather =""
         self.multi_turn_move_charged = 0
+
+        self.end_turn_event_done = False  # check if all the end turn events are done (status, weather, trapped, mirror move)
 
 
         # ==========================================
@@ -136,20 +137,19 @@ class Battle(pygame.sprite.Sprite):
         self.hp1_display = 1.0
         self.pokemon1_health_decreasing = False
         self.new_hp1_percent_recoil = 0
-        self.recoil_pending = False
         self.recoil_decreasing = False
         self.paralysis_checked = False  # check paralyse of pokemon1
         self.pokemon1_heal = False
-        self.pokemon1_sleep_counter = 0
         self.animation_status_p1_done = False
         self.pokemon1_confusion = False
-        self.sleep_animation_pokemon1_done = True
+        self.sleep_freeze_animation_pokemon1_done = True
         self.pokemon1_self_hit = False
         self.being_trapped_p1 = False
         self.trapped_name_p1 = ""
         self.trapped_counter_p1 = 0
         self.seeded_p1 = False
         self.p1_invulnerable = False
+        self.confusion_checked_this_turn = False
 
 
 
@@ -175,9 +175,6 @@ class Battle(pygame.sprite.Sprite):
         self.pokemon2_current_status = ""
         self.hp2_ratio = 1.0
         self.pokemon2_previous_hp_percent = 1.0
-        self.hp2_raw_display = None  # set to None until battle starts
-        self.draining = False # health draning animation
-        self.pokemon2_heal = False # self heal
 
         # --- opponent turn state ---
         self.pokemon2_chosen_move = ""
@@ -185,17 +182,16 @@ class Battle(pygame.sprite.Sprite):
         self.opponent_move_done = True
         self.opponent_damage_applied = False
         self.opponent_move_hit = None
-        self.pokemon2_sleep_counter = 0
         self.animation_status_p2_done = False
         self.pokemon2_confusion = False
-        self.sleep_animation_pokemon2_done = True
+        self.sleep_freeze_animation_pokemon2_done = True
         self.being_trapped_p2 = False
         self.trapped_name_p2 = ""
         self.trapped_counter_p2 = 0 
         self.seeded_p2 = False
         self.seed_animation_transition = False
-        self.p2_invulnerable = False
-
+       
+        self.p2_stats_swapped_this_turn = False
         # ==========================================
         # 10. WEATHER TURN COUNTS
         # ==========================================
@@ -226,7 +222,7 @@ class Battle(pygame.sprite.Sprite):
         # ==========================================
         # 13. MIRROR MOVE
         # ==========================================
-        self.mirror_move_checked = False
+        self.mirror_move_checked = True
 
 
     def fade_in(self): 
@@ -285,7 +281,6 @@ class Battle(pygame.sprite.Sprite):
         self.weight_pokemon2 = self.pokemon_data[self.opponent_name]["weight_kg"] 
         self.ability_pokemon2 = self.pokemon_data[self.opponent_name]["abilities"][0].lower()
 
-        self.hp2_raw_display = self.hp2_raw # the max health is displayed
 
         self.engine.get_pokemon1_def_spdef_speed_item_type_ability_turn(self.def_pokemon1,self.spdef_pokemon1, self.speed_pokemon1, self.pokemon_item, self.type_pokemon1, self.pokemon_ability, self.opponent_turn)
         self.engine.get_pokemon1_atk_spatk(self.atk_pokemon1, self.spatk_pokemon1)
@@ -365,6 +360,9 @@ class Battle(pygame.sprite.Sprite):
             self.engine.check_status_pokemon(screen) # show status for both pokemon
             if self.pokemon2_confusion:
                 screen.blit(self.duck,(190,40))
+
+            if self.pokemon1_confusion:
+                screen.blit(self.duck,(20,360))
 
 
 
@@ -543,39 +541,68 @@ class Battle(pygame.sprite.Sprite):
 
             # POKEMON 1 ATTACK
             elif self.hover == 3 and self.chosen_move and not self.opponent_turn and not self.current_message and not self.message_queue and not self.pokemon1_health_decreasing and not self.move_done and not self.battle_over: 
-                # CHECK SLEEP (FIST THING)
-                if self.pokemon1_current_status == "sleep" and self.sleep_animation_pokemon1_done:
+                # CHECK SLEEP AND FREEZE, AND CONFUSED
+                if self.pokemon1_current_status == "sleep" and self.sleep_freeze_animation_pokemon1_done:
                     asleep = self.engine.still_asleep()
                     if asleep:
                         self.message_queue.append(f"{self.pokemon_name.capitalize()} is fast asleep!")
                         self.move_hit = None
-                        self.sleep_animation_pokemon1_done = False
+                        self.sleep_freeze_animation_pokemon1_done = False
                     elif not asleep:
                         self.pokemon1_current_status =""
                         self.message_queue.append(f"{self.pokemon_name.capitalize()} woke up!")
 
+            
+                elif self.pokemon1_current_status == "freeze" and self.sleep_freeze_animation_pokemon1_done:
+                    thaw = self.engine.check_thaw_out()
+                    if not thaw and self.engine.moves[self.chosen_move.lower()]["type"] != "Fire" :
+                        self.message_queue.append(f"{self.pokemon_name.capitalize()} is frozen solid!")
+                        self.move_hit = None
+                        self.sleep_freeze_animation_pokemon1_done = False
 
-                if self.pokemon1_confusion:
+                    elif not thaw and self.engine.moves[self.chosen_move.lower()]["type"] == "Fire":
+                        self.pokemon1_current_status =""
+                        self.engine.status_pokemon1 = None
+                        self.message_queue.append(f"{self.pokemon_name.capitalize()} thawed out!")
+
+                    elif thaw:
+                        self.pokemon1_current_status =""
+                        self.message_queue.append(f"{self.pokemon_name.capitalize()} thawed out!")
+
+
+
+                elif self.pokemon1_confusion and self.pokemon1_current_status not in ("sleep","freeze") and not self.confusion_checked_this_turn:
+                    self.confusion_checked_this_turn = True
                     self.message_queue.append(f"{self.pokemon_name.capitalize()} is being confused!")
                     snap_out = random.randint(1,100)
                     self_hit = random.randint(1,100)
-                    if snap_out <= 25:   # 30% CHANCE TO SNAP OUT CONFUSION
+                    if snap_out <= 25:   
                         self.message_queue.append(f"{self.pokemon_name.capitalize()} snaps out!")
                         self.pokemon1_confusion = False
 
                     else:
                         if self_hit <= 50:
                             self.message_queue.append(f"{self.pokemon_name.capitalize()} hit itself!")
-                            damage  = round(((10* 40 * ((self.atk_pokemon1 * self.engine.stage_multipliers[self.engine.stages_pokemon1["attack"]])/(self.def_pokemon2 *self.engine.stage_multipliers[self.engine.stages_pokemon2["defense"]])))/50  + 2))
-                            self.hp1_ratio = self.pokemon1_previous_hp_percent - damage/ self.pokemon_data[self.pokemon_name]["health"]
-                            print(f"mau cua hp1:{self.hp1_ratio}")
+                            damage  = round(((10* 40 * ((self.atk_pokemon1 * self.engine.stage_multipliers[self.engine.stages_pokemon1["attack"]])/(self.def_pokemon1 *self.engine.stage_multipliers[self.engine.stages_pokemon1["defense"]])))/50  + 2))
+                            self.hp1_number = max(0, self.hp1_number - damage)
                             self.pokemon1_self_hit = True
+                            self.damage_applied = True
+                            self.move_done = True
+
+                            # IF THE POKEMON IS CHARGING A MOVE AND HIT IN CONFUSION, THE MOVE FAILS. 
+                            if self.engine.charging_move != "" and self.multi_turn_move_charged == 1:
+                                self.multi_turn_move_charged = 0
+                                self.engine.charging_move = ""
+                                self.p1_invulnerable = False
+
+                        else:
+                            self.pokemon1_self_hit = False
 
 
                 #CHECK MULTI TURN MOVE
                 self.engine.multi_turn_move()
 
-                if self.engine.charging_move in self.engine.two_turn_move and self.multi_turn_move_charged == 0 and self.pokemon1_current_status != "sleep" and not self.pokemon1_self_hit:
+                if self.engine.charging_move in self.engine.two_turn_move and self.multi_turn_move_charged == 0 and self.pokemon1_current_status not in ("sleep","freeze") and not self.pokemon1_self_hit:
                     if self.engine.charging_move == "razor wind":
                         full_text = f"{self.pokemon_name.capitalize()} whipped up a whirlwind!"
 
@@ -590,9 +617,9 @@ class Battle(pygame.sprite.Sprite):
                     elif self.engine.charging_move == "sky attack":
                         full_text = f"{self.pokemon_name.capitalize()} is cloaked in harshed light!"
                 else:
-                    if self.pokemon1_current_status != "sleep":
+                    if self.pokemon1_current_status not in ("sleep","freeze"):
                         full_text = f"{self.pokemon_name.capitalize()} used {self.chosen_move}!"
-                    elif self.pokemon1_current_status == "sleep":
+                    elif self.pokemon1_current_status in ("sleep","freeze"):
                         full_text = ""
 
                 # show the text gradually   
@@ -614,7 +641,7 @@ class Battle(pygame.sprite.Sprite):
 
 
                 if self.text_index == len(full_text):
-                        # CHECK STATUS PARALYSIS, FREEZE AND SLEEP
+                        # CHECK STATUS PARALYSIS
                         if self.pokemon1_current_status == "paralysis" and not self.paralysis_checked and not self.damage_applied:
                             self.paralysis_checked = True
                             if not self.engine.check_paralysis_attack():
@@ -623,34 +650,23 @@ class Battle(pygame.sprite.Sprite):
                                 self.move_done = True
                                 self.message_queue.append(f"{self.pokemon_name.capitalize()} can't move due to paralysis!")
 
-                        elif self.pokemon1_current_status == "freeze":
-                            thaw = self.engine.check_thaw_out()
-                            if not thaw and self.engine.pokemon1_move_data["type"] != "Fire" :
-                                self.move_hit = None
-                                self.damage_applied = True
-                                self.move_done = True
-                                self.message_queue.append(f"{self.pokemon_name.capitalize()} is frozen solid!")
 
-                            elif not thaw and self.engine.pokemon1_move_data["type"] == "Fire":
-                                self.pokemon1_current_status =""
-                                self.engine.status_pokemon1 = None
+                        # SHOW THE SLEEP AND FREEZE ANIMATIONS
+                        if not self.sleep_freeze_animation_pokemon1_done and not self.message_queue and not self.current_message:
+                            if self.pokemon1_current_status == "sleep":
+                                play = self.animator.play(screen, "status sleep",self.pokemon1_sprite, pokemon_rect,self.opponent_frames[self.opponent_frame_index], self.opponent_pokemon_rect)
 
-                            elif thaw:
-                                self.pokemon1_current_status =""
-                                self.message_queue.append(f"{self.pokemon_name.capitalize()} thawed out!")
+                            elif self.pokemon1_current_status == "freeze":
+                                play = self.animator.play(screen, "status freeze",self.pokemon1_sprite, pokemon_rect,self.opponent_frames[self.opponent_frame_index], self.opponent_pokemon_rect)
 
-
-                        # SHOW THE SLEEP ANIMATION
-                        if not self.sleep_animation_pokemon1_done:
-                            play = self.animator.play(screen, "status sleep",self.pokemon1_sprite, pokemon_rect,self.opponent_frames[self.opponent_frame_index], self.opponent_pokemon_rect)
                             if play:
-                                self.sleep_animation_pokemon1_done = True
+                                self.sleep_freeze_animation_pokemon1_done = True
                                 self.damage_applied = True
                                 self.move_done = True
 
 
                         #CHECK ACCURACY
-                        if self.move_hit is None and not self.move_done and self.pokemon1_current_status !="sleep":
+                        if self.move_hit is None and not self.move_done and self.pokemon1_current_status not in ("sleep", "freeze"):
                             self.move_hit = self.engine.check_accuracy()
                             if self.move_hit is None: # FOR CANT MISS MOVE
                                 self.move_hit = True
@@ -663,8 +679,9 @@ class Battle(pygame.sprite.Sprite):
                         if self.move_hit and not self.damage_applied:
                             if self.chosen_move.lower() in self.engine.status_moves and self.engine.status_moves[self.chosen_move.lower()][1] in ("sleep","poison","bad_poison","paralysis","burn","freeze") and self.pokemon2_current_status !="":
                                 self.message_queue.append("But it failed!")
+                                animation_done = True
 
-                            if self.chosen_move.lower() == "sandstorm" and self.engine.current_weather == "sandstorm":
+                            elif self.chosen_move.lower() == "sandstorm" and self.engine.current_weather == "sandstorm":
                                 self.message_queue.append("But it failed!")
                                 animation_done = True
 
@@ -709,25 +726,17 @@ class Battle(pygame.sprite.Sprite):
                                         self.weather_turn = 0 # reset the weather counter if weather changed
                                         self.present_weather = self.engine.current_weather
 
-                                    if self.engine.current_weather == "sandstorm":
+                                    weather_messages = {
+                                    "sandstorm": "A sandstorm brewed!",
+                                    "rain dance": "It started to rain!",
+                                    "sunny day": "The sunlight turn harsh!",
+                                    }
+                                    weather = self.engine.current_weather
+                                    if weather in weather_messages:
                                         if self.weather_turn == 0:
-                                            self.present_weather = "sandstorm"
+                                            self.present_weather = weather
                                             self.weather_turn += 1
-                                            self.message_queue.append("A sandstorm brewed!")
-                                        self.weather_done_damage_this_turn = False
-
-                                    elif self.engine.current_weather == "rain dance":
-                                        if self.weather_turn == 0:
-                                            self.present_weather = "rain dance"
-                                            self.weather_turn += 1
-                                            self.message_queue.append("It started to rain!")
-                                        self.weather_done_damage_this_turn = False
-
-                                    elif self.engine.current_weather == "sunny day":
-                                        if self.weather_turn == 0:
-                                            self.present_weather = "sunny day"
-                                            self.weather_turn += 1
-                                            self.message_queue.append("The sunlight turn harsh!")
+                                            self.message_queue.append(weather_messages[weather])
                                         self.weather_done_damage_this_turn = False
 
 
@@ -735,7 +744,8 @@ class Battle(pygame.sprite.Sprite):
                                     if self.engine.charging_move != "" and self.multi_turn_move_charged == 0:
                                             self.damage = 0
                                             self.multi_turn_move_charged = 1
-                                            self.p1_invulnerable = True
+                                            if self.engine.charging_move in ("dig","fly"):
+                                                self.p1_invulnerable = True
 
                                     elif self.engine.charging_move != "" and self.multi_turn_move_charged == 1:
                                             self.multi_turn_move_charged = 0
@@ -759,10 +769,14 @@ class Battle(pygame.sprite.Sprite):
                                     if self.ability_pokemon2 in ("lightning rod","flash fire"): 
                                         self.damage = 0
                                         if self.engine.stages_pokemon2["sp_attack"] !=6:
-                                            self.message_queue.append(f"{self.opponent_name.capitalize()} has its Sp Atk increased!")
+                                            self.message_queue.append(f"The foe {self.opponent_name.capitalize()} has its Sp Atk increased!")
 
                                     elif self.ability_pokemon2 == "anger point": 
-                                        self.message_queue.append(f"{self.opponent_name.capitalize()} has its ATK maxed out!")
+                                        self.message_queue.append(f"The foe {self.opponent_name.capitalize()} has its ATK maxed out!")
+
+                                    elif self.ability_pokemon2 == "levitate":
+                                        self.damage = 0
+                                        self.message_queue.append(f"The foe {self.opponent_name.capitalize()} is levitating!")
 
                                     elif self.ability_pokemon2 == "damp":
                                         self.damage = 0
@@ -790,7 +804,6 @@ class Battle(pygame.sprite.Sprite):
                                 if contact_status: # check if getting contact ability from pokemon 2
                                     self.opponent_ability_box_text = self.ability_pokemon2.capitalize() # take the foe pokemon ability name
                                     self.opponent_ability_box_showing = True  # show the ability text
-                                    print(f"{self.engine.status_pokemon1} la hieu ung cua pokemon 1")
                                     if contact_status == "paralysis" and self.pokemon1_current_status == "":
                                         self.pokemon1_current_status = "paralysis"
 
@@ -816,7 +829,6 @@ class Battle(pygame.sprite.Sprite):
 
                                 #ACCURACY LOWERED MOVE
                                 prevented_stat_lowered = self.engine.prevent_lowered_stat_ability()
-                                print(f"hieu ung la{prevented_stat_lowered}")
                                 if prevented_stat_lowered:
                                     self.opponent_ability_box_text = self.engine.pokemon2_ability.capitalize()
                                     self.opponent_ability_box_showing = True
@@ -838,9 +850,6 @@ class Battle(pygame.sprite.Sprite):
                                  # MESSAGE FOR DAMAGE AND CHECKING FOR SECONDARY EFFECTS OF ATTACKS   
                                 if self.damage > 0:
                                     # DAMAGE CALCULATION
-
-
-
                                     self.hp2_ratio = self.pokemon2_previous_hp_percent - self.damage / self.pokemon_data[self.opponent_name]["health"]
 
                                     # CHECK STURDY
@@ -858,7 +867,8 @@ class Battle(pygame.sprite.Sprite):
                                     elif effectiveness < 1.0 and not self.opponent_ability_box_showing:
                                         if self.pokemon_ability.lower() != "tinted lens":
                                             self.message_queue.append("It's not very effective...")
-                                    #SECONDARY 
+
+                                    #SECONDARY STAtus
                                     if secondary == "burn"  and self.pokemon2_current_status == "":
                                         self.message_queue.append(f"{self.opponent_name.capitalize()} was burned!")
                                         self.pokemon2_current_status = "burn"
@@ -873,11 +883,11 @@ class Battle(pygame.sprite.Sprite):
                                         self.message_queue.append(f"{self.opponent_name.capitalize()} was poisoned!")
                                         self.pokemon2_current_status = "poison"
                                         self.status_done_damage_this_turn = False
-                                    elif secondary == "flinch" and self.pokemon2_ability != "inner focus":
+                                    elif secondary == "flinch" and self.ability_pokemon2 != "inner focus" and self.go_first_this_turn == "pokemon_1":
                                         self.message_queue.append(f"{self.opponent_name.capitalize()} flinched!")
                                         self.turn_done = True
 
-                                    elif secondary == "confusion":
+                                    elif secondary == "confusion" and not self.pokemon2_confusion:
                                         self.message_queue.append(f"{self.opponent_name.capitalize()} is confused!")
                                         self.pokemon2_confusion = True
 
@@ -900,7 +910,6 @@ class Battle(pygame.sprite.Sprite):
                                         self.trapped_name_p2  = self.chosen_move.lower()
                                         self.trapped_done_damage_this_turn = False
                                         self.trapped_turn_p2 = random.randint(2,5)
-                                        print(f"bi kep trong {self.trapped_turn_p2} luot")
                                         self.message_queue.append(f"{self.opponent_name.capitalize()} is trapped in {self.chosen_move.capitalize()}!")
 
 
@@ -960,16 +969,15 @@ class Battle(pygame.sprite.Sprite):
 
 
                                 
-                                # THIS IS THE UPDATE TO SHOW THE STATUS ICON 
-                                if self.engine.my_pokemon_status is None or self.engine.my_pokemon_status =="" or self.engine.my_pokemon_status == "freeze"  or self.engine.my_pokemon_status == "sleep":
+                                # THIS IS THE UPDATE TO SHOW THE STATUS ICON, SYNCHING THE STATUS
+                                if self.engine.my_pokemon_status in (None, "", "sleep", "freeze"):
                                     self.engine.my_pokemon_status = self.pokemon1_current_status
-                                if self.engine.opponent_pokemon_status is None or self.engine.opponent_pokemon_status == "" or self.engine.opponent_pokemon_status == "freeze"  or self.engine.opponent_pokemon_status == "sleep":
+                                if self.engine.opponent_pokemon_status in (None, "", "sleep", "freeze"):
                                     self.engine.opponent_pokemon_status = self.pokemon2_current_status
 
 
                                 # CHECK FOR DAMAGING STATUS AND END TURN MOVE
-
-                                if self.pokemon2_current_status in ("poison", "bad_poison", "burn") or self.pokemon1_current_status in  ("poison", "bad_poison", "burn"):
+                                if self.pokemon2_current_status in ("poison", "bad_poison", "burn") or self.pokemon1_current_status in ("poison", "bad_poison", "burn"):
                                     self.status_done_damage_this_turn = False
 
                                 if self.being_trapped_p2 or self.being_trapped_p1 or self.seeded_p2 or self.seeded_p1:
@@ -978,10 +986,11 @@ class Battle(pygame.sprite.Sprite):
                                 if self.engine.p1_screen or self.engine.p2_screen:
                                     self.mirror_move_checked = False
 
+                                print(f"status of p1 my turn(2): {self.engine.status_pokemon1}")
+                                print(f"status of p2 my turn(2): {self.engine.status_pokemon2}")
 
 
                         elif self.move_hit == False:
-                            pygame.time.wait(500)
                             if self.chosen_move.lower() in self.engine.status_moves and self.engine.status_moves[self.chosen_move.lower()][1] in ("sleep","poison","bad_poison","paralysis","burn","freeze") and self.pokemon2_current_status !="":
                                 self.message_queue.append("But it failed!") #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                             else:
@@ -992,11 +1001,11 @@ class Battle(pygame.sprite.Sprite):
                             self.multi_turn_move_charged = 0
                             self.engine.charging_move = ""
 
-                            # SHOW THE STATUS ICON AND CHECK OR DAMGAIGNG STATUS
 
-                            if self.engine.my_pokemon_status is None or self.engine.my_pokemon_status =="" or self.engine.my_pokemon_status == "sleep" or self.engine.my_pokemon_status == "freeze":
+                            # SHOW THE STATUS ICON AND CHECK OR DAMGAIGNG STATUS
+                            if self.engine.my_pokemon_status in (None, "", "sleep", "freeze"):
                                 self.engine.my_pokemon_status = self.pokemon1_current_status
-                            if self.engine.opponent_pokemon_status is None or self.engine.opponent_pokemon_status == "" or self.engine.opponent_pokemon_status == "sleep" or self.engine.opponent_pokemon_status == "freeze":
+                            if self.engine.opponent_pokemon_status in (None, "", "sleep", "freeze"):
                                 self.engine.opponent_pokemon_status = self.pokemon2_current_status
 
                             if self.pokemon2_current_status in ("poison", "bad_poison", "burn") or self.pokemon1_current_status in ("poison", "bad_poison", "burn"):
@@ -1007,13 +1016,15 @@ class Battle(pygame.sprite.Sprite):
 
                             if self.engine.p1_screen or self.engine.p2_screen:
                                 self.mirror_move_checked = False
+
+
+                            print(f"status of p1 my turn(2): {self.engine.status_pokemon1}")
+                            print(f"status of p2 my turn(2): {self.engine.status_pokemon2}")
                                 
 
                 #CHECK WHICH TURN IT IS, AND END IF MY POKEMON MOVE LAST
                 if self.go_first_this_turn == "pokemon_2" and self.move_done and self.damage_applied and not self.move_hit:
                     self.turn_done = True
-                    print(f"status of p1 my turn(2): {self.engine.status_pokemon1}")
-                    print(f"status of p2 my turn(2): {self.engine.status_pokemon2}")
 
 
             # RUN THE OPPONENT TURN IF ITS THE OPPONENT TURN
@@ -1066,12 +1077,12 @@ class Battle(pygame.sprite.Sprite):
                         self.swap_turn_timer_start = pygame.time.get_ticks()
 
                 # WHEN BOTH TURN ARE DONE AND ALL THE STATUS AND STUFF ARE DONE (MIRROR IS USED BECAUSE MIRROR IS CHECK LAST)
-                if self.turn_done and self.mirror_move_checked and not self.pokemon1_health_decreasing and not self.message_queue and not self.current_message: 
-                    print(self.message_duration)
+                if self.turn_done and self.end_turn_event_done and not self.pokemon1_health_decreasing and not self.message_queue and not self.current_message: 
                     self.turn_done = False 
                     self.chosen_move = ""
                     self.pokemon2_chosen_move = ""
                     self.hover = 0
+                    self.end_turn_event_done = False # reset the end turn event check
                     print(self.engine.stages_pokemon1)
                     print(self.engine.stages_pokemon2)
 
@@ -1098,11 +1109,12 @@ class Battle(pygame.sprite.Sprite):
                 if not self.mirror_move_checked and self.status_done_damage_this_turn and not self.pokemon1_health_decreasing and self.pokemon2_previous_hp_percent == self.hp2_ratio:
                     self.check_screen_effect()
 
-
+                if self.mirror_move_checked and self.status_done_damage_this_turn and self.weather_done_damage_this_turn and self.trapped_done_damage_this_turn and not self.pokemon1_health_decreasing and self.pokemon2_previous_hp_percent == self.hp2_ratio:
+                    self.end_turn_event_done = True
 
 
     def run_opponent_turn(self, screen, pokemon_rect):
-        move_list = ["light screen"]  # hahah
+        move_list = ["toxic","agility","sunny day"]  # hahah
         if self.pokemon2_chosen_move == "":
             self.pokemon2_chosen_move = random.choice(move_list)
    
@@ -1110,14 +1122,12 @@ class Battle(pygame.sprite.Sprite):
 
         if swap_turn_timer_stop - self.swap_turn_timer_start > 500 or self.go_first_this_turn == "pokemon_2": 
 
-            # SWAP THE STATS
-            self.engine.get_move(self.pokemon2_chosen_move)
-            self.engine.get_pokemon1_def_spdef_speed_item_type_ability_turn(self.def_pokemon2, self.spdef_pokemon2, self.speed_pokemon2,"none", self.type_pokemon2, self.ability_pokemon2, self.opponent_turn)
-            self.engine.get_pokemon1_atk_spatk(self.atk_pokemon2, self.spatk_pokemon2)
-            self.engine.get_pokemon2_hp_def_spdef_speed_type_ability( self.hp1_number, self.def_pokemon1, self.spdef_pokemon1,self.speed_pokemon1, self.type_pokemon1, self.pokemon_ability)
-            
-            # accuracy check — only once
-            if self.opponent_move_hit is None and not self.opponent_move_done:
+            if not self.p2_stats_swapped_this_turn:# SWAP THE STATS, ONCE
+                self.engine.get_move(self.pokemon2_chosen_move)
+                self.engine.get_pokemon1_def_spdef_speed_item_type_ability_turn(self.def_pokemon2, self.spdef_pokemon2, self.speed_pokemon2,"none", self.type_pokemon2, self.ability_pokemon2, self.opponent_turn)
+                self.engine.get_pokemon1_atk_spatk(self.atk_pokemon2, self.spatk_pokemon2)
+                self.engine.get_pokemon2_hp_def_spdef_speed_type_ability( self.hp1_number, self.def_pokemon1, self.spdef_pokemon1,self.speed_pokemon1, self.type_pokemon1, self.pokemon_ability)
+
                 stage_2  = self.engine.stages_pokemon2
                 self.engine.stages_pokemon2 = self.engine.stages_pokemon1 # swap the stages first
                 self.engine.stages_pokemon1 = stage_2
@@ -1126,9 +1136,13 @@ class Battle(pygame.sprite.Sprite):
                 self.engine.status_pokemon2 = self.engine.status_pokemon1
                 self.engine.status_pokemon1 = status_2
 
+                self.p2_stats_swapped_this_turn = True
+
+            
+            # STATUS AND ACCURACY CHECK
+            if self.opponent_move_hit is None and not self.opponent_move_done:
                 # CHECK STATUS ,PARALYSIS AND SLEEP AND FROZEN
                 if self.pokemon2_current_status == "paralysis" and not self.engine.check_paralysis_attack():
-                    print(f"hieu ung cua p2: {self.engine.status_pokemon1}")
                     self.message_queue.append(f"{self.opponent_name.capitalize()} can't move due to paralysis!")
                     self.opponent_damage_applied = True
                     self.opponent_move_done = True
@@ -1136,11 +1150,11 @@ class Battle(pygame.sprite.Sprite):
                     self._end_opponent_turn()
                     return
                 
-                elif self.pokemon2_current_status == "sleep" and self.sleep_animation_pokemon2_done:
+                elif self.pokemon2_current_status == "sleep" and self.sleep_freeze_animation_pokemon2_done:
                     asleep = self.engine.still_asleep()
                     if asleep:
                         self.message_queue.append(f"{self.opponent_name.capitalize()} is fast asleep!")
-                        self.sleep_animation_pokemon2_done = False
+                        self.sleep_freeze_animation_pokemon2_done = False
                         self.opponent_move_hit = None
                         self.opponent_damage_applied = True
                     elif not asleep:
@@ -1148,20 +1162,16 @@ class Battle(pygame.sprite.Sprite):
                         self.message_queue.append(f"{self.opponent_name.capitalize()} woke up!")
                         
 
-                elif self.pokemon2_current_status == "freeze":
+                elif self.pokemon2_current_status == "freeze" and self.sleep_freeze_animation_pokemon2_done:
                     thaw_out = self.engine.check_thaw_out()
-                    print(f"co hoi out ra la:{thaw_out}")
-                    if not thaw_out:
-                        print("chua ra")
-                        #self.opponent_move_hit = False
+                    if not thaw_out :
                         self.message_queue.append(f"{self.opponent_name.capitalize()} is frozen solid!")
+                        self.sleep_freeze_animation_pokemon2_done = False
                         self.opponent_damage_applied = True
-                        self.opponent_move_done = True
                         self.opponent_move_hit = None
-                        self._end_opponent_turn()
-                        return
-                    elif thaw_out:
+                    elif thaw_out or self.engine.pokemon1_move_data["type"] == "Fire":
                         self.pokemon2_current_status =""
+                        self.engine.current_status_pokemon1 = None
                         self.message_queue.append(f"{self.opponent_name.capitalize()} thawed out!")
 
 
@@ -1179,32 +1189,31 @@ class Battle(pygame.sprite.Sprite):
                             self.message_queue.append(f"{self.opponent_name.capitalize()} hit itself!")
                             self.opponent_move_hit = None
                             self.opponent_damage_applied = True
-                            damage  = round(((10* 40 * ((self.atk_pokemon1 * self.engine.stage_multipliers[self.engine.stages_pokemon1["attack"]])/(self.def_pokemon2 *self.engine.stage_multipliers[self.engine.stages_pokemon2["defense"]])))/50  + 2))
+                            damage  = round(((10* 40 * ((self.atk_pokemon2 * self.engine.stage_multipliers[self.engine.stages_pokemon1["attack"]])/(self.def_pokemon2 *self.engine.stage_multipliers[self.engine.stages_pokemon1["defense"]])))/50  + 2))
                             self.hp2_ratio = self.pokemon2_previous_hp_percent - damage/ self.pokemon_data[self.opponent_name]["health"]
-                            print(f"mau cua hp2:{self.hp2_ratio}")
                             self.opponent_move_done = True
                             self._end_opponent_turn()
                             return
                             
- 
-                #DRAW ANIMAITON FOR SLEEP
-                if not self.sleep_animation_pokemon2_done and not self.message_queue and not self.current_message:
-                    play = self.animator.play(screen, "status sleep",self.opponent_frames[self.opponent_frame_index], self.opponent_pokemon_rect,self.pokemon1_sprite, pokemon_rect)
+                #DRAW ANIMAITON FOR SLEEP AND FREEZE
+                if not self.sleep_freeze_animation_pokemon2_done and not self.message_queue and not self.current_message:
+                    if self.pokemon2_current_status == "sleep":
+                        play = self.animator.play(screen, "status sleep",self.opponent_frames[self.opponent_frame_index], self.opponent_pokemon_rect,self.pokemon1_sprite, pokemon_rect)
+                    elif self.pokemon2_current_status == "freeze":
+                        play = self.animator.play(screen, "status freeze",self.opponent_frames[self.opponent_frame_index], self.opponent_pokemon_rect,self.pokemon1_sprite, pokemon_rect)
                     if play:
-                        self.sleep_animation_pokemon2_done = True
+                        self.sleep_freeze_animation_pokemon2_done = True
                         self.opponent_move_done = True
                         self._end_opponent_turn()
                         return
-
+                    
                 # CHECK ACCURACY (SKIP IF POKEMON IS SLEEPING)
-                if not self.opponent_move_hit and self.pokemon2_current_status != "sleep": 
+                if not self.opponent_move_hit and self.pokemon2_current_status not in ("sleep", "freeze"): # IF THE POKEMON ISNT SLEEP OR FREEZE OR HAS ESCAPED IT
                     self.message_queue.append(f"{self.opponent_name.capitalize()} used {self.pokemon2_chosen_move.capitalize()}!")
-
-                    # CHECK ACCURACY
                     self.opponent_move_hit = self.engine.check_accuracy()
-                    if self.opponent_move_hit is None:
+                    if self.opponent_move_hit is None: # its a sure hit attack
                         self.opponent_move_hit = True
-                    elif self.opponent_move_hit is not None and self.p1_invulnerable:
+                    elif self.opponent_move_hit is not None and self.p1_invulnerable: # if p1 is fly or dig
                         self.opponent_move_hit = False
 
 
@@ -1247,23 +1256,17 @@ class Battle(pygame.sprite.Sprite):
                             self.weather_turn = 0
                             self.present_weather = self.engine.current_weather
 
-                        if self.engine.current_weather == "sandstorm":
+                        weather_messages = {
+                            "sandstorm": "A sandstorm brewed!",
+                            "rain dance": "It started to rain!",
+                            "sunny day": "The sunlight turn harsh!",
+                        }
+                        weather = self.engine.current_weather
+                        if weather in weather_messages:
                             if self.weather_turn == 0:
-                                self.present_weather = "sandstorm"
+                                self.present_weather = weather
                                 self.weather_turn += 1
-                                self.message_queue.append("A sandstorm brewed!")
-                            self.weather_done_damage_this_turn = False
-                        elif self.engine.current_weather == "rain dance":
-                            if self.weather_turn == 0:
-                                self.present_weather = "rain dance"
-                                self.weather_turn += 1
-                                self.message_queue.append("It started to rain!")
-                            self.weather_done_damage_this_turn = False
-                        elif self.engine.current_weather == "sunny day":
-                            if self.weather_turn == 0:
-                                self.present_weather = "sunny day"
-                                self.weather_turn += 1
-                                self.message_queue.append("The sunlight turned harsh!")
+                                self.message_queue.append(weather_messages[weather])
                             self.weather_done_damage_this_turn = False
 
 
@@ -1289,6 +1292,11 @@ class Battle(pygame.sprite.Sprite):
                             damage = 0
                             if self.engine.stages_pokemon2["sp_attack"] != 6:
                                 self.message_queue.append(f"{self.pokemon_name.capitalize()}'s {self.pokemon_ability.capitalize()} absorbed the move!")
+
+                        elif self.pokemon_ability.lower() == "levitate":
+                            damage = 0
+                            self.message_queue.append(f"{self.pokemon_name.capitalize()} is levitating!")
+
                         elif self.pokemon_ability.lower() == "water absorb":
                             damage = 0
                             if self.hp1_ratio <= 0.75:
@@ -1380,7 +1388,6 @@ class Battle(pygame.sprite.Sprite):
                             self.message_queue.append("It's not very effective...")
 
                         elif effectiveness == 0:
-                            print("cu dau")
                             self.message_queue.append(f"It doesnt affect {self.pokemon_name.capitalize()}")
 
                         if secondary == "burn" and self.pokemon1_current_status == "":
@@ -1402,7 +1409,7 @@ class Battle(pygame.sprite.Sprite):
                             self.turn_done = True
                             self.message_queue.append(f"{self.pokemon_name.capitalize()} flinched!")
 
-                        elif secondary == "confusion":
+                        elif secondary == "confusion" and not self.pokemon1_confusion:
                             self.message_queue.append(f"{self.pokemon_name.capitalize()} is confused!")
                             self.pokemon1_confusion = True
 
@@ -1455,8 +1462,6 @@ class Battle(pygame.sprite.Sprite):
                                 self.message_queue.append(f"{self.pokemon_name.capitalize()}'s {self.engine.status_moves[self.pokemon2_chosen_move.lower()][1].capitalize()} fell!")
                             elif self.engine.status_moves[self.pokemon2_chosen_move.lower()][2] == -2:
                                     self.message_queue.append(f"{self.pokemon_name.capitalize()}'s {self.engine.status_moves[self.pokemon2_chosen_move.lower()][1].capitalize()} harshly fell!")
-                        elif status is None and self.engine.status_moves[self.pokemon2_chosen_move.lower()][3] == "opponent" and prevented_stat_lowered:
-                            self.message_queue.append(f"It doesn't affect {self.pokemon_name.capitalize()}!")
 
 
                         if self.engine.status_moves[self.pokemon2_chosen_move.lower()][0] == "status" and status is None:
@@ -1479,7 +1484,6 @@ class Battle(pygame.sprite.Sprite):
 
 
                         synchronize = self.engine.ability_synchonize()
-                        print(f"synchronize: {synchronize}")
                         if synchronize:
                             self.ability_box_text = self.pokemon_ability.capitalize()
                             self.ability_box_showing = True
@@ -1501,12 +1505,10 @@ class Battle(pygame.sprite.Sprite):
                                 self.message_queue.append(f"{self.pokemon_name.capitalize()} is unaffected!")
 
 
-
-
                     # SHOW STATUS ICON 
-                    if self.engine.my_pokemon_status is None or self.engine.my_pokemon_status =="" or self.engine.my_pokemon_status == "sleep" or self.engine.my_pokemon_status == "freeze":
+                    if self.engine.my_pokemon_status in (None, "", "sleep", "freeze"):
                         self.engine.my_pokemon_status = self.pokemon1_current_status
-                    if self.engine.opponent_pokemon_status is None or self.engine.opponent_pokemon_status == "" or self.engine.opponent_pokemon_status == "sleep" or self.engine.opponent_pokemon_status == "freeze":
+                    if self.engine.opponent_pokemon_status in (None, "", "sleep", "freeze"):
                         self.engine.opponent_pokemon_status = self.pokemon2_current_status
 
                     self.opponent_move_done = True
@@ -1522,9 +1524,9 @@ class Battle(pygame.sprite.Sprite):
                 self.opponent_move_hit = None
 
                 #SHOW STATUS ICON
-                if self.engine.my_pokemon_status is None or self.engine.my_pokemon_status =="" or self.engine.my_pokemon_status == "sleep" or self.engine.my_pokemon_status == "freeze":
+                if self.engine.my_pokemon_status in (None, "", "sleep", "freeze"):
                     self.engine.my_pokemon_status = self.pokemon1_current_status
-                if self.engine.opponent_pokemon_status is None or self.engine.opponent_pokemon_status == "" or self.engine.opponent_pokemon_status == "sleep" or self.engine.opponent_pokemon_status == "freeze":
+                if self.engine.opponent_pokemon_status in (None, "", "sleep", "freeze"):
                     self.engine.opponent_pokemon_status = self.pokemon2_current_status
 
                 self._end_opponent_turn()
@@ -1556,6 +1558,9 @@ class Battle(pygame.sprite.Sprite):
         self.engine.status_pokemon2 = self.engine.status_pokemon1 # swap the status too
         self.engine.status_pokemon1 = status_1 
 
+        # RESET FOR THE NEXT TURN SWAP
+        self.p2_stats_swapped_this_turn = False
+
 
         if self.pokemon2_current_status in ("poison", "bad_poison", "burn") or self.pokemon1_current_status in  ("poison", "bad_poison", "burn"):
             self.status_done_damage_this_turn = False
@@ -1570,7 +1575,6 @@ class Battle(pygame.sprite.Sprite):
         print(f"status of p2 op turn:{self.engine.status_pokemon2}")
         print(f"status of p1 op turn:{self.engine.my_pokemon_status}")
         print(f"status of p2 op turn:{self.engine.opponent_pokemon_status}")
-        print("!!!!!!!!!!!!!!!!!!!!!!!!!!")
 
 
     def crop_sprite(self, surface):
@@ -1693,16 +1697,15 @@ class Battle(pygame.sprite.Sprite):
                         self.damage_applied = False
                         self.chosen_move = self.pokemon_moves[i] 
                         self.text_index = 0
-                        self.paralysis_checked = False  # add this
+                        self.paralysis_checked = False 
+                        self.confusion_checked_this_turn = False
                         self.pokemon1_heal = False
-                        self.pokemon2_heal = False
 
                         self.opponent_turn = True if self.engine.move_priority() == "pokemon_2" else False
                         self.opponent_move_done = False      
                         self.opponent_damage_applied = False
                         self.status_done_damage_this_turn = False
                         self.go_first_this_turn = "pokemon_2" if  self.engine.move_priority() == "pokemon_2" else "pokemon_1"
-                        print(f"TURN: {self.go_first_this_turn}")
                         self.weather_done_damage_this_turn = True
 
 

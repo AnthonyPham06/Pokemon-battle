@@ -80,6 +80,8 @@ class BattleAnimation:
             "bonemerang": (self._load_bonemerang, self.anim_bonemerang),
             "reflect":      (self._load_reflect,      self.anim_screen_move),
             "light screen": (self._load_light_screen, self.anim_screen_move),
+            "status freeze": (self._load_status_freeze, self.anim_status_freeze),
+            "growl": (self._load_growl, self.anim_growl),
             
         }
 
@@ -501,6 +503,15 @@ class BattleAnimation:
         self.state["sound"] = pygame.mixer.Sound('move_sprites/screen_move/screen_move.mp3')
         self.state["start"] = None
         self.state["colors"] = ((60, 110, 200), (150, 200, 255), (30, 60, 140), (200, 230, 255))
+
+
+    def _load_status_freeze(self, name):
+        self.state["sound"] = pygame.mixer.Sound('move_sprites/status_freeze/status_freeze.mp3')
+        self.state["start"] = None
+
+    def _load_growl(self, name):
+        self.state["sound"] = pygame.mixer.Sound('move_sprites/growl/growl.mp3')
+        self.state["start"] = None
     
 
 
@@ -2652,3 +2663,70 @@ class BattleAnimation:
 
         screen.blit(mirror, mirror.get_rect(center=(my_rect.centerx, my_rect.centery - 20)))
         return False
+
+
+    def anim_status_freeze(self, move_name, screen, opponent_sprite, opponent_rect, my_sprite, my_rect):
+        s = self.state
+        elapsed = self._start_animation(True)
+
+        tinted = opponent_sprite.copy()
+        overlay = pygame.Surface(tinted.get_size(), pygame.SRCALPHA)
+
+        # Pulse alpha overlay over 2400ms (matching poison style)
+        if elapsed < 600:
+            alpha = int((elapsed / 600) * 180)
+        elif elapsed < 1200:
+            alpha = int((1 - (elapsed - 600) / 600) * 180)
+        elif elapsed < 1800:
+            alpha = int((elapsed - 1200) / 600 * 180)
+        elif elapsed < 2400:
+            alpha = int((1 - (elapsed - 1800) / 600) * 180)
+        else:
+            self.current_loaded_move = None
+            return True
+
+        # Ice color (light blue tint)
+        overlay.fill((100, 200, 255, alpha))
+        tinted.blit(overlay, (0, 0), special_flags=pygame.BLEND_RGBA_MULT)
+        screen.blit(tinted, opponent_rect)
+
+        return False
+    
+
+    def anim_growl(self, move_name, screen, opponent_sprite, opponent_rect, my_sprite, my_rect):
+        s = self.state
+        elapsed = self._start_animation(True)
+
+        WAVE_END = 800
+        TINT_END = 1200
+
+        if elapsed < WAVE_END:
+            screen.blit(opponent_sprite, opponent_rect)
+
+            progress = elapsed / WAVE_END
+            num_rings = 3
+            for i in range(num_rings):
+                ring_progress = (progress - i * 0.25) % 1.0
+                if ring_progress <= 0:
+                    continue
+                radius = int(20 + ring_progress * 50)
+                alpha = int(255 * (1.0 - ring_progress))
+                ring_surface = pygame.Surface((radius*2+4, radius*2+4), pygame.SRCALPHA)
+                pygame.draw.circle(ring_surface, (230, 120, 200, alpha), (radius+2, radius+2), radius, 4)
+                ring_rect = ring_surface.get_rect(center=my_rect.center)
+                screen.blit(ring_surface, ring_rect)
+            return False
+
+        elif elapsed < TINT_END:
+            tinted = opponent_sprite.copy()
+            overlay = pygame.Surface(tinted.get_size(), pygame.SRCALPHA)
+            overlay.fill((230, 120, 200, 100))
+            tinted.blit(overlay, (0, 0), special_flags=pygame.BLEND_RGBA_MULT)
+            screen.blit(tinted, opponent_rect)
+            return False
+
+        else:
+            done = self._flash_phase(screen, opponent_sprite, opponent_rect)
+            if done:
+                s["start"] = None
+            return done
